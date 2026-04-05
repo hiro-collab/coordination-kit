@@ -96,7 +96,7 @@ Arms:
 For read-aloud names, many runs treat these as call-sign style team names such as:
 
 - `A` -> `Alpha`
-- `B` -> `Bravo`
+- `B` -> `Blabo`
 - `C` -> `Charlie`
 - `D` -> `Delta`
 

@@ -25,8 +25,8 @@ English comes first in this file. A Japanese mirror and extra Japanese operator 
 The default example for this repository is a scoped software delivery run:
 
 - `Commander` owns the mission brief and final integration.
-- `Arm A` implements the product change.
-- `Arm B` verifies acceptance criteria and prepares docs or handoff notes.
+- `Arm A` and `Arm B` are stable team identities, not fixed departments.
+- In this example, current assignments put more implementation work in `Arm A` and more verification or handoff work in `Arm B`.
 - Nodes such as `A.Indy` and `B.Thumb` execute concrete subtasks with visible status updates.
 
 Read [reference-use-case.md](reference-use-case.md) before going deeper if you want to see the model in a real scenario.
