@@ -1,5 +1,7 @@
 # Coordination Kit
 
+If you are thinking, "I want AI to work in parallel, but how should I structure the coordination first?", start here.
+
 A documentation-first operating kit for visible, auditable multi-agent work.
 
 Use this when one human or top-level coordinator needs to run several agent lanes on the same task without losing traceability, handoff quality, or integration ownership.
@@ -168,6 +170,8 @@ If you publish this kit as its own repository:
 3. Review [04-maintainers/publishing-checklist.md](04-maintainers/publishing-checklist.md) before release.
 
 ## Japanese
+
+「AI に並列処理をやらせたいけど、とりあえず連携の組み方をどうしよう」と思ったら、ここから読むのが入口です。
 
 `coordination-kit` は、見える multi-agent 運用のための documentation-first operating kit です。
 
