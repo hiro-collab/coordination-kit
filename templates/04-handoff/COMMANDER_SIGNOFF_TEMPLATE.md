@@ -29,7 +29,11 @@ Reason:
 - <reason>
 
 Separate Judgments If Useful:
-- Game winner:
+- Preferred output:
 - Operations winner:
 - Overall result:
 ```
+
+Optional competitive-trial add-on:
+
+- Replace `Preferred output` with `Game winner` when the run is a comparative game trial.

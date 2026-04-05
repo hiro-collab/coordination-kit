@@ -1,5 +1,7 @@
 # Public Trial Brief Template
 
+Use this only when the run is a comparative public trial, especially side-by-side browser-game evaluation.
+
 Share this with both teams. This is the only trial-rules file that should be copied into team workspaces.
 
 - Owner:

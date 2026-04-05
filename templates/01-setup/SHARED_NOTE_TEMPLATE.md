@@ -6,16 +6,19 @@
 ## Mission Snapshot
 
 - Mission: <short mission>
-- Trial priority: <what matters most>
+- Priority: <what matters most>
 - Topology in scope:
   - Commander
-  - A.Shoulder
-  - <fingers>
+  - <A.Shoulder>
+  - <A.Elbow if used>
+  - <A.Thumb / A.Indy / A.Middy / A.Ringy / A.Pinky as needed>
+  - <B... if used>
 
 ## Source Documents
 
-- `AGENTS.md`
-- <project spec>
+- `AGENTS.md` if present
+- <project spec or project README>
+- `MISSION_BRIEF.md`
 - `INTEGRATION.md`
 - <00_INDEX.md if used>
 
@@ -23,9 +26,19 @@
 
 - Commander
   - <files>
-- A.Shoulder
+- <A.Shoulder>
   - <files>
-- <finger>
+- <A.Elbow if used>
+  - <files>
+- <A.Thumb>
+  - <files>
+- <A.Indy>
+  - <files>
+- <A.Middy>
+  - <files>
+- <A.Ringy>
+  - <files>
+- <A.Pinky>
   - <files>
 
 ## Shared Interfaces

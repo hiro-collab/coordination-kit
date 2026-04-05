@@ -1,14 +1,15 @@
 # Finger Task Card Template
 
 ```text
-Node: <node id>
-Mode: <Explore|Verify|Integrate or mixed emphasis>
+Task ID: <A-01>
+Node: <A.Thumb|A.Indy|A.Middy|A.Ringy|A.Pinky or other node id>
+Mode: <mode label; examples: Explore|Verify|Integrate>
 
 Mission:
 <one-paragraph mission slice>
 
 Read First:
-- <project spec>
+- <project spec, or project README / mission brief>
 - <shared note>
 - <integration note>
 - <working memory file>
@@ -21,12 +22,25 @@ Owned Scope:
 Required Output:
 - <artifact or result>
 
+Required Output Checklist:
+- <required line or artifact>
+- <required line or artifact>
+- any missing item means incomplete
+
+Completion Evidence:
+- <live output, visible file path, verification record, or other evidence>
+
+Recovery Owner:
+- <A.Shoulder|Commander|other>
+
 Done Definition:
 - <observable completion condition>
+- all required checklist items above are visible
 - visible node files reflect assumptions, outputs, blockers, and completion state
 
 Constraints:
 - do not change global scope
+- node names are identifiers, not fixed specializations
 - state assumptions explicitly
 - expose uncertainty instead of hiding it
 - escalate blockers early
