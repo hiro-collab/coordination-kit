@@ -25,8 +25,8 @@ Commander owns this file.
 - [ ] Any drifting shared boundary was frozen in a visible interface-contract note.
 - [ ] Verification records exist for midpoint and pre-handoff claims.
 - [ ] Language and onboarding checks are visible when the run has a primary human language.
-- [ ] Team-local submission packet exists before final board posting.
-- [ ] Final handoff includes playable state, known defects, launch method, judging focus, and explicit cuts.
+- [ ] Local submission packet exists before final board posting when formal handoff is used.
+- [ ] Final handoff includes current state, known defects, launch method, evaluation focus, and explicit cuts where relevant.
 - [ ] Known gaps are documented.
 - [ ] Assumptions are explicit.
 - [ ] Integration ownership remains visible.
@@ -40,7 +40,7 @@ Commander owns this file.
 - Keep global scope fixed.
 - Prefer explicit interfaces over implicit coupling.
 - Pull behavior conflicts upward to Commander quickly.
-- A.Shoulder owns lower-node spawn and routine steering.
+- The active Shoulder or Arm lead owns lower-node spawn and routine steering.
 
 ## Commander Sign-Off
 

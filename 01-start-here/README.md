@@ -10,30 +10,56 @@ If you are browsing the repository for the first time, read this file before any
 
 1. [../README.md](../README.md)
 2. [README.ja.md](README.ja.md) if the operators or judges need Japanese guidance
-3. [workspace-isolation.md](workspace-isolation.md)
-4. [../02-run-a-trial/README.md](../02-run-a-trial/README.md)
-5. [../03-reference/README.md](../03-reference/README.md)
+3. [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
+4. [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
+5. [workspace-isolation.md](workspace-isolation.md)
+6. [../02-run-a-trial/README.md](../02-run-a-trial/README.md)
+7. [../03-reference/README.md](../03-reference/README.md)
 
 ## Folder Map
 
 - `../01-start-here/`: first-time adoption and environment setup
 - `../02-run-a-trial/`: live execution guidance and preflight checks
-- `../03-reference/`: stable rules and lessons learned
+- `../03-reference/`: generic topology, memory model, stable rules, and lessons learned
 - `../04-maintainers/`: release and publishing tasks
-- `../prompts/`: startup prompts for Commander and A.Shoulder
+- `../prompts/`: startup prompts for Commander and Shoulder threads
 - `../templates/`: copyable templates grouped by run phase
 
-## Standard Lower-Node Names
+## Standard Node IDs
 
-When the arm activates five finger lanes, use these names consistently:
+Use compact IDs that preserve the Arm relationship:
+
+- `A.Shoulder`
+- `A.Elbow`
+- `A.Thumb`
+- `A.Indy`
+- `A.Middy`
+- `A.Ringy`
+- `A.Pinky`
+
+When an arm activates five finger lanes, use these local finger names consistently:
 
 - `Thumb`
-- `Inddy`
+- `Indy`
 - `Middy`
 - `Ringy`
 - `Pinky`
 
 Use those names in task cards, file ownership, status updates, and handoff notes so the relationship between lanes stays visible.
+
+Names are identifiers, not fixed roles. A node may explore, verify, integrate, or implement depending on the current task.
+
+## Modes
+
+If you use mode labels, treat them as explicit task emphasis rather than permanent classes.
+
+Common examples are:
+
+- `Explore`
+- `Verify`
+- `Integrate`
+
+These are examples, not a closed mandatory set.
 
 ## Recommended Options
 
@@ -67,17 +93,22 @@ git submodule update --init --recursive
 ## First 15 Minutes
 
 1. Decide where the reusable kit will live.
-2. Decide workspace isolation with [workspace-isolation.md](workspace-isolation.md).
-3. Set directory responsibilities with [../03-reference/directory-conventions.md](../03-reference/directory-conventions.md).
-4. Create the public brief from `../templates/01-setup/PUBLIC_TRIAL_BRIEF_TEMPLATE.md`.
-5. Start Commander with `../prompts/COMMANDER_THREAD_PROMPT.md`.
-6. If the user needs direct steering access, create a visible A.Shoulder thread with `../prompts/SHOULDER_THREAD_PROMPT.md`.
-7. Copy the live-run templates you need into the project workspace, not back into the kit itself.
+2. Define the active topology and node IDs with [../03-reference/agent-topology.md](../03-reference/agent-topology.md).
+3. Decide whether persistent personality files will be used with [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md).
+4. Decide workspace isolation with [workspace-isolation.md](workspace-isolation.md).
+5. Set directory responsibilities with [../03-reference/directory-conventions.md](../03-reference/directory-conventions.md).
+6. Create the mission brief from `../templates/01-setup/MISSION_BRIEF_TEMPLATE.md`.
+7. Create persistent behavior files from `../templates/01-setup/PERSONALITY_TEMPLATE.md` if your run uses them.
+8. Start Commander with `../prompts/COMMANDER_THREAD_PROMPT.md`.
+9. If the user needs direct steering access, create a visible Shoulder thread with `../prompts/SHOULDER_THREAD_PROMPT.md`.
+10. Copy the live-run templates you need into the project workspace, not back into the kit itself.
 
 ## Minimum Files To Start A New Trial
 
 Read first:
 
+- [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
+- [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
 - `../prompts/COMMANDER_THREAD_PROMPT.md`
 - [../02-run-a-trial/README.md](../02-run-a-trial/README.md)
 - [../03-reference/directory-conventions.md](../03-reference/directory-conventions.md)
@@ -85,7 +116,9 @@ Read first:
 
 Usually copy these into the new run:
 
-- `../templates/01-setup/PUBLIC_TRIAL_BRIEF_TEMPLATE.md`
+- `../templates/01-setup/MISSION_BRIEF_TEMPLATE.md`
+- `../templates/01-setup/PUBLIC_TRIAL_BRIEF_TEMPLATE.md` if the run is a comparative trial
+- `../templates/01-setup/PERSONALITY_TEMPLATE.md` if persistent behavior files are part of the run
 - `../templates/03-checkpoints/RUN_MONITOR_TEMPLATE.md`
 - `../templates/02-dispatch/COMMAND_DISPATCH_TEMPLATE.md`
 - `../templates/02-dispatch/SEND_READY_PROMPT_TEMPLATE.md`
@@ -110,8 +143,8 @@ your-project/
     coordination-kit/
   trial-ops/
   trial-runs/
-    team-a/
-    team-b/
+    arm-a/
+    arm-b/
 ```
 
 If the kit stays external:
@@ -127,7 +160,7 @@ your-project/
 
 - Treat the kit as reusable source material.
 - Keep run-specific files outside the kit.
-- If you improve the kit during a live trial, capture the idea and publish the kit update after judging unless a safety issue forces immediate change.
+- If you improve the kit during a live trial, capture the idea and publish the kit update after judgment unless a safety issue forces immediate change.
 
 ## Before Publishing Or Reusing Widely
 
@@ -137,8 +170,9 @@ your-project/
 
 ## Next Docs
 
+- Generic topology: [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
+- Memory and personality: [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
 - Live execution: [../02-run-a-trial/README.md](../02-run-a-trial/README.md)
 - Preflight check: [../02-run-a-trial/bootstrap-checklist.md](../02-run-a-trial/bootstrap-checklist.md)
 - Japanese onboarding: [README.ja.md](README.ja.md)
 - Standalone release prep: [../04-maintainers/publishing-checklist.md](../04-maintainers/publishing-checklist.md)
-

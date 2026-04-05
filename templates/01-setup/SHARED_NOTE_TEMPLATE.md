@@ -6,11 +6,13 @@
 ## Mission Snapshot
 
 - Mission: <short mission>
-- Trial priority: <what matters most>
+- Priority: <what matters most>
 - Topology in scope:
   - Commander
-  - A.Shoulder
-  - <Thumb / Inddy / Middy / Ringy / Pinky as needed>
+  - <A.Shoulder>
+  - <A.Elbow if used>
+  - <A.Thumb / A.Indy / A.Middy / A.Ringy / A.Pinky as needed>
+  - <B... if used>
 
 ## Source Documents
 
@@ -23,17 +25,19 @@
 
 - Commander
   - <files>
-- A.Shoulder
+- <A.Shoulder>
   - <files>
-- <Thumb>
+- <A.Elbow if used>
   - <files>
-- <Inddy>
+- <A.Thumb>
   - <files>
-- <Middy>
+- <A.Indy>
   - <files>
-- <Ringy>
+- <A.Middy>
   - <files>
-- <Pinky>
+- <A.Ringy>
+  - <files>
+- <A.Pinky>
   - <files>
 
 ## Shared Interfaces

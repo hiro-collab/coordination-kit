@@ -5,43 +5,34 @@ Use this during the live run. Commander owns this file.
 - Owner:
 - Readers:
 
-## Trial Setup
+## Run Setup
 
 - Date:
-- Public brief:
-- Common mission:
+- Mission brief:
+- Active topology:
 - Time budget:
 - Primary human language:
 - Official timezone:
 - Official clock owner:
 - Official start time:
-- Midpoint playable check:
-- Feature freeze:
-- Submission cutoff:
-- Judge pair:
-- Team A thread:
-- Team A workspace:
-- Team B thread:
-- Team B workspace:
+- Planned checkpoints:
 - Verification record path:
 - Language/onboarding checklist path:
 
-## Fairness Guardrails
+## Optional Comparative Guardrails
 
 - Same brief:
 - Same allowed tools:
 - Same timebox:
-- Same asset access:
-- Same judging rubric:
-- Cross-team visibility rule:
+- Same evaluation rubric:
+- Cross-lane visibility rule:
 
 ## Checkpoints
 
 ### T0 Bootstrap Complete
 
 - Official timestamp:
-- Team A status:
-- Team B status:
+- Active nodes:
 - Dispatches sent:
 - Shared blockers:
 - Commander action:
@@ -49,12 +40,9 @@ Use this during the live run. Commander owns this file.
 ### T1 Plan Locked
 
 - Official timestamp:
-- Team A chosen direction:
-- Team B chosen direction:
-- Midpoint playable definition fixed:
-- Player guidance location fixed:
+- Chosen direction by Arm:
 - Scope drift observed:
-- Fairness risk:
+- Integration risk:
 - Active owners for next phase:
 - Reminder scheduled before midpoint:
 - Commander action:
@@ -62,9 +50,8 @@ Use this during the live run. Commander owns this file.
 ### T2 Mid-Build
 
 - Official timestamp:
-- Team A progress:
-- Team B progress:
-- Live end-to-end run demonstrated:
+- Progress by Arm:
+- Live end-to-end state demonstrated:
 - Diverging assumptions:
 - Integration or execution risk:
 - Redistribution command sent:
@@ -73,15 +60,14 @@ Use this during the live run. Commander owns this file.
 - Verification record updated:
 - Commander action:
 
-### T3 Pre-Judge Handoff
+### T3 Pre-Handoff
 
 - Official timestamp:
-- Team A delivered artifact:
-- Team B delivered artifact:
+- Delivered artifact or state:
 - Known defects:
 - Launch method captured:
-- Judge-facing summary captured:
-- Team-local submission packet present:
+- Human-facing summary captured:
+- Local submission packet present:
 - Verification record complete:
 - Escalation needed before cutoff:
 - Missing evidence:
@@ -89,11 +75,10 @@ Use this during the live run. Commander owns this file.
 
 ## Escalations
 
-- <timestamp>: <team or global> | <issue> | <decision>
+- <timestamp>: <lane or global> | <issue> | <decision>
 
-## Ready For Judging
+## Ready For Sign-Off
 
 - Official stop time:
 - Freeze declared:
-- Scorecards prepared:
-- Residual fairness concerns:
+- Residual concerns:

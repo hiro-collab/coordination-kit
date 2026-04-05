@@ -4,12 +4,12 @@ Use this guide before any team starts writing files.
 
 ## Default Recommendation
 
-For most first trials, use separate team directories inside the current project root:
+For most first runs, use separate arm directories inside the current project root:
 
 ```text
 trial-runs/
-  team-a/
-  team-b/
+  arm-a/
+  arm-b/
 ```
 
 This is the safest starting point because:
@@ -31,13 +31,13 @@ Use git worktrees only if you need:
 
 1. Initialize git in the project root if the project is not already a repository.
 2. Commit the baseline kit and project files.
-3. Create one branch per trial team.
-4. Create worktrees under `./worktrees/team-a` and `./worktrees/team-b`.
+3. Create one branch per active Arm or execution lane.
+4. Create worktrees under `./worktrees/arm-a` and `./worktrees/arm-b`.
 
 ## Worktree Rules
 
 - never create worktrees above the current project root
-- one team gets one worktree and one writable root
+- one active Arm gets one worktree and one writable root
 - do not let teams share mutable files during the active run
 - update the coordination kit after the trial, not inside multiple active team worktrees mid-run
 

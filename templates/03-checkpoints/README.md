@@ -12,8 +12,8 @@ Read this folder in order:
 
 ## What Each File Is For
 
-- `RUN_MONITOR_TEMPLATE.md`: checkpoint log for scope, blockers, and fairness
+- `RUN_MONITOR_TEMPLATE.md`: checkpoint log for scope, blockers, and optional fairness checks
 - `POST_CHECKPOINT_REDISTRIBUTION_TEMPLATE.md`: visible reassignment after midpoint or new evidence
 - `INTERFACE_CONTRACT_FREEZE_TEMPLATE.md`: authoritative boundary note when lanes drift
 - `VERIFICATION_RECORD_TEMPLATE.md`: proof of what was actually played or tested
-- `LANGUAGE_AND_ONBOARDING_CHECKLIST_TEMPLATE.md`: judge-facing and player-facing language quality check
+- `LANGUAGE_AND_ONBOARDING_CHECKLIST_TEMPLATE.md`: direct human-facing language quality check

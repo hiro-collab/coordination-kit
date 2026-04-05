@@ -1,6 +1,6 @@
 # Handoff Templates
 
-Use these files near the end of a run when teams must submit, judge, and sign off with visible evidence.
+Use these files near the end of a run when participants must submit, evaluate, and sign off with visible evidence.
 
 Read this folder in order:
 
@@ -12,8 +12,8 @@ Read this folder in order:
 
 ## What Each File Is For
 
-- `SUBMISSION_PACKET_TEMPLATE.md`: team-local submission draft before the final board update
+- `SUBMISSION_PACKET_TEMPLATE.md`: local submission draft before the final board update
 - `FINAL_HANDOFF_TEMPLATE.md`: explicit final handoff for launch method, cuts, and known defects
 - `COMMANDER_SIGNOFF_TEMPLATE.md`: Commander acceptance or rejection of the final state
-- `GAME_JUDGING_SCORECARD_TEMPLATE.md`: evidence-based judging form per team
+- `GAME_JUDGING_SCORECARD_TEMPLATE.md`: evidence-based judging form for comparative game trials
 - `KIT_RETROSPECTIVE_TEMPLATE.md`: post-run improvement capture for the kit itself

@@ -2,11 +2,20 @@
 
 - Owner:
 - Readers:
+- Persistence: ephemeral
+- Reset policy: replace or reset between tasks or sessions
 
 ## Node
 
 - Identity: <node id>
-- Role: <responsibility>
+- Current function: <current responsibility for this run>
+- Current mode or emphasis: <label; examples include Explore, Verify, Integrate>
+
+## Session Rule
+
+- This file is task-local context.
+- It must not be treated as persistent personality.
+- It must not automatically update any `PERSONALITY` file.
 
 ## Owned Scope
 
@@ -19,6 +28,14 @@
 ## Dependencies
 
 - <dependency>
+
+## Intermediate Results
+
+- <result>
+
+## Constraints
+
+- <constraint>
 
 ## Assumptions
 

@@ -9,21 +9,29 @@ Read this folder in order:
 
 ## When To Use Each Prompt
 
-- `COMMANDER_THREAD_PROMPT.md`: start here for the main coordination thread
-- `SHOULDER_THREAD_PROMPT.md`: use when A.Shoulder needs to be a visible thread or receive direct user instructions
+- `COMMANDER_THREAD_PROMPT.md`: start here for the top-level coordination thread
+- `SHOULDER_THREAD_PROMPT.md`: use when an Arm's Shoulder needs to be a visible thread or receive direct user instructions
 
-## Standard Finger Names
+## Standard Node IDs
 
-When A.Shoulder fans work out to five finger lanes, use:
+Use compact IDs that preserve hierarchy, for example:
 
-- `Thumb`
-- `Inddy`
-- `Middy`
-- `Ringy`
-- `Pinky`
+- `A.Shoulder`
+- `A.Elbow`
+- `A.Thumb`
+- `A.Indy`
+- `A.Middy`
+- `A.Ringy`
+- `A.Pinky`
+
+If an Arm uses five finger lanes, the local finger names are `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`.
+
+Names are identifiers, not fixed roles.
 
 ## Related Docs
 
 - [Start Here](../01-start-here/README.md)
+- [Agent Topology](../03-reference/agent-topology.md)
+- [Memory and Personality](../03-reference/memory-and-personality.md)
 - [Runbook](../02-run-a-trial/README.md)
 - [Templates](../templates/README.md)

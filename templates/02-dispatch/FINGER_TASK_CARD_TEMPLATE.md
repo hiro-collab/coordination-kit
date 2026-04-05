@@ -1,8 +1,8 @@
 # Finger Task Card Template
 
 ```text
-Node: <Thumb|Inddy|Middy|Ringy|Pinky or other node id>
-Mode: <Explore|Verify|Integrate or mixed emphasis>
+Node: <A.Thumb|A.Indy|A.Middy|A.Ringy|A.Pinky or other node id>
+Mode: <mode label; examples: Explore|Verify|Integrate>
 
 Mission:
 <one-paragraph mission slice>
@@ -27,6 +27,7 @@ Done Definition:
 
 Constraints:
 - do not change global scope
+- node names are identifiers, not fixed specializations
 - state assumptions explicitly
 - expose uncertainty instead of hiding it
 - escalate blockers early

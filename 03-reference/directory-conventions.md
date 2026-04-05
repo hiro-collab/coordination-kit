@@ -14,10 +14,10 @@ Related docs:
   - should not hold run-specific working files
 - `trial-ops/`
   - run-specific global operations files
-  - shared between Commander, user, and any team that needs global visibility
-- `trial-runs/team-*/`
-  - team-specific working files, code, handoff, and retrospective
-  - should not be treated as global reference by the competing team unless explicitly allowed
+  - shared between Commander, user, and any Arm that needs global visibility
+- `trial-runs/arm-*/`
+  - Arm-specific working files, code, handoff, and retrospective
+  - should not be treated as global reference by other Arms unless explicitly allowed
 
 ## File Metadata
 

@@ -16,4 +16,6 @@ Read this folder in order:
 
 ## Standard Finger Names
 
-When five finger lanes are active, name them `Thumb`, `Inddy`, `Middy`, `Ringy`, and `Pinky`.
+When five finger lanes are active, name them `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`.
+
+Use compact node IDs such as `A.Thumb`, `A.Indy`, and `B.Shoulder` when reporting or assigning work.
