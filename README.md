@@ -6,6 +6,8 @@ Use this when one human or top-level coordinator needs to run several agent lane
 
 This repository is not a workflow engine, distributed runtime, or graph DSL. It gives you prompts, templates, and runbook rules for coordinating real work in visible files.
 
+English comes first in this file. A Japanese mirror appears later in the same document.
+
 The default concept is generic:
 
 - Commander coordinates across one or more Arms.
@@ -31,7 +33,7 @@ The default front-door example is a scoped software delivery run:
 - `Arm B` verifies acceptance criteria and prepares docs or handoff notes.
 - Lower nodes such as `A.Indy`, `A.Middy`, and `B.Thumb` execute concrete subtasks and report through visible files.
 
-See [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for the concrete walk-through and [01-start-here/reference-use-case.ja.md](01-start-here/reference-use-case.ja.md) for the Japanese version.
+See [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for the concrete walk-through. The same file includes a Japanese section after the English section.
 
 ## Best Fits
 
@@ -50,10 +52,8 @@ Competitive browser-game trials are still supported, but they are now one profil
 
 ## Start Here
 
-- English onboarding: [01-start-here/README.md](01-start-here/README.md)
-- Reference use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
-- 日本語案内: [01-start-here/README.ja.md](01-start-here/README.ja.md)
-- 日本語の代表例: [01-start-here/reference-use-case.ja.md](01-start-here/reference-use-case.ja.md)
+- Bilingual onboarding: [01-start-here/README.md](01-start-here/README.md)
+- Bilingual reference use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
 - Git usage recommendation: [01-start-here/git-usage.md](01-start-here/git-usage.md)
 - Generic runbook: [02-runbook/README.md](02-runbook/README.md)
 - Topology and naming: [03-reference/agent-topology.md](03-reference/agent-topology.md)
@@ -96,7 +96,7 @@ coordination-kit/
 
 1. Read [01-start-here/README.md](01-start-here/README.md).
 2. Read the front-door example in [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md).
-3. If needed, share [01-start-here/README.ja.md](01-start-here/README.ja.md) and [01-start-here/reference-use-case.ja.md](01-start-here/reference-use-case.ja.md) with Japanese-speaking operators or reviewers.
+3. If Japanese guidance is needed, continue to the Japanese sections in those same files.
 4. Choose the Git placement pattern with [01-start-here/git-usage.md](01-start-here/git-usage.md).
 5. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
 6. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
@@ -125,3 +125,59 @@ If you publish this kit as its own repository:
 1. Keep this directory as the repository root.
 2. Keep run-specific artifacts outside this repository.
 3. Review [04-maintainers/publishing-checklist.md](04-maintainers/publishing-checklist.md) before release.
+
+## Japanese
+
+`coordination-kit` は、見える multi-agent 運用のための documentation-first operating kit です。
+
+1 人の人間または上位 coordinator が、同じ task に対して複数の agent lane を走らせたいときに使います。
+runtime や workflow engine ではなく、prompt、template、runbook rule を visible file ベースで組み立てるためのキットです。
+
+### このキットが何か
+
+- human-supervised multi-agent run のための再利用可能な coordination layer
+- handoff、verification、sign-off を visible file で回す operating model
+- 再利用する policy と run ごとの writable state を分けるための構成
+
+### 代表ユースケース
+
+入口の標準例は、スコープを絞ったソフトウェア変更です。
+
+- `Commander` が mission と最終統合を持つ
+- `Arm A` が実装を進める
+- `Arm B` が acceptance criteria の確認と docs / handoff note を担当する
+- `A.Indy` や `B.Thumb` のような lower node が visible file 経由で具体タスクを進める
+
+詳しくは [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) を見てください。
+同じファイルの後半に日本語の代表例があります。
+
+### 向いている場面
+
+- 1 人の operator が複数の visible agent lane を監督する AI-assisted software delivery
+- 明示的な handoff と integration が必要な multi-arm exploration や comparison run
+- prompt だけでは足りず、auditability が必要な human-in-the-loop workflow
+
+browser-game の competitive trial も扱えますが、それは optional profile です。標準の前提ではありません。
+
+### 向いていない場面
+
+- `Temporal` や `Airflow` のような workflow scheduler の代わり
+- `Ray` のような compute runtime
+- `LangGraph` のような graph execution framework
+- handoff や verification が不要な小さな 1-thread task
+
+### 最初に読む順番
+
+1. [01-start-here/README.md](01-start-here/README.md)
+2. [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
+3. [03-reference/agent-topology.md](03-reference/agent-topology.md)
+4. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
+5. [02-runbook/README.md](02-runbook/README.md)
+
+### コアルール
+
+- 上位 node が分解と統合を持ち、下位 node が実行する
+- Arm 名や Finger 名で役割を固定しない
+- reusable kit file と run-specific writable file を分ける
+- `PERSONALITY` と `WORKING_MEMORY` を分ける
+- visible artifact を handoff、verification、sign-off の基準にする

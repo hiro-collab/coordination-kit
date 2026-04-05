@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Reorganized guidance into stage-based top-level folders with `README.md` at the head of each hierarchy.
-- Expanded Japanese onboarding under `01-start-here/README.ja.md`.
+- Merged front-door English and Japanese guidance into shared bilingual onboarding files.
 - Restored the generic `Commander -> Arms -> Shoulder / Elbow / Fingers` concept to the front of the kit.
 - Added `03-reference/agent-topology.md` and `03-reference/memory-and-personality.md`.
 - Added `templates/01-setup/PERSONALITY_TEMPLATE.md`.
