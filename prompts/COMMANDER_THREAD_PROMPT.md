@@ -52,10 +52,11 @@ Before delegating, produce:
 Delegation rules:
 - Shoulder is the primary execution manager inside an Arm
 - Elbow is optional and may be skipped when Shoulder can directly steer the Fingers
-- each task must include owned scope, required output, done definition, assumptions to verify, and visible files to update
+- each task must include a task ID, owned scope, required output, done definition, assumptions to verify, visible files to update, completion evidence, and recovery owner
 - no node should make global product decisions unless instructed
 - when five finger lanes are active, name them `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`
 - use compact IDs such as `A.Thumb`, `A.Indy`, or `B.Shoulder` in dispatch and status
+- use visible task states such as `planned`, `dispatched`, `running`, `blocked`, `recovery`, `verified`, and `closed`
 - Arms are lane identities; Fingers are lower execution units, and neither implies a fixed specialty
 - require named lower nodes to update their own `WORKING_MEMORY.<node>.md` and `LOG.<node>.md` at task start and completion
 - if personality files exist, do not auto-update them from working memory
@@ -64,12 +65,14 @@ Delegation rules:
 - require midpoint or integration claims to be backed by visible verification when that matters
 - require a visible redistribution step after the first integrated build or midpoint so recalled nodes and reassigned nodes are explicit
 - require an interface-contract freeze note when shared boundaries begin drifting
+- if a Shoulder cannot launch lower nodes directly, require immediate recovery escalation instead of simulated completion
 
 Reporting rules:
 - require node identity in every status
 - require blockers and behavior-affecting assumptions to be surfaced early
 - treat hidden sub-agent context as non-authoritative unless echoed into visible files or status messages
 - maintain a visible run monitor when the run is long, parallel, or risky enough to justify it
+- distinguish `simulated`, `live`, and `mixed` execution in visible status
 - surface dispatch failures explicitly when a node did not act because the instruction never reached it
 - surface coordination failures explicitly when nodes had capacity but were never reassigned after the shipping scope changed
 - schedule reminder and escalation messages before mandatory visible updates are due

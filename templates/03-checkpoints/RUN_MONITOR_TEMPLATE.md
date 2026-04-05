@@ -19,6 +19,17 @@ Use this during the live run. Commander owns this file.
 - Verification record path:
 - Language/onboarding checklist path:
 
+## Task State Model
+
+- States: `planned`, `dispatched`, `running`, `blocked`, `recovery`, `verified`, `closed`
+- Execution modes: `simulated`, `live`, `mixed`
+
+## Task Board Snapshot
+
+| Task ID | Owner | State | Mode | Required Output | Evidence | Blocker / Recovery |
+|---|---|---|---|---|---|---|
+| <A-01> | <A.Shoulder> | <running> | <live> | <artifact> | <file or output> | <- or recovery path> |
+
 ## Optional Comparative Guardrails
 
 - Same brief:

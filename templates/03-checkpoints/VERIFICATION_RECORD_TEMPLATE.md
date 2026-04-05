@@ -14,8 +14,17 @@ Checkpoint:
 Verifier:
 - <who ran it>
 
+Execution Mode:
+- <simulated|live|mixed>
+
 Launch Method Used:
 - <how the build was launched>
+
+Evidence Source:
+- <node-local files|live sub-agent output|human run|mixed>
+
+Verified Against:
+- <task card|acceptance checklist|other visible source>
 
 What Was Tested:
 - <end-to-end flow, launch, restart, handoff path, onboarding, layout fit, other>
@@ -28,6 +37,9 @@ End-To-End Evidence:
 
 Known Defects Seen During Verification:
 - <defect>
+
+Recovery Used:
+- <none|Commander recovery|other>
 
 Required Follow-Up:
 - <who should change what>

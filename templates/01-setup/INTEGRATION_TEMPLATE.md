@@ -24,6 +24,8 @@ Commander owns this file.
 - [ ] Post-checkpoint redistribution was written visibly and sent explicitly.
 - [ ] Any drifting shared boundary was frozen in a visible interface-contract note.
 - [ ] Verification records exist for midpoint and pre-handoff claims when those claims matter.
+- [ ] Active work is tracked with visible task states such as `planned`, `running`, `blocked`, `recovery`, `verified`, or `closed`.
+- [ ] Simulated progress and live executed progress are distinguished when both appear in the run.
 - [ ] Language, onboarding, or reviewer-facing checks are visible when the run has human-facing materials.
 - [ ] Local submission packet exists before final handoff when formal handoff is used.
 - [ ] Final handoff includes current state, known defects, launch or use method, review focus, and explicit cuts where relevant.

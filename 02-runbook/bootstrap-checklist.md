@@ -10,6 +10,7 @@ Related docs:
 
 ## Project Files
 
+- [ ] A dedicated isolated run directory exists before any live run files are created.
 - [ ] `AGENTS.md` exists and states the topology and responsibility split, or an equivalent visible topology note exists.
 - [ ] Active node IDs are fixed, for example `A.Shoulder`, `A.Indy`, `B.Thumb`.
 - [ ] Directory responsibilities are clear for global ops files, Arm files, and reusable assets.
@@ -30,11 +31,14 @@ Related docs:
 - [ ] Commander thread is active.
 - [ ] A visible Shoulder thread exists if direct user interaction is required.
 - [ ] The active Shoulder or lane lead has authority to spawn and steer lower nodes.
+- [ ] The active Shoulder has probed whether lower-node live spawn works in this execution path, or a Commander recovery path is already fixed.
 - [ ] Commander retains mission scope and final sign-off.
 - [ ] Required read-and-act instructions have been sent explicitly to the correct node.
 
 ## Before Parallel Execution
 
+- [ ] The run uses one visible task-state vocabulary: `planned`, `dispatched`, `running`, `blocked`, `recovery`, `verified`, `closed`.
+- [ ] The run uses one visible execution-mode vocabulary: `simulated`, `live`, or `mixed`.
 - [ ] Shared interfaces are written down in `SHARED_NOTE.md`.
 - [ ] File ownership is written down in `SHARED_NOTE.md`.
 - [ ] Lower-node names are treated as identifiers, not fixed specializations.
@@ -58,6 +62,7 @@ Related docs:
 
 - [ ] Monitoring checkpoints are scheduled.
 - [ ] Commander records blockers and behavior-affecting assumption changes in `RUN_MONITOR.md`.
+- [ ] Simulated progress and live executed progress are not mixed in one completion claim.
 - [ ] Dispatch failures are surfaced quickly if a node did not act because no explicit instruction reached it.
 - [ ] Collaboration quality is watched: each active node should have meaningful work and a visible handoff path.
 

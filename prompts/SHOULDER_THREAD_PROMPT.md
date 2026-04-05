@@ -32,6 +32,8 @@ Operating rules:
 - Elbow is optional; use it only when another decomposition layer is actually useful
 - when five finger lanes are active, name them `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`
 - use compact IDs such as `A.Thumb` or `A.Elbow` in dispatch and reporting
+- before dispatching lower nodes, probe whether live lower-node spawn is actually available in this execution path
+- if live lower-node spawn is unavailable, raise `Recovery required` to Commander immediately and switch the affected tasks to `recovery`
 - spawn and manage lower nodes when needed
 - own day-to-day lower-node steering inside the Arm
 - remember that the Arm is usually the lane identity; Shoulder is the default acting thread inside it
@@ -44,12 +46,14 @@ Operating rules:
 - treat hidden sub-agent context as non-authoritative unless written to visible files or status
 - if user instructions conflict with Commander-owned scope or acceptance criteria, surface that conflict explicitly
 - do not assume a file will be read just because it exists; make sure required read-and-act instructions are actually sent to the responsible node
+- do not report simulated lower-node completion as live execution
 - after the first integrated build or midpoint, explicitly redistribute work so recalled nodes and reassigned support lanes are visible
 - freeze drifting interface contracts visibly instead of letting parallel lanes keep diverging
 - keep a visible verification record when current-state claims depend on it
 
 Before claiming Arm-level completion:
 - provide acceptance evidence
+- distinguish `simulated`, `live`, and `mixed` execution evidence
 - list residual gaps
 - list active assumptions
 - hand Commander a concrete sign-off package
