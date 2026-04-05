@@ -14,16 +14,33 @@ In one paragraph: `coordination-kit` is a visible operating model for multi-team
 
 ## How To Use First
 
-Use the kit like this:
+Put `coordination-kit` next to your project as a sibling directory.
+That is the safest default.
 
-1. Name one `Commander` and one or more `Arm` team lanes.
-2. Give `Commander` the mission, scope boundary, and final sign-off responsibility.
-3. Inside each Arm, appoint a `Shoulder`. Add an `Elbow` only when that Arm needs another coordination layer.
-4. Dispatch concrete work to lower nodes through visible files. A file by itself is storage, not instruction.
-5. Keep stable behavior policy in `PERSONALITY`, run-local facts in `WORKING_MEMORY`, and shared run truth in mission, integration, verification, and handoff files.
-6. Let `Shoulder` coordinate inside one Arm, let `Commander` rebalance across Arms, and let `Commander` own the final integration and sign-off.
+```text
+workspace/
+  coordination-kit/
+  your-project/
+```
 
-If you cannot explain your run in these six steps, the run is still underspecified.
+Then open both directories in a file-aware AI coding system such as Codex or Claude Code, and say something like:
+
+```text
+Use coordination-kit as the coordination method for this project.
+You are Commander.
+Create Arm A and Arm B as team lanes.
+Set up visible mission, working-memory, integration, verification, and handoff files.
+Keep ownership explicit and do not sign off until the final integration is complete.
+```
+
+What you get:
+
+- parallel AI lanes without losing ownership
+- visible handoff and verification instead of hidden context
+- one clear place for integration and final sign-off
+- easier mid-run rebalancing when one lane stalls or drifts
+
+If the kit must live inside the project repository, use a Git submodule instead of a plain nested clone.
 
 The default concept is generic:
 
@@ -182,16 +199,33 @@ runtime や workflow engine ではなく、prompt、template、runbook rule を 
 
 ### 最初の使い方
 
-この kit は、次の 6 ステップで使います。
+まず `coordination-kit` を project の横に sibling directory として置きます。
+これがいちばん安全な既定です。
 
-1. まず `Commander` を 1 人決め、必要な数だけ `Arm` という team lane を置く
-2. `Commander` に mission、scope boundary、最終 sign-off responsibility を持たせる
-3. 各 Arm の中に `Shoulder` を置き、もう 1 段の調整役が必要なときだけ `Elbow` を置く
-4. 下位 node には visible file 経由で具体タスクを dispatch する。ファイルを置いただけでは instruction にならない
-5. 安定した振る舞い policy は `PERSONALITY`、run ごとの事実は `WORKING_MEMORY`、shared truth は mission、integration、verification、handoff file に分ける
-6. Arm 内の調整は `Shoulder`、Arm 間の再配分と最終統合は `Commander` が持つ
+```text
+workspace/
+  coordination-kit/
+  your-project/
+```
 
-この 6 ステップで説明しきれない run は、まだ設計が曖昧です。
+そのうえで、Codex や Claude Code のような file-aware AI coding system に、たとえば次のように伝えます。
+
+```text
+この project では coordination-kit を coordination method として使う。
+あなたは Commander として動く。
+Arm A と Arm B を team lane として立てる。
+mission、working-memory、integration、verification、handoff の visible file を用意する。
+ownership を明示し、最終統合が終わるまで sign-off しない。
+```
+
+この kit を使うと、次の利点があります。
+
+- AI を並列で動かしても ownership が崩れにくい
+- handoff や verification が hidden context ではなく visible file になる
+- integration と final sign-off の責任者が明確になる
+- 途中で lane が詰まっても再配分しやすい
+
+もし kit を project repository の中に置く必要があるなら、plain な nested clone ではなく Git submodule を使うのが安全です。
 
 ### 階層の見え方
 
