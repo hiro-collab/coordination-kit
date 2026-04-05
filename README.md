@@ -77,10 +77,21 @@ Competitive browser-game trials are still supported, but they are now one profil
 
 ## What This Is Not
 
-- not a replacement for `Temporal`, `Airflow`, or other workflow schedulers
-- not a compute runtime such as `Ray`
-- not a graph execution framework such as `LangGraph`
+- not an execution engine that runs jobs, retries, or background workflows for you
+- not a distributed compute runtime that spreads code across machines
+- not an agent-graph runtime that executes a graph for you
 - not the right tool for a tiny one-thread task with no handoff or verification pressure
+
+### Nearby Tools At Other Layers
+
+If you know these tools, the rough comparison is:
+
+- `Temporal` or `Airflow`: workflow schedulers that run and track background flows
+- `Ray`: a distributed compute runtime for parallel execution
+- `LangGraph`: a graph-shaped runtime for agent flows
+- `coordination-kit`: a visible coordination layer for humans and agents working across multiple lanes
+
+So yes, similar tools exist nearby, but they solve a different layer of the problem. This kit is about structure, visibility, handoff, and responsibility, not job execution.
 
 ## Start Here
 
@@ -224,10 +235,21 @@ browser-game の competitive trial も扱えますが、それは optional profi
 
 ### 向いていない場面
 
-- `Temporal` や `Airflow` のような workflow scheduler の代わり
-- `Ray` のような compute runtime
-- `LangGraph` のような graph execution framework
+- job 実行、retry、background workflow 実行そのものを任せたい場合
+- 分散 compute runtime としてコードを複数 machine に投げたい場合
+- agent graph をそのまま実行する runtime を探している場合
 - handoff や verification が不要な小さな 1-thread task
+
+### 近いレイヤーのツール
+
+近い領域には、たとえば次のようなツールがあります。
+
+- `Temporal` や `Airflow`: background workflow を実行して追跡する workflow scheduler
+- `Ray`: 並列実行や分散実行のための compute runtime
+- `LangGraph`: graph 形状の agent flow を動かす runtime
+- `coordination-kit`: human と agent が複数 lane で動くときの visible coordination layer
+
+つまり、近い問題を扱うツールはありますが、この kit が担当するのは job 実行ではなく、構造、可視化、handoff、責任分担です。
 
 ### 最初に読む順番
 
