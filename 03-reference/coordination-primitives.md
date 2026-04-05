@@ -231,7 +231,7 @@ Use this file together with:
 
 - [agent-topology.md](agent-topology.md) for hierarchy and naming
 - [memory-and-personality.md](memory-and-personality.md) for persistent versus disposable state
-- [directory-conventions.md](directory-conventions.md) for where each artifact should live
+- [../01-start-here/project-placement.md](../01-start-here/project-placement.md) for where shared and lane-local artifacts should live
 - [../02-runbook/README.md](../02-runbook/README.md) for the execution sequence
 
 ## Japanese
@@ -463,5 +463,5 @@ sign-off には少なくとも次が必要です。
 
 - [agent-topology.md](agent-topology.md): hierarchy と naming
 - [memory-and-personality.md](memory-and-personality.md): persistent state と disposable state の分離
-- [directory-conventions.md](directory-conventions.md): artifact をどこに置くか
+- [../01-start-here/project-placement.md](../01-start-here/project-placement.md): shared artifact と lane-local artifact をどこに置くか
 - [../02-runbook/README.md](../02-runbook/README.md): 実行順序と運用手順

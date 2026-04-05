@@ -5,10 +5,8 @@ Use this before starting a new coordination run.
 Related docs:
 
 - [Runbook](README.md)
-- [Agent Topology](../03-reference/agent-topology.md)
-- [Memory and Personality](../03-reference/memory-and-personality.md)
-- [Directory Conventions](../03-reference/directory-conventions.md)
-- [Workspace Isolation](../01-start-here/workspace-isolation.md)
+- [Project Placement And Boundaries](../01-start-here/project-placement.md)
+- [AI / System Reference](../03-reference/README.md)
 
 ## Project Files
 

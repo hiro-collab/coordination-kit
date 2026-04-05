@@ -1,79 +1,71 @@
-# Reference
+# AI And System Reference
 
-Use this folder after you already understand the front-door use case and need the stable rules behind the kit.
+Use this folder after the user-facing adoption path already makes sense.
 
-For a user, this folder answers questions like:
-
-- "What lane structure am I asking the AI to create?"
-- "Which file is the source of truth?"
-- "What is stable policy and what is disposable run memory?"
+Most users do not need to read this folder to get started. This folder is for advanced operators, prompt authors, and AI systems that need the stable rules behind the kit.
 
 English comes first in this file. A Japanese mirror appears later in the same document.
 
 ## Open This Folder When
 
-- the quick-start flow already makes sense, but you want the stable rules
-- you need to settle a naming, topology, or authority dispute
-- you want to understand why the kit separates protocol, state, and policy
+- the quick-start flow already makes sense, but you need the fixed rules
+- you need to settle a topology, naming, authority, or memory dispute
+- you are tuning prompts, templates, or multi-lane operating rules
 
 ## Read In This Order
 
 1. [agent-topology.md](agent-topology.md)
 2. [coordination-primitives.md](coordination-primitives.md)
 3. [memory-and-personality.md](memory-and-personality.md)
-4. [directory-conventions.md](directory-conventions.md)
-5. [lessons-learned.md](lessons-learned.md)
+4. [lessons-learned.md](lessons-learned.md)
 
 ## Which File Answers Which Question
 
-- `agent-topology.md`: "What stable lane structure and naming system should this run use?"
-- `coordination-primitives.md`: "How does work move, where is visible truth stored, and who decides?"
+- `agent-topology.md`: "What lane structure and naming system should exist?"
+- `coordination-primitives.md`: "How does work move, where is visible truth, and who decides?"
 - `memory-and-personality.md`: "What should stay stable across runs, and what should stay disposable?"
-- `directory-conventions.md`: "Where should these files live, and who is supposed to read them?"
-- `lessons-learned.md`: "What operating rules have already been learned from real runs?"
+- `lessons-learned.md`: "What rules were learned from real runs and kept?"
 
 ## Related Docs
 
 - [Start Here](../01-start-here/README.md)
 - [Reference Use Case](../01-start-here/reference-use-case.md)
+- [Project Placement And Boundaries](../01-start-here/project-placement.md)
 - [Runbook](../02-runbook/README.md)
+- [Prompts](../prompts/README.md)
 - [Templates](../templates/README.md)
 
 ## Japanese
 
-このフォルダは、入口のユースケースを読んだあとに、この kit の固定ルールを確認したいときに開くための索引です。
+このフォルダは、user-facing な導入経路を読んだあとに開く AI / system reference です。
 
-ユーザー目線では、たとえば次の疑問に答えるために使います。
-
-- 「AI にどんな lane 構造を作らせる前提なのか」
-- 「どのファイルが source of truth なのか」
-- 「何が stable policy で、何が run ごとの disposable memory なのか」
+多くの user は、開始時点ではこのフォルダを読まなくても構いません。ここは、advanced operator、prompt author、AI system が固定ルールを確認するときのための資料です。
 
 ## このフォルダを開くタイミング
 
-- quick-start の流れは分かったが、固定ルールを確認したい
-- naming、topology、authority で迷いが出た
-- protocol / state / policy をどう分けるのか確かめたい
+- quick-start は分かったが、固定ルールを確認したい
+- topology、naming、authority、memory で迷いが出た
+- prompt、template、multi-lane rule を調整したい
 
 ## 読む順番
 
 1. [agent-topology.md](agent-topology.md)
 2. [coordination-primitives.md](coordination-primitives.md)
 3. [memory-and-personality.md](memory-and-personality.md)
-4. [directory-conventions.md](directory-conventions.md)
-5. [lessons-learned.md](lessons-learned.md)
+4. [lessons-learned.md](lessons-learned.md)
 
 ## どの疑問ならどのファイルか
 
 - `agent-topology.md`: 「どの lane 構造と naming system を前提にするか」
 - `coordination-primitives.md`: 「仕事がどう動き、visible truth がどこにあり、誰が決めるか」
-- `memory-and-personality.md`: 「何を run をまたいで残し、何を task ごとに捨てるか」
-- `directory-conventions.md`: 「ファイルをどこに置き、誰に読ませるか」
-- `lessons-learned.md`: 「実運用から何を固定ルールとして学んだか」
+- `memory-and-personality.md`: 「何を run をまたいで残し、何を disposable にするか」
+- `lessons-learned.md`: 「実運用から学んで固定したルールは何か」
 
 ## 関連ドキュメント
 
 - [Start Here](../01-start-here/README.md)
 - [Reference Use Case](../01-start-here/reference-use-case.md)
+- [Project Placement And Boundaries](../01-start-here/project-placement.md)
 - [Runbook](../02-runbook/README.md)
+- [Prompts](../prompts/README.md)
 - [Templates](../templates/README.md)

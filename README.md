@@ -153,15 +153,11 @@ So yes, similar tools exist nearby, but they solve a different layer of the prob
 
 ## Reference Map
 
-- Onboarding: [01-start-here/README.md](01-start-here/README.md)
+- User guide: [01-start-here/README.md](01-start-here/README.md)
 - Concrete use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
-- Git placement guidance: [01-start-here/git-usage.md](01-start-here/git-usage.md)
-- Workspace layout: [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md)
+- Project placement and boundaries: [01-start-here/project-placement.md](01-start-here/project-placement.md)
 - Live operation runbook: [02-runbook/README.md](02-runbook/README.md)
-- Topology and naming: [03-reference/agent-topology.md](03-reference/agent-topology.md)
-- Protocol, state, and policy: [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)
-- Memory and personality: [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-- Lessons learned: [03-reference/lessons-learned.md](03-reference/lessons-learned.md)
+- AI / system reference: [03-reference/README.md](03-reference/README.md)
 - Prompt assets: [prompts/README.md](prompts/README.md)
 - Template assets: [templates/README.md](templates/README.md)
 - Maintainer docs: [04-maintainers/README.md](04-maintainers/README.md)
@@ -181,9 +177,9 @@ coordination-kit/
   README.md
 ```
 
-- `01-start-here/` is for first-time adoption and workspace setup.
+- `01-start-here/` is for user-facing adoption and project setup.
 - `02-runbook/` is for live execution.
-- `03-reference/` holds the generic topology, memory model, stable rules, and lessons learned.
+- `03-reference/` holds AI / system rules such as topology, protocol, memory, and lessons learned.
 - `04-maintainers/` is for release and publishing work.
 - `prompts/` contains startup prompts for Commander and active Shoulder threads.
 - `templates/` contains reusable coordination files grouped by run phase.

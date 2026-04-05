@@ -30,11 +30,8 @@ If those five things are not true yet, the run is not ready.
 
 - [Getting Started](../01-start-here/README.md)
 - [Reference Use Case](../01-start-here/reference-use-case.md)
-- [Agent Topology](../03-reference/agent-topology.md)
-- [Coordination Primitives](../03-reference/coordination-primitives.md)
-- [Memory and Personality](../03-reference/memory-and-personality.md)
-- [Workspace Isolation](../01-start-here/workspace-isolation.md)
-- [Directory Conventions](../03-reference/directory-conventions.md)
+- [Project Placement And Boundaries](../01-start-here/project-placement.md)
+- [AI / System Reference](../03-reference/README.md)
 
 ## Quick Flow
 
