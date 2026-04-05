@@ -112,45 +112,24 @@ For read-aloud team names, many runs treat `A / B / C / D` as call-sign style Ar
 
 The structure is intentionally stage-based: at every directory level, the first file to read is `README.md` in that directory.
 
-## What This Is
-
-- a reusable coordination layer for human-supervised multi-agent runs
-- a visible-file operating model for prompts, handoff, verification, and sign-off
-- a protocol/state/policy model for explicit multi-lane coordination
-- a way to keep reusable policy separate from run-local writable state
-
-## Canonical Example
-
-The default front-door example is a scoped software delivery run.
-
-Typical user intent:
-
-- "Add a feature, keep the API stable, and let AI work in parallel."
-
-Typical first result:
-
-- one lane starts implementation-heavy work
-- another lane starts verification, docs, or handoff-heavy work
-- the user can still see who owns scope, what is blocked, and who may sign off
-
-See [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for the concrete walk-through. The same file includes a Japanese section after the English section.
-
-## Best Fits
+## Good Fit
 
 - AI-assisted software delivery where one operator supervises multiple visible agent lanes
-- multi-arm exploration or comparison runs where you need explicit handoff and integration
-- human-in-the-loop workflows where prompts alone are not enough and auditability matters
+- multi-arm exploration or comparison runs where explicit handoff and integration matter
+- human-in-the-loop work where prompts alone are not enough and visible evidence is required
 
-Competitive browser-game trials are still supported, but they are now one profile, not the default concept.
+If you want one concrete scenario, open [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md).
 
-## What This Is Not
+Competitive browser-game trials are still supported, but they are one profile, not the default concept.
+
+## Not This
 
 - not an execution engine that runs jobs, retries, or background workflows for you
 - not a distributed compute runtime that spreads code across machines
 - not an agent-graph runtime that executes a graph for you
 - not the right tool for a tiny one-thread task with no handoff or verification pressure
 
-### Nearby Tools At Other Layers
+## Nearby Tools At Other Layers
 
 If you know these tools, the rough comparison is:
 
@@ -314,29 +293,22 @@ Commander
 
 会話上は `A / B / C / D` を、`Alpha / Blabo / Charlie / Delta` のような team callsign として読むとイメージしやすいです。
 
-### このキットが何か
+### 向いている場面
 
-- human-supervised multi-agent run のための再利用可能な coordination layer
-- handoff、verification、sign-off を visible file で回す operating model
-- 再利用する policy と run ごとの writable state を分けるための構成
+- 1 人の operator が複数の visible agent lane を監督する AI-assisted software delivery
+- 明示的な handoff と integration が必要な multi-arm exploration や comparison run
+- prompt だけでは足りず、auditability が必要な human-in-the-loop workflow
 
-### 代表ユースケース
+具体例が欲しいときは [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) を開いてください。
 
-入口の標準例は、スコープを絞ったソフトウェア変更です。
+browser-game の competitive trial も扱えますが、それは optional profile です。標準の前提ではありません。
 
-ユーザーの典型的な意図:
+### 向いていない場面
 
-- 「機能追加はしたいが、API は壊したくない」
-- 「AI を並列で動かしたいが、最後の責任は 1 か所に残したい」
-
-最初に起きることの典型:
-
-- ある lane で実装寄りの作業が進む
-- 別の lane で検証、docs、handoff 寄りの作業が進む
-- ユーザーは scope、blocker、sign-off 権限を visible file で追える
-
-詳しくは [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) を見てください。
-同じファイルの後半に日本語の代表例があります。
+- job 実行、retry、background workflow 実行そのものを任せたい場合
+- 分散 compute runtime としてコードを複数 machine に投げたい場合
+- agent graph をそのまま実行する runtime を探している場合
+- handoff や verification が不要な小さな 1-thread task
 
 ### protocol / state / policy
 
@@ -347,21 +319,6 @@ Commander
 - `policy`: 誰が何を決める authority を持つか
 
 まとまった説明は [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md) に置いてあります。
-
-### 向いている場面
-
-- 1 人の operator が複数の visible agent lane を監督する AI-assisted software delivery
-- 明示的な handoff と integration が必要な multi-arm exploration や comparison run
-- prompt だけでは足りず、auditability が必要な human-in-the-loop workflow
-
-browser-game の competitive trial も扱えますが、それは optional profile です。標準の前提ではありません。
-
-### 向いていない場面
-
-- job 実行、retry、background workflow 実行そのものを任せたい場合
-- 分散 compute runtime としてコードを複数 machine に投げたい場合
-- agent graph をそのまま実行する runtime を探している場合
-- handoff や verification が不要な小さな 1-thread task
 
 ### 近いレイヤーのツール
 

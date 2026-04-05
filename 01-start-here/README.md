@@ -19,36 +19,6 @@ English comes first in this file. A Japanese mirror appears later in the same do
 
 Use the root `README.md` instruction block first, then confirm the project-side checks in this file.
 
-## Use This Kit When
-
-- one person or one top-level thread must supervise several agent lanes on the same task
-- prompts alone are no longer enough and you need explicit files for handoff, verification, and integration
-- you want reusable coordination assets that can be applied across many project runs
-
-## Avoid It When
-
-- one user and one agent can finish the task directly with no coordination overhead
-- you are looking for a workflow engine, scheduler, or compute runtime
-- your team will not maintain visible files or explicit dispatch messages
-
-## One Concrete Example
-
-The default example is a scoped software delivery run.
-
-The user wants:
-
-- one feature or change shipped
-- API stability preserved
-- parallel AI work without losing final control
-
-The user should see:
-
-- one lane leaning implementation-heavy
-- another lane leaning verification or handoff-heavy
-- visible files that show scope, status, evidence, and sign-off ownership
-
-Read [reference-use-case.md](reference-use-case.md) for the concrete scenario.
-
 ## User Reading Path
 
 Read these in order:
@@ -108,36 +78,6 @@ After the first setup pass, you should usually have:
 5. 実装を始める前に、ownership、sign-off、handoff の visible file が project 側にできているか確認する
 
 最初の AI への指示文は root の [../README.md](../README.md) にある block を使い、このファイルでは project 側の確認事項を詰めます。
-
-## このキットが向いている場面
-
-- 1 人の人間や上位 thread が、複数の agent lane を同時に監督したい
-- prompt だけでは足りず、handoff、verification、integration の visible file が欲しい
-- project をまたいで再利用できる coordination 資産を持ちたい
-
-## 向いていない場面
-
-- 1 user と 1 agent でそのまま終わる小タスク
-- workflow engine、scheduler、compute runtime を探している場合
-- visible file や explicit dispatch を運用しない場合
-
-## 代表ユースケース
-
-標準の例は、スコープを絞ったソフトウェア変更です。
-
-ユーザーの意図:
-
-- 1 つの機能や変更を出したい
-- API は壊したくない
-- AI は並列で動かしたいが、最後の責任は 1 か所に残したい
-
-ユーザーから見えるべきもの:
-
-- ある lane は実装寄り
-- 別の lane は verification や handoff 寄り
-- scope、status、evidence、sign-off ownership が visible file で追える
-
-具体例は [reference-use-case.md](reference-use-case.md) を見てください。
 
 ## ユーザー向けの読む順番
 
