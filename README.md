@@ -25,6 +25,8 @@ workspace/
     run-workspaces/
 ```
 
+Open the AI from `your-project/`, not from the shared `workspace/` parent.
+
 Then open both directories in a file-aware AI coding system such as Codex or Claude Code, and say something like:
 
 ```text
@@ -35,8 +37,9 @@ Write only inside this project, mainly under ./run-ops and ./run-workspaces.
 Use coordination-kit as the coordination method for this project.
 You are Commander.
 Create Arm A and Arm B as team lanes.
-Use A.Shoulder and B.Shoulder as the first acting threads inside those lanes.
-Create `MISSION_BRIEF.md` and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
+Start as Commander first.
+When lane-level direct steering is needed, use `A.Shoulder` and `B.Shoulder` as the first acting threads inside those lanes.
+Create `MISSION_BRIEF.md`, `SHARED_NOTE.md`, and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
 Keep ownership explicit and do not sign off until the final integration is complete.
 ```
 
@@ -50,6 +53,7 @@ What you get:
 Your first visible outputs should usually be:
 
 - `MISSION_BRIEF.md` for scope and finish conditions
+- `SHARED_NOTE.md` for shared interfaces, file ownership, and active assumptions
 - `INTEGRATION.md` as the shared integration file
 - one or more `WORKING_MEMORY.<node>.md` or `LOG.<node>.md` files for active lanes
 - `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` before sign-off
@@ -235,6 +239,8 @@ workspace/
     run-workspaces/
 ```
 
+AI は shared な `workspace/` 親ではなく、`your-project/` を起点に開いてください。
+
 そのうえで、Codex や Claude Code のような file-aware AI coding system に、たとえば次のように伝えます。
 
 ```text
@@ -245,8 +251,9 @@ live run file を ../ や ../coordination-kit の中には作らない。
 この project では coordination-kit を coordination method として使う。
 あなたは Commander として動く。
 Arm A と Arm B を team lane として立てる。
-その lane の最初の acting thread は A.Shoulder と B.Shoulder にする。
-まず `MISSION_BRIEF.md` と `INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を用意する。
+まず Commander として始める。
+lane ごとの direct steering が必要になったら、その最初の acting thread は `A.Shoulder` と `B.Shoulder` にする。
+まず `MISSION_BRIEF.md`、`SHARED_NOTE.md`、`INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を用意する。
 ownership を明示し、最終統合が終わるまで sign-off しない。
 ```
 
@@ -260,6 +267,7 @@ ownership を明示し、最終統合が終わるまで sign-off しない。
 最初の導入が正しくできているなら、たいてい最初に次の visible file が見えるはずです。
 
 - scope と finish condition を書いた `MISSION_BRIEF.md`
+- shared interface、file ownership、active assumption をまとめる `SHARED_NOTE.md`
 - shared integration file である `INTEGRATION.md`
 - 動いている lane ごとの `WORKING_MEMORY.<node>.md` か `LOG.<node>.md`
 - sign-off 前に確認する `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md`

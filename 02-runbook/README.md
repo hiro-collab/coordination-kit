@@ -104,12 +104,14 @@ Use this when you want side-by-side outputs under matched public constraints.
 Use one of these layouts inside the current project root:
 
 ```text
+run-ops/
 run-workspaces/
   arm-a/
   arm-b/
 ```
 
 ```text
+run-ops/
 worktrees/
   arm-a/
   arm-b/
@@ -122,6 +124,8 @@ If you want the directory names to emphasize comparison, `trial-runs/` and `tria
 Do not place active workspaces above the current project root.
 
 Use `00_INDEX.md` in directories that may accumulate ad hoc files during the run.
+
+Keep shared files such as `MISSION_BRIEF.md`, `SHARED_NOTE.md`, `INTEGRATION.md`, `RUN_MONITOR.md`, and final verification or handoff artifacts in `run-ops/`.
 
 ## Actors And Lane Labels
 

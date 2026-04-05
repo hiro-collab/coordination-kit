@@ -12,7 +12,7 @@ English comes first in this file. A Japanese mirror appears later in the same do
 
 1. Put `coordination-kit` next to your project, or add it as a Git submodule.
 2. Decide the exact kit path and the exact writable project paths.
-3. Open both the project and the kit in a file-aware AI coding system.
+3. Open both the project and the kit in a file-aware AI coding system, but start the session from the project root.
 4. Tell the AI to use `coordination-kit`, name the kit path, and restrict writes to project-side directories such as `./run-ops` and `./run-workspaces`.
    Ask it to confirm those read/write paths back before it creates anything.
 5. Before real implementation starts, confirm that visible ownership, sign-off, and handoff files exist in the project.
@@ -68,7 +68,7 @@ Read these only if needed:
 
 1. Confirm the kit path and writable project paths.
 2. Create or confirm `run-ops/` and `run-workspaces/arm-*/`.
-3. Create `MISSION_BRIEF.md` and `INTEGRATION.md`.
+3. Create `MISSION_BRIEF.md`, `SHARED_NOTE.md`, and `INTEGRATION.md`.
 4. Start the Commander thread.
 5. Start a visible Shoulder thread only if direct user steering is needed.
 6. Dispatch the first visible tasks.
@@ -79,6 +79,7 @@ Read these only if needed:
 After the first setup pass, you should usually have:
 
 - `MISSION_BRIEF.md` that states scope and finish conditions
+- `SHARED_NOTE.md` for shared interfaces, file ownership, and active assumptions
 - `INTEGRATION.md` as the shared integration file
 - one or more `WORKING_MEMORY.<node>.md` or `LOG.<node>.md` files for active lanes
 - `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` before sign-off
@@ -101,7 +102,7 @@ After the first setup pass, you should usually have:
 
 1. `coordination-kit` を project の横に置くか、Git submodule として入れる
 2. kit の実パスと、project 側の書き込み先を決める
-3. project と kit の両方を file-aware な AI coding system で開く
+3. project と kit の両方を file-aware な AI coding system で開くが、session の起点は project root にする
 4. `coordination-kit` を使うこと、kit の場所、書き込み境界を AI に伝える
    そのうえで、何か作る前に read path / write path を AI に復唱させる
 5. 実装を始める前に、ownership、sign-off、handoff の visible file が project 側にできているか確認する
@@ -157,7 +158,7 @@ After the first setup pass, you should usually have:
 
 1. kit path と writable path を確定する
 2. `run-ops/` と `run-workspaces/arm-*/` を作るか確認する
-3. `MISSION_BRIEF.md` と `INTEGRATION.md` を作る
+3. `MISSION_BRIEF.md`、`SHARED_NOTE.md`、`INTEGRATION.md` を作る
 4. Commander thread を始める
 5. direct steering が必要なときだけ visible Shoulder thread を始める
 6. 最初の visible task を dispatch する
@@ -168,6 +169,7 @@ After the first setup pass, you should usually have:
 最初の setup が通っていれば、たいてい次が見えるはずです。
 
 - scope と finish condition を書いた `MISSION_BRIEF.md`
+- shared interface、file ownership、active assumption をまとめる `SHARED_NOTE.md`
 - shared integration file である `INTEGRATION.md`
 - active lane の `WORKING_MEMORY.<node>.md` か `LOG.<node>.md`
 - sign-off 前の `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md`
