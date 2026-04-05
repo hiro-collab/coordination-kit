@@ -5,6 +5,7 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 ## Repository Readiness
 
 - [ ] `README.md` explains purpose, use order, and included assets.
+- [ ] `INSTALLATION.md` explains how to copy, clone, or submodule the kit into another workspace.
 - [ ] `RUNBOOK.md` reflects the latest operating rules.
 - [ ] `LESSONS_LEARNED.md` reflects the latest accepted changes.
 - [ ] `templates/` contains the full current template set.
@@ -31,4 +32,3 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 4. Create the GitHub repository.
 5. Push `main`.
 6. Tag the first reusable revision if desired.
-

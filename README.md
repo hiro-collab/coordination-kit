@@ -10,6 +10,8 @@ Use this kit when you want to reuse the Commander -> A.Shoulder -> fingers opera
 
 This version also supports trials where two teams build competing outputs and Commander plus the user judge both the game quality and the operating model.
 
+For setup in another workspace, see `INSTALLATION.md`.
+
 ## What Changed After The First Trial
 
 - A.Shoulder should be a visible thread when the user needs to give it direct instructions.
@@ -49,6 +51,7 @@ This version also supports trials where two teams build competing outputs and Co
 - `BOOTSTRAP_CHECKLIST.md`
 - `DIRECTORY_CONVENTIONS.md`
 - `RUNBOOK.md`
+- `INSTALLATION.md`
 - `WORKSPACE_ISOLATION_GUIDE.md`
 - `prompts/COMMANDER_THREAD_PROMPT.md`
 - `prompts/SHOULDER_THREAD_PROMPT.md`
@@ -95,5 +98,6 @@ If you publish this folder on GitHub as its own repository:
 
 1. Keep this directory as the repository root.
 2. Add a license before public release.
-3. Use `PUBLISHING_CHECKLIST.md` before pushing.
-4. Keep run-specific files outside this repository and treat this repository as reusable source material only.
+3. Document installation and reuse with `INSTALLATION.md`.
+4. Use `PUBLISHING_CHECKLIST.md` before pushing.
+5. Keep run-specific files outside this repository and treat this repository as reusable source material only.
