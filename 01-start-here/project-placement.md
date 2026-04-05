@@ -38,12 +38,14 @@ Example:
 
 ```text
 The reusable coordination kit is at ../coordination-kit.
+Before creating anything, confirm that you can read ../coordination-kit and that you will write only under ./run-ops and ./run-workspaces.
 Do not create live run files in ../ or inside ../coordination-kit.
 Write only inside this project, mainly under ./run-ops and ./run-workspaces.
 Use coordination-kit as the coordination method for this project.
 ```
 
 If you do not name both the read path and the write path, the AI may search too broadly or place files in the wrong directory.
+It is safer to make the AI repeat those boundaries back before it creates the first run file.
 
 ## Placement Options
 
@@ -209,12 +211,14 @@ AI には、作業開始前に必ず次の 2 つを伝えます。
 
 ```text
 再利用する coordination kit は ../coordination-kit にある。
+何か作る前に、../coordination-kit を読めることと、書き込みが ./run-ops と ./run-workspaces に限定されることを確認する。
 live run file を ../ や ../coordination-kit の中には作らない。
 書き込みはこの project 配下、主に ./run-ops と ./run-workspaces に限定する。
 この project では coordination-kit を coordination method として使う。
 ```
 
 read path と write path の両方を明示しないと、AI が広く探索したり、誤った場所へ file を置いたりしやすくなります。
+最初の run file を作る前に、その境界を AI に言い返させるとさらに安全です。
 
 ## 配置パターン
 

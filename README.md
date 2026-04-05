@@ -29,12 +29,13 @@ Then open both directories in a file-aware AI coding system such as Codex or Cla
 
 ```text
 The reusable coordination kit is at ../coordination-kit.
+Before creating anything, confirm that you can read ../coordination-kit and that you will write only under ./run-ops and ./run-workspaces.
 Do not write live run files in ../ or inside ../coordination-kit.
 Write only inside this project, mainly under ./run-ops and ./run-workspaces.
 Use coordination-kit as the coordination method for this project.
 You are Commander.
 Create Arm A and Arm B as team lanes.
-Set up visible mission, working-memory, integration, verification, and handoff files.
+Create `MISSION_BRIEF.md` and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
 Keep ownership explicit and do not sign off until the final integration is complete.
 ```
 
@@ -47,10 +48,10 @@ What you get:
 
 Your first visible outputs should usually be:
 
-- one mission file that states scope and finish conditions
-- one shared integration file
-- one or more working-memory or log files for active lanes
-- one verification or handoff file before sign-off
+- `MISSION_BRIEF.md` for scope and finish conditions
+- `INTEGRATION.md` as the shared integration file
+- one or more `WORKING_MEMORY.<node>.md` or `LOG.<node>.md` files for active lanes
+- `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` before sign-off
 
 Boundary rule:
 
@@ -94,6 +95,7 @@ Read it like this:
 
 - `Commander` is the top-level coordinator.
 - `Arm` means one parallel team lane under Commander.
+- The visible acting threads are usually `Commander` and one or more `Shoulder` nodes.
 - `Shoulder`, `Elbow`, and `Fingers` belong inside one specific Arm.
 - An `Arm` is usually the lane or container name, not a separate acting thread by itself.
 - `Elbow` is optional. Shoulder may control Fingers directly.
@@ -234,12 +236,13 @@ workspace/
 
 ```text
 再利用する coordination kit は ../coordination-kit にある。
+何か作る前に、../coordination-kit を読めることと、書き込みが ./run-ops と ./run-workspaces に限定されることを確認する。
 live run file を ../ や ../coordination-kit の中には作らない。
 書き込みはこの project 配下、主に ./run-ops と ./run-workspaces に限定する。
 この project では coordination-kit を coordination method として使う。
 あなたは Commander として動く。
 Arm A と Arm B を team lane として立てる。
-mission、working-memory、integration、verification、handoff の visible file を用意する。
+まず `MISSION_BRIEF.md` と `INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を用意する。
 ownership を明示し、最終統合が終わるまで sign-off しない。
 ```
 
@@ -252,10 +255,10 @@ ownership を明示し、最終統合が終わるまで sign-off しない。
 
 最初の導入が正しくできているなら、たいてい最初に次の visible file が見えるはずです。
 
-- scope と finish condition を書いた mission file
-- shared integration file
-- 動いている lane ごとの working-memory か log
-- sign-off 前に確認する verification か handoff file
+- scope と finish condition を書いた `MISSION_BRIEF.md`
+- shared integration file である `INTEGRATION.md`
+- 動いている lane ごとの `WORKING_MEMORY.<node>.md` か `LOG.<node>.md`
+- sign-off 前に確認する `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md`
 
 境界ルール:
 
@@ -290,6 +293,7 @@ Commander
 
 - `Commander` が最上位
 - `Arm` は Commander 配下の並列 team lane
+- 実際に visible thread になりやすいのは `Commander` と各 Arm の `Shoulder`
 - `Shoulder`、`Elbow`、`Fingers` はその Arm の内部構造
 - `Elbow` は任意で、なくてもよい
 - `A.Thumb` と `B.Thumb` は別の Arm に属する別 node

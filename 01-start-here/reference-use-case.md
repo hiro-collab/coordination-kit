@@ -19,6 +19,7 @@ Example user instruction:
 ```text
 Use coordination-kit for this feature work.
 Act as Commander.
+Before creating anything, confirm that you can read the kit path and that you will write only inside this project's run directories.
 Create at least two team lanes so implementation and verification can move in parallel.
 Keep the API stable, keep handoff visible, and keep final sign-off centralized.
 ```
@@ -110,6 +111,7 @@ If you only need one agent and no formal handoff, this kit is probably heavier t
 ```text
 この機能追加では coordination-kit を使う。
 あなたは Commander として動く。
+何か作る前に、kit の read path と、この project 側の run directory だけに書くことを確認する。
 実装と検証が並列に進むように、少なくとも 2 つの team lane を作る。
 API は壊さず、handoff を visible にし、最終 sign-off は 1 か所に残す。
 ```

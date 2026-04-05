@@ -1,6 +1,6 @@
 # Templates
 
-Copy these files into the active project or trial workspace. Do not treat the kit copy as the live working area.
+Copy these files into the active project workspace. If the run is competitive, that live workspace may also be a trial workspace. Do not treat the kit copy as the live working area.
 
 From the user side, this folder answers: "Which files should I ask the AI to create in the live workspace?"
 

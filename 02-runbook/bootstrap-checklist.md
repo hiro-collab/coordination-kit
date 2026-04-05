@@ -18,9 +18,9 @@ Related docs:
 - [ ] `SHARED_NOTE.md` exists.
 - [ ] `INTEGRATION.md` exists.
 - [ ] `WORKING_MEMORY.Commander.md` exists.
-- [ ] `WORKING_MEMORY.<active-node>.md` exists for the active Arm leads or lower nodes that need it.
+- [ ] `WORKING_MEMORY.<active-node>.md` exists for the active Shoulders or lower nodes that need it.
 - [ ] `LOG.Commander.md` exists.
-- [ ] `LOG.<active-node>.md` exists for the active Arm leads or lower nodes that need it.
+- [ ] `LOG.<active-node>.md` exists for the active Shoulders or lower nodes that need it.
 - [ ] `PERSONALITY.<node>.md` exists if persistent personality files are part of the run.
 - [ ] `RUN_MONITOR.md` exists or is explicitly deferred for very small runs.
 - [ ] `KIT_RETROSPECTIVE.md` exists or is queued for post-run use.
@@ -29,7 +29,7 @@ Related docs:
 
 - [ ] Commander thread is active.
 - [ ] A visible Shoulder thread exists if direct user interaction is required.
-- [ ] The active Arm lead has authority to spawn and steer lower nodes.
+- [ ] The active Shoulder or lane lead has authority to spawn and steer lower nodes.
 - [ ] Commander retains mission scope and final sign-off.
 - [ ] Required read-and-act instructions have been sent explicitly to the correct node.
 
@@ -63,7 +63,7 @@ Related docs:
 
 ## Before Final Sign-Off
 
-- [ ] The active Arm lead has provided acceptance evidence and residual gaps.
+- [ ] The active Shoulder or lane lead has provided acceptance evidence and residual gaps.
 - [ ] Commander has checked or rejected each acceptance item explicitly.
 - [ ] Accepted deviations from the preferred stack or plan are recorded.
 - [ ] Final handoff includes current state, known defects, launch method, evaluation focus, and explicit cuts where relevant.

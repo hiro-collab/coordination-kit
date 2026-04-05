@@ -12,18 +12,20 @@ English comes first in this file. A Japanese mirror appears later in the same do
 2. Decide the exact kit path and the exact writable project paths.
 3. Open both the project and the kit in a file-aware AI coding system.
 4. Tell the AI to use `coordination-kit`, name the kit path, and restrict writes to project-side directories such as `./run-ops` and `./run-workspaces`.
+   Ask it to confirm those read/write paths back before it creates anything.
 5. Before real implementation starts, confirm that visible ownership, sign-off, and handoff files exist in the project.
 
 Example instruction:
 
 ```text
 The reusable coordination kit is at ../coordination-kit.
+Before creating anything, confirm that you can read ../coordination-kit and that you will write only under ./run-ops and ./run-workspaces.
 Do not create live run files in ../ or inside ../coordination-kit.
 Write only inside this project, mainly under ./run-ops and ./run-workspaces.
 Use coordination-kit for this project.
 Act as Commander.
 Set up Arm A and Arm B as team lanes.
-Create the visible files needed for mission, working memory, integration, verification, and handoff.
+Create `MISSION_BRIEF.md` and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
 Keep ownership explicit and do not sign off early.
 ```
 
@@ -76,7 +78,7 @@ Read these only if needed:
 
 1. Confirm the kit path and writable project paths.
 2. Create or confirm `run-ops/` and `run-workspaces/arm-*/`.
-3. Create the mission brief and the shared integration file.
+3. Create `MISSION_BRIEF.md` and `INTEGRATION.md`.
 4. Start the Commander thread.
 5. Start a visible Shoulder thread only if direct user steering is needed.
 6. Dispatch the first visible tasks.
@@ -86,10 +88,10 @@ Read these only if needed:
 
 After the first setup pass, you should usually have:
 
-- one mission file that states scope and finish conditions
-- one shared integration file
-- one or more working-memory or log files for active lanes
-- one verification or handoff file before sign-off
+- `MISSION_BRIEF.md` that states scope and finish conditions
+- `INTEGRATION.md` as the shared integration file
+- one or more `WORKING_MEMORY.<node>.md` or `LOG.<node>.md` files for active lanes
+- `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` before sign-off
 - no live run files in the shared parent directory or back inside the kit
 
 ## Where Specific Questions Go
@@ -111,18 +113,20 @@ After the first setup pass, you should usually have:
 2. kit の実パスと、project 側の書き込み先を決める
 3. project と kit の両方を file-aware な AI coding system で開く
 4. `coordination-kit` を使うこと、kit の場所、書き込み境界を AI に伝える
+   そのうえで、何か作る前に read path / write path を AI に復唱させる
 5. 実装を始める前に、ownership、sign-off、handoff の visible file が project 側にできているか確認する
 
 例:
 
 ```text
 再利用する coordination kit は ../coordination-kit にある。
+何か作る前に、../coordination-kit を読めることと、書き込みが ./run-ops と ./run-workspaces に限定されることを確認する。
 live run file を ../ や ../coordination-kit の中には作らない。
 書き込みはこの project 配下、主に ./run-ops と ./run-workspaces に限定する。
 この project では coordination-kit を使う。
 あなたは Commander として動く。
 Arm A と Arm B を team lane として作る。
-mission、working-memory、integration、verification、handoff の visible file を作る。
+まず `MISSION_BRIEF.md` と `INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を作る。
 ownership を明示し、途中で勝手に sign-off しない。
 ```
 
@@ -175,7 +179,7 @@ ownership を明示し、途中で勝手に sign-off しない。
 
 1. kit path と writable path を確定する
 2. `run-ops/` と `run-workspaces/arm-*/` を作るか確認する
-3. mission brief と shared integration file を作る
+3. `MISSION_BRIEF.md` と `INTEGRATION.md` を作る
 4. Commander thread を始める
 5. direct steering が必要なときだけ visible Shoulder thread を始める
 6. 最初の visible task を dispatch する
@@ -185,10 +189,10 @@ ownership を明示し、途中で勝手に sign-off しない。
 
 最初の setup が通っていれば、たいてい次が見えるはずです。
 
-- scope と finish condition を書いた mission file
-- shared integration file
-- active lane の working-memory か log
-- sign-off 前の verification か handoff file
+- scope と finish condition を書いた `MISSION_BRIEF.md`
+- shared integration file である `INTEGRATION.md`
+- active lane の `WORKING_MEMORY.<node>.md` か `LOG.<node>.md`
+- sign-off 前の `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md`
 - shared な親階層や kit の中に live run file が増えていないこと
 
 ## どの疑問ならどこを見るか

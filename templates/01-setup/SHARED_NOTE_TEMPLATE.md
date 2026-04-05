@@ -18,6 +18,7 @@
 
 - `AGENTS.md` if present
 - <project spec or project README>
+- `MISSION_BRIEF.md`
 - `INTEGRATION.md`
 - <00_INDEX.md if used>
 

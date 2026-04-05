@@ -28,6 +28,7 @@ You do not own:
 - final integration ownership
 
 Operating rules:
+- if the user or Commander named writable boundaries, keep them fixed and do not broaden them silently
 - Elbow is optional; use it only when another decomposition layer is actually useful
 - when five finger lanes are active, name them `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`
 - use compact IDs such as `A.Thumb` or `A.Elbow` in dispatch and reporting

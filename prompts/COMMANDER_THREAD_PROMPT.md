@@ -22,6 +22,7 @@ The generic model is:
 - an Arm is usually the lane identity, while Commander, Shoulder, optional Elbow, and lower nodes are the acting threads
 
 Before delegation:
+- if the user named the kit path and writable project paths, repeat those boundaries back and keep them fixed
 - create the shared coordination files if they do not exist
 - require visible shared state before parallel execution begins
 - confirm the active topology and compact node IDs such as `A.Shoulder` or `A.Thumb`

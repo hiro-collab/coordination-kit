@@ -23,3 +23,5 @@ Read this folder in order:
 - `WORKING_MEMORY_TEMPLATE.md`: per-node working memory file
 - `LOG_TEMPLATE.md`: per-node activity log
 - `00_INDEX_TEMPLATE.md`: directory-level navigation when files begin to sprawl
+
+Start ordinary runs with `MISSION_BRIEF_TEMPLATE.md`, then `SHARED_NOTE_TEMPLATE.md`, then `INTEGRATION_TEMPLATE.md`.

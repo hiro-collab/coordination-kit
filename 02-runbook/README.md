@@ -121,7 +121,7 @@ Do not place active workspaces above the current project root.
 
 Use `00_INDEX.md` in directories that may accumulate ad hoc files during the run.
 
-## Roles
+## Actors And Lane Labels
 
 - User
   - starts visible threads
@@ -135,6 +135,7 @@ Use `00_INDEX.md` in directories that may accumulate ad hoc files during the run
   - records final sign-off
 - Arm
   - names a parallel execution lane under Commander
+  - is usually a lane label, not a visible acting thread by itself
 - Shoulder
   - steers day-to-day execution inside its Arm
   - keeps visible files current
@@ -149,7 +150,7 @@ Use `00_INDEX.md` in directories that may accumulate ad hoc files during the run
 ## Phase 1: Bootstrap
 
 1. Choose active Arms and node IDs before parallel execution.
-2. Write one mission brief shared to all participating nodes.
+2. Write one `MISSION_BRIEF.md` shared to all participating nodes.
 3. If the run is comparative, also lock fairness constraints before work begins.
 4. Set the primary human language for the run.
 5. Copy the setup templates into each active workspace.

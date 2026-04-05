@@ -168,6 +168,7 @@ The kit separates state by lifespan and authority.
 
 - is one parallel team lane under Commander
 - carries a share of the run without owning the whole mission by default
+- is usually a lane label, not a standalone acting thread by default
 
 #### Shoulder
 
@@ -400,6 +401,7 @@ Use this file together with:
 
 - Commander 配下の 1 本の parallel team lane
 - whole mission 全体を持つのではなく、その run の一部を担う
+- 通常は standalone な acting thread ではなく、lane label として使う
 
 #### Shoulder
 
