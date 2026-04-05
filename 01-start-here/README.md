@@ -31,6 +31,7 @@ Read these in order:
 Read these only if needed:
 
 - [../03-reference/README.md](../03-reference/README.md) for AI / system rules
+- [../03-reference/profile-promotion.md](../03-reference/profile-promotion.md) when a team wants to carry behavior forward across runs
 - [../prompts/README.md](../prompts/README.md) when starting visible AI threads
 - [../templates/README.md](../templates/README.md) when asking the AI to create live files
 
@@ -91,6 +92,7 @@ After the first setup pass, you should usually have:
 必要になってから読むもの:
 
 - [../03-reference/README.md](../03-reference/README.md): AI / system rule
+- [../03-reference/profile-promotion.md](../03-reference/profile-promotion.md): team の behavior を run をまたいで carry forward したいとき
 - [../prompts/README.md](../prompts/README.md): visible AI thread を立てるとき
 - [../templates/README.md](../templates/README.md): AI に live file を作らせるとき
 
@@ -121,3 +123,4 @@ After the first setup pass, you should usually have:
 - 具体的な導入例: [reference-use-case.md](reference-use-case.md)
 - 実行中の checkpoint と運用: [../02-runbook/README.md](../02-runbook/README.md)
 - topology、protocol、memory の固定ルール: [../03-reference/README.md](../03-reference/README.md)
+- durable profile の carry-forward ルール: [../03-reference/profile-promotion.md](../03-reference/profile-promotion.md)

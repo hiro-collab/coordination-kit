@@ -147,6 +147,7 @@ So yes, similar tools exist nearby, but they solve a different layer of the prob
 - Live operation runbook: [02-runbook/README.md](02-runbook/README.md)
 - Concrete example when needed: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
 - AI / system rules only when needed: [03-reference/README.md](03-reference/README.md)
+- Durable profile carry-forward rules: [03-reference/profile-promotion.md](03-reference/profile-promotion.md)
 - Prompt assets only when starting visible AI threads: [prompts/README.md](prompts/README.md)
 - Template assets only when creating live run files: [templates/README.md](templates/README.md)
 - Maintainer docs: [04-maintainers/README.md](04-maintainers/README.md)
@@ -179,8 +180,9 @@ coordination-kit/
 - Roles are not fixed by Arm or Finger name.
 - Keep reusable kit files separate from run-specific writable files.
 - Treat file creation as storage, not instruction delivery.
-- Keep persistent personality separate from task-specific working memory.
-- Do not auto-update personality from working memory.
+- Keep constitution, personality, and durable beliefs separate from task-specific working memory.
+- Keep conditional methods in playbooks instead of always-on personality files.
+- Do not auto-update durable profile files from working memory.
 - Use visible artifacts for handoff, verification, and sign-off.
 - Keep human-facing materials aligned to the run's primary human language.
 - After midpoint or the first integrated build, redistribute work visibly instead of letting everything collapse back to one operator.

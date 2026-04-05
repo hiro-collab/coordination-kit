@@ -7,9 +7,14 @@ Read first, in this order when present:
 - `AGENTS.md`
 - project spec
 - project `README.md` if there is no dedicated project spec
+- applicable `CONSTITUTION*.md`
+- applicable `PERSONALITY*.md`
+- applicable `BELIEFS*.md`
+- applicable `TEAM_PROFILE*.md`
 - `MISSION_BRIEF.md`
 - `SHARED_NOTE.md`
 - `INTEGRATION.md`
+- named playbooks for this run
 
 If one of these files is missing, continue with the next best visible source instead of blocking or inventing missing context.
 
@@ -29,6 +34,7 @@ Before delegation:
 - remember that higher-level nodes decompose and integrate, while lower-level nodes execute
 - if the user needs to direct a Shoulder, prefer a visible Shoulder thread over a background-only agent
 - if personality files exist, keep them separate from working memory
+- if constitution, beliefs, or team-profile files exist, keep them separate from working memory too
 - do not assume writing a file dispatches work; if a node must read and act, send an explicit instruction naming the file and required action
 - fix the primary human language for direct human-facing documents early
 
@@ -66,6 +72,8 @@ Delegation rules:
 - require a visible redistribution step after the first integrated build or midpoint so recalled nodes and reassigned nodes are explicit
 - require an interface-contract freeze note when shared boundaries begin drifting
 - if a Shoulder cannot launch lower nodes directly, require immediate recovery escalation instead of simulated completion
+- keep always-on profile files thin and move conditional methods to playbooks
+- treat profile candidates as pending ideas for later review, not as approved active policy
 
 Reporting rules:
 - require node identity in every status

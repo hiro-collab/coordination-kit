@@ -19,13 +19,15 @@ English comes first in this file. A Japanese mirror appears later in the same do
 1. [agent-topology.md](agent-topology.md)
 2. [coordination-primitives.md](coordination-primitives.md)
 3. [memory-and-personality.md](memory-and-personality.md)
-4. [lessons-learned.md](lessons-learned.md)
+4. [profile-promotion.md](profile-promotion.md)
+5. [lessons-learned.md](lessons-learned.md)
 
 ## Which File Answers Which Question
 
 - `agent-topology.md`: "What lane structure and naming system should exist?"
 - `coordination-primitives.md`: "How does work move, where is visible truth, and who decides?"
 - `memory-and-personality.md`: "What should stay stable across runs, and what should stay disposable?"
+- `profile-promotion.md`: "What is safe to carry forward, and what should stay local to this run?"
 - `lessons-learned.md`: "What rules were learned from real runs and kept?"
 
 ## Related Docs
@@ -56,13 +58,15 @@ English comes first in this file. A Japanese mirror appears later in the same do
 1. [agent-topology.md](agent-topology.md)
 2. [coordination-primitives.md](coordination-primitives.md)
 3. [memory-and-personality.md](memory-and-personality.md)
-4. [lessons-learned.md](lessons-learned.md)
+4. [profile-promotion.md](profile-promotion.md)
+5. [lessons-learned.md](lessons-learned.md)
 
 ## どの疑問ならどのファイルか
 
 - `agent-topology.md`: 「どの lane 構造と naming system を前提にするか」
 - `coordination-primitives.md`: 「仕事がどう動き、visible truth がどこにあり、誰が決めるか」
 - `memory-and-personality.md`: 「何を run をまたいで残し、何を disposable にするか」
+- `profile-promotion.md`: 「何を carry forward してよく、何を今回限りに留めるべきか」
 - `lessons-learned.md`: 「実運用から学んで固定したルールは何か」
 
 ## 関連ドキュメント

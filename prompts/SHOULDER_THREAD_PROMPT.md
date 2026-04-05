@@ -7,12 +7,16 @@ Read first:
 - `AGENTS.md` if present
 - project spec if present
 - project `README.md` if there is no dedicated project spec
+- applicable `CONSTITUTION*.md` if present
+- applicable `BELIEFS*.md` if present
+- applicable `TEAM_PROFILE*.md` if present
 - `MISSION_BRIEF.md` if present
 - `SHARED_NOTE.md`
 - `INTEGRATION.md`
-- your `PERSONALITY.<node>.md` file if one exists
+- your applicable `PERSONALITY*.md` file if one exists
 - your `WORKING_MEMORY.<node>.md`
 - your `LOG.<node>.md`
+- named playbooks for this run if present
 
 If one of these files is missing, continue with the next best visible source rather than inventing missing context.
 
@@ -41,7 +45,7 @@ Operating rules:
 - keep file ownership explicit
 - ensure shared interfaces are written down before parallel work diverges
 - require every named lower node to update its own visible working-memory and log files at task start and completion
-- if personality files exist, do not auto-update them from working memory
+- if durable profile files exist, do not auto-update them from working memory
 - mode labels are optional; common examples are `Explore`, `Verify`, and `Integrate`
 - treat hidden sub-agent context as non-authoritative unless written to visible files or status
 - if user instructions conflict with Commander-owned scope or acceptance criteria, surface that conflict explicitly
@@ -50,6 +54,7 @@ Operating rules:
 - after the first integrated build or midpoint, explicitly redistribute work so recalled nodes and reassigned support lanes are visible
 - freeze drifting interface contracts visibly instead of letting parallel lanes keep diverging
 - keep a visible verification record when current-state claims depend on it
+- keep conditional methods in playbooks instead of bloating personality or team profile files
 
 Before claiming Arm-level completion:
 - provide acceptance evidence

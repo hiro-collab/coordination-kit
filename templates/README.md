@@ -12,12 +12,14 @@ Read this folder in order:
 2. [02-dispatch/README.md](02-dispatch/README.md)
 3. [03-checkpoints/README.md](03-checkpoints/README.md)
 4. [04-handoff/README.md](04-handoff/README.md)
+5. [05-profile-promotion/README.md](05-profile-promotion/README.md) for post-run carry-forward decisions
 
 ## Japanese Note
 
 フォルダ名がそのまま利用タイミングです。迷ったら、まず `01-setup/` から順に見てください。
 多くの human user は、placement、writable boundary、最初の run shape が決まるまでこのフォルダを開かなくて構いません。
 比較型 run でないなら、profile-specific な template は無理に使わなくて構いません。
+run 後に carry-forward を検討するときだけ `05-profile-promotion/` を見てください。
 
 ## Rules
 
@@ -25,6 +27,7 @@ Read this folder in order:
 - Only copy profile-specific templates when the run actually uses that profile.
 - Keep the kit repository reusable and mostly read-only during live execution.
 - Pair file creation with explicit dispatch when someone must read and act.
+- Keep always-on profile files thin; move conditional methods into playbooks.
 
 ## Related Docs
 

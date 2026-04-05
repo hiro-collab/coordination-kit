@@ -43,6 +43,7 @@ Names are identifiers, not fixed roles.
 - [Start Here](../01-start-here/README.md)
 - [Agent Topology](../03-reference/agent-topology.md)
 - [Memory and Personality](../03-reference/memory-and-personality.md)
+- [Profile Promotion](../03-reference/profile-promotion.md)
 - [Runbook](../02-runbook/README.md)
 - [Templates](../templates/README.md)
 
