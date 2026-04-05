@@ -10,6 +10,20 @@ English comes first in this file. A Japanese mirror appears later in the same do
 
 In one paragraph: `coordination-kit` is a visible operating model for multi-team human and AI work. A `Commander` owns overall direction and final responsibility, while one or more Arms such as `Alpha`, `Blabo`, `Charlie`, and `Delta` run in parallel as team identities. Inside each Arm, `Shoulder`, optional `Elbow`, and `Fingers` carry the current work. The important point is that Arm names are not job titles. They are stable team IDs, while implementation, verification, research, or handoff duties are assigned per run.
 
+## How To Use First
+
+If you are evaluating or adopting the kit, start here before reading the deeper concept pages:
+
+1. Read [01-start-here/README.md](01-start-here/README.md) for the onboarding path.
+2. Read [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for one concrete run.
+3. Decide where the kit should live with [01-start-here/git-usage.md](01-start-here/git-usage.md).
+4. Fix the generic model with [03-reference/agent-topology.md](03-reference/agent-topology.md), [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md), and [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
+5. Choose workspace layout with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
+6. Run the operation with [02-runbook/README.md](02-runbook/README.md).
+7. Copy or adapt assets from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md).
+
+If you only read three things, read `01-start-here/README.md`, `01-start-here/reference-use-case.md`, and `03-reference/agent-topology.md`.
+
 The default concept is generic:
 
 - Commander coordinates across one or more Arms.
@@ -96,27 +110,20 @@ If you know these tools, the rough comparison is:
 
 So yes, similar tools exist nearby, but they solve a different layer of the problem. This kit is about structure, visibility, handoff, and responsibility, not job execution.
 
-## Start Here
+## Reference Map
 
-- Bilingual onboarding: [01-start-here/README.md](01-start-here/README.md)
-- Bilingual reference use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
-- Git usage recommendation: [01-start-here/git-usage.md](01-start-here/git-usage.md)
-- Generic runbook: [02-runbook/README.md](02-runbook/README.md)
+- Onboarding: [01-start-here/README.md](01-start-here/README.md)
+- Concrete use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
+- Git placement guidance: [01-start-here/git-usage.md](01-start-here/git-usage.md)
+- Workspace layout: [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md)
+- Live operation runbook: [02-runbook/README.md](02-runbook/README.md)
 - Topology and naming: [03-reference/agent-topology.md](03-reference/agent-topology.md)
 - Protocol, state, and policy: [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)
 - Memory and personality: [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-
-## Read In Order
-
-1. [01-start-here/README.md](01-start-here/README.md)
-2. [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
-3. [03-reference/agent-topology.md](03-reference/agent-topology.md)
-4. [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)
-5. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-6. [02-runbook/README.md](02-runbook/README.md)
-7. [prompts/README.md](prompts/README.md)
-8. [templates/README.md](templates/README.md)
-9. [04-maintainers/README.md](04-maintainers/README.md) if you maintain or publish the kit
+- Lessons learned: [03-reference/lessons-learned.md](03-reference/lessons-learned.md)
+- Prompt assets: [prompts/README.md](prompts/README.md)
+- Template assets: [templates/README.md](templates/README.md)
+- Maintainer docs: [04-maintainers/README.md](04-maintainers/README.md)
 
 ## Repository Structure
 
@@ -139,20 +146,6 @@ coordination-kit/
 - `04-maintainers/` is for release and publishing work.
 - `prompts/` contains startup prompts for Commander and active Shoulder threads.
 - `templates/` contains reusable coordination files grouped by run phase.
-
-## Recommended Use Order
-
-1. Read [01-start-here/README.md](01-start-here/README.md).
-2. Read the front-door example in [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md).
-3. If Japanese guidance is needed, continue to the Japanese sections in those same files.
-4. Choose the Git placement pattern with [01-start-here/git-usage.md](01-start-here/git-usage.md).
-5. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
-6. Understand the protocol/state/policy model with [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md).
-7. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
-8. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
-9. Operate the run with [02-runbook/README.md](02-runbook/README.md).
-10. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
-11. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each run and update the kit after final review is complete.
 
 ## Core Rules
 
@@ -183,6 +176,20 @@ If you publish this kit as its own repository:
 runtime や workflow engine ではなく、prompt、template、runbook rule を visible file ベースで組み立てるためのキットです。
 
 短く言うと、`coordination-kit` は複数の human / AI チームを見える形で運用するための型です。`Commander` が全体方針と最終責任を持ち、`Alpha`、`Blabo`、`Charlie`、`Delta` のような Arm が並列に動きます。各 Arm の内部では `Shoulder`、必要なら `Elbow`、`Fingers` が仕事を回します。大事なのは、Arm 名は担当名ではないことです。Arm は安定した team ID であり、実装、検証、調査、handoff などの担当は run ごとの assign で変わります。
+
+### 最初の使い方
+
+導入や試用をするときは、概念説明より先に次の順で読むのがおすすめです。
+
+1. まず [01-start-here/README.md](01-start-here/README.md) で全体の導入手順を見る
+2. 次に [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) で具体例を 1 本読む
+3. [01-start-here/git-usage.md](01-start-here/git-usage.md) で kit をどこに置くか決める
+4. [03-reference/agent-topology.md](03-reference/agent-topology.md)、[03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)、[03-reference/memory-and-personality.md](03-reference/memory-and-personality.md) で generic model を固定する
+5. [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md) で workspace layout を決める
+6. [02-runbook/README.md](02-runbook/README.md) で実運用の流れを確認する
+7. [prompts/README.md](prompts/README.md) と [templates/README.md](templates/README.md) から必要な素材を持っていく
+
+時間がないなら、最低でも `01-start-here/README.md`、`01-start-here/reference-use-case.md`、`03-reference/agent-topology.md` の 3 つを先に読むと全体像をつかみやすいです。
 
 ### 階層の見え方
 
