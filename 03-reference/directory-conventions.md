@@ -4,8 +4,8 @@ Use this to keep coordination files flexible without losing track of who should 
 
 Related docs:
 
-- [Getting Started](../getting-started.md)
-- [Runbook](../guides/runbook.md)
+- [Getting Started](../01-start-here/README.md)
+- [Runbook](../02-run-a-trial/README.md)
 
 ## Responsibility Split
 

@@ -4,9 +4,9 @@ Use this before starting a new coordination run.
 
 Related docs:
 
-- [Runbook](runbook.md)
-- [Directory Conventions](../reference/directory-conventions.md)
-- [Workspace Isolation](workspace-isolation.md)
+- [Runbook](README.md)
+- [Directory Conventions](../03-reference/directory-conventions.md)
+- [Workspace Isolation](../01-start-here/workspace-isolation.md)
 
 ## Project Files
 

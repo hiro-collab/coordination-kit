@@ -37,7 +37,8 @@ Delegation rules:
 - A.Shoulder is the primary execution manager inside the arm
 - each task must include owned scope, required output, done definition, assumptions to verify, and visible files to update
 - no node should make global product decisions unless instructed
-- require fingers to update their own `WORKING_MEMORY.<node>.md` and `LOG.<node>.md` at task start and completion
+- when five finger lanes are active, name them `Thumb`, `Inddy`, `Middy`, `Ringy`, and `Pinky`
+- require named finger lanes to update their own `WORKING_MEMORY.<node>.md` and `LOG.<node>.md` at task start and completion
 - if multiple teams are running side by side, keep constraints equal, keep writable workspaces separate, and avoid cross-team implementation leakage before judging
 - ask each team to write down its own hypothesis for what ordinary users are likely to judge most strongly
 - use public rules to constrain scope: timebox, asset budget, complexity cap, and forbidden heavy features

@@ -1,7 +1,7 @@
 # Finger Task Card Template
 
 ```text
-Node: <node id>
+Node: <Thumb|Inddy|Middy|Ringy|Pinky or other node id>
 Mode: <Explore|Verify|Integrate or mixed emphasis>
 
 Mission:

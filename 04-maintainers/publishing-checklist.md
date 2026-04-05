@@ -5,10 +5,10 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 ## Repository Readiness
 
 - [ ] `README.md` explains purpose, layout, and main entry points.
-- [ ] `docs/getting-started.md` explains how to copy, clone, or submodule the kit into another workspace.
-- [ ] `docs/guides/runbook.md` reflects the latest operating rules.
-- [ ] `docs/reference/lessons-learned.md` reflects the latest accepted changes.
-- [ ] `docs/ja/getting-started.md` is current if Japanese guidance is part of the public offering.
+- [ ] `01-start-here/README.md` explains how to copy, clone, or submodule the kit into another workspace.
+- [ ] `02-run-a-trial/README.md` reflects the latest operating rules.
+- [ ] `03-reference/lessons-learned.md` reflects the latest accepted changes.
+- [ ] `01-start-here/README.ja.md` is current if Japanese guidance is part of the public offering.
 - [ ] `templates/` contains the full current template set.
 - [ ] `prompts/` contains the current Commander and Shoulder prompts.
 

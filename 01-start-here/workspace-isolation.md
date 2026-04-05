@@ -1,4 +1,4 @@
-# Workspace Isolation
+# Workspace Isolation Guide
 
 Use this guide before any team starts writing files.
 
@@ -48,6 +48,6 @@ Use git worktrees only if you need:
 
 ## Related Docs
 
-- [Getting Started](../getting-started.md)
-- [Runbook](runbook.md)
-- [Directory Conventions](../reference/directory-conventions.md)
+- [Getting Started](README.md)
+- [Runbook](../02-run-a-trial/README.md)
+- [Directory Conventions](../03-reference/directory-conventions.md)

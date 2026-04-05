@@ -2,9 +2,8 @@
 
 ## Unreleased
 
-- Reorganized support documentation under `docs/` and turned `README.md` into a cleaner entry point.
-- Added `docs/README.md` as a document index.
-- Added `docs/getting-started.md` with copy, clone, and submodule setup guidance.
-- Added `docs/ja/getting-started.md` for Japanese onboarding.
+- Reorganized guidance into stage-based top-level folders with `README.md` at the head of each hierarchy.
+- Expanded Japanese onboarding under `01-start-here/README.ja.md`.
+- Split `templates/` into phase-based subfolders so setup, dispatch, checkpoints, and handoff assets are easier to find.
 - Added explicit instruction-routing, send-ready forwarding, redistribution, submission-packet, interface-freeze, verification-record, and language/onboarding templates.
 - Hardened midpoint, handoff, and visibility rules based on the Alpha vs Blabo trial.

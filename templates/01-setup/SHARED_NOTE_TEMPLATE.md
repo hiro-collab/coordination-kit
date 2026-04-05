@@ -10,7 +10,7 @@
 - Topology in scope:
   - Commander
   - A.Shoulder
-  - <fingers>
+  - <Thumb / Inddy / Middy / Ringy / Pinky as needed>
 
 ## Source Documents
 
@@ -25,7 +25,15 @@
   - <files>
 - A.Shoulder
   - <files>
-- <finger>
+- <Thumb>
+  - <files>
+- <Inddy>
+  - <files>
+- <Middy>
+  - <files>
+- <Ringy>
+  - <files>
+- <Pinky>
   - <files>
 
 ## Shared Interfaces

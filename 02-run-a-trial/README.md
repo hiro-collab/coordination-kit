@@ -4,9 +4,9 @@ Use this when two teams are building separate browser games from the same coordi
 
 ## Read Before Running
 
-- [Getting Started](../getting-started.md)
-- [Workspace Isolation](workspace-isolation.md)
-- [Directory Conventions](../reference/directory-conventions.md)
+- [Getting Started](../01-start-here/README.md)
+- [Workspace Isolation](../01-start-here/workspace-isolation.md)
+- [Directory Conventions](../03-reference/directory-conventions.md)
 
 ## Quick Flow
 
@@ -14,6 +14,13 @@ Use this when two teams are building separate browser games from the same coordi
 2. Monitor live progress with visible checkpoints and explicit dispatch.
 3. Freeze changes and judge the shipped outputs.
 4. Update the kit only after judging is complete.
+
+## Templates Used In This Phase
+
+- Setup files: [../templates/01-setup/README.md](../templates/01-setup/README.md)
+- Dispatch and tasking: [../templates/02-dispatch/README.md](../templates/02-dispatch/README.md)
+- Checkpoints and verification: [../templates/03-checkpoints/README.md](../templates/03-checkpoints/README.md)
+- Final handoff and judging: [../templates/04-handoff/README.md](../templates/04-handoff/README.md)
 
 ## Core Principles
 
