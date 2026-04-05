@@ -13,6 +13,8 @@ Read this folder in order:
 7. `LOG_TEMPLATE.md`
 8. `00_INDEX_TEMPLATE.md`
 
+For a normal run, start with `MISSION_BRIEF_TEMPLATE.md` and skip `PUBLIC_TRIAL_BRIEF_TEMPLATE.md`.
+
 ## What Each File Is For
 
 - `MISSION_BRIEF_TEMPLATE.md`: generic mission brief for a normal run

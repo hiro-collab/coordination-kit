@@ -35,6 +35,7 @@ Write only inside this project, mainly under ./run-ops and ./run-workspaces.
 Use coordination-kit as the coordination method for this project.
 You are Commander.
 Create Arm A and Arm B as team lanes.
+Use A.Shoulder and B.Shoulder as the first acting threads inside those lanes.
 Create `MISSION_BRIEF.md` and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
 Keep ownership explicit and do not sign off until the final integration is complete.
 ```
@@ -60,6 +61,8 @@ Boundary rule:
 - normal live writes belong in `your-project/run-ops/` and `your-project/run-workspaces/`
 
 If the kit must live inside the project repository, use a Git submodule instead of a plain nested clone.
+
+If you are the human operator, you can usually stop after this `README.md`, [01-start-here/README.md](01-start-here/README.md), and [02-runbook/README.md](02-runbook/README.md). Open `03-reference/`, `prompts/`, and `templates/` only when you need deeper rules or reusable assets.
 
 The default concept is generic:
 
@@ -154,15 +157,15 @@ If you know these tools, the rough comparison is:
 
 So yes, similar tools exist nearby, but they solve a different layer of the problem. This kit is about structure, visibility, handoff, and responsibility, not job execution.
 
-## Reference Map
+## Open Next
 
-- User guide: [01-start-here/README.md](01-start-here/README.md)
-- Concrete use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
-- Project placement and boundaries: [01-start-here/project-placement.md](01-start-here/project-placement.md)
+- Human operator next step: [01-start-here/README.md](01-start-here/README.md)
+- Placement and write-boundary rules: [01-start-here/project-placement.md](01-start-here/project-placement.md)
 - Live operation runbook: [02-runbook/README.md](02-runbook/README.md)
-- AI / system reference: [03-reference/README.md](03-reference/README.md)
-- Prompt assets: [prompts/README.md](prompts/README.md)
-- Template assets: [templates/README.md](templates/README.md)
+- Concrete example when needed: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
+- AI / system rules only when needed: [03-reference/README.md](03-reference/README.md)
+- Prompt assets only when starting visible AI threads: [prompts/README.md](prompts/README.md)
+- Template assets only when creating live run files: [templates/README.md](templates/README.md)
 - Maintainer docs: [04-maintainers/README.md](04-maintainers/README.md)
 
 ## Repository Structure
@@ -242,6 +245,7 @@ live run file を ../ や ../coordination-kit の中には作らない。
 この project では coordination-kit を coordination method として使う。
 あなたは Commander として動く。
 Arm A と Arm B を team lane として立てる。
+その lane の最初の acting thread は A.Shoulder と B.Shoulder にする。
 まず `MISSION_BRIEF.md` と `INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を用意する。
 ownership を明示し、最終統合が終わるまで sign-off しない。
 ```
@@ -267,6 +271,8 @@ ownership を明示し、最終統合が終わるまで sign-off しない。
 - 通常の live file は `your-project/run-ops/` と `your-project/run-workspaces/` に置く
 
 もし kit を project repository の中に置く必要があるなら、plain な nested clone ではなく Git submodule を使うのが安全です。
+
+人間の operator なら、通常はこの `README.md` と [01-start-here/README.md](01-start-here/README.md)、[02-runbook/README.md](02-runbook/README.md) までで十分です。`03-reference/`、`prompts/`、`templates/` は、固定ルールや再利用 asset が必要になってから開けば構いません。
 
 ### 階層の見え方
 
@@ -360,13 +366,15 @@ browser-game の competitive trial も扱えますが、それは optional profi
 
 つまり、近い問題を扱うツールはありますが、この kit が担当するのは job 実行ではなく、構造、可視化、handoff、責任分担です。
 
-### 最初に読む順番
+### 次に開くもの
 
-1. [01-start-here/README.md](01-start-here/README.md)
-2. [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
-3. [03-reference/agent-topology.md](03-reference/agent-topology.md)
-4. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-5. [02-runbook/README.md](02-runbook/README.md)
+- human operator の次の 1 枚: [01-start-here/README.md](01-start-here/README.md)
+- 配置と書き込み境界: [01-start-here/project-placement.md](01-start-here/project-placement.md)
+- live operation の runbook: [02-runbook/README.md](02-runbook/README.md)
+- 具体例が欲しいとき: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
+- AI / system rule が必要になったときだけ: [03-reference/README.md](03-reference/README.md)
+- visible AI thread を立てるときだけ: [prompts/README.md](prompts/README.md)
+- live run file を作るときだけ: [templates/README.md](templates/README.md)
 
 ### コアルール
 

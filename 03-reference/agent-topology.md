@@ -19,7 +19,7 @@ If you cannot explain why a second Arm exists, you probably do not need it yet.
 This project uses a hierarchical multi-agent coordination model.
 
 The structure is inspired by a body metaphor:
-higher-level nodes control lower-level nodes as execution units.
+higher-level coordinators steer lower execution nodes inside a stable lane structure.
 
 This is a coordination model, not a literal anatomy.
 

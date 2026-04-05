@@ -4,11 +4,7 @@ Use this when you have already chosen to run `coordination-kit` on a real task a
 
 If you want one concrete front-door scenario before reading the runbook, start with [../01-start-here/reference-use-case.md](../01-start-here/reference-use-case.md).
 
-This kit supports:
-
-- single-arm tests
-- multi-arm runs
-- competitive trials
+This kit supports single-arm tests, multi-arm runs, and optional competitive trials.
 
 Competitive browser-game comparison is one supported profile, not the default concept.
 
@@ -31,13 +27,16 @@ If those five things are not true yet, the run is not ready.
 - [Getting Started](../01-start-here/README.md)
 - [Reference Use Case](../01-start-here/reference-use-case.md)
 - [Project Placement And Boundaries](../01-start-here/project-placement.md)
+
+Only if a topology, authority, or memory rule is still disputed:
+
 - [AI / System Reference](../03-reference/README.md)
 
 ## Quick Flow
 
 1. Fix the topology and node IDs.
 2. Bootstrap visible files and workspace boundaries.
-3. Dispatch work across Arms and lower nodes.
+3. Dispatch work into active Arms through their visible Shoulder threads and lower nodes.
 4. Monitor, rebalance, and integrate visibly.
 5. Sign off, hand off, and capture lessons.
 
@@ -53,10 +52,13 @@ If those five things are not true yet, the run is not ready.
 4. drift や詰まりを見ながら再配分し、必要なら integration を固定する
 5. sign-off 前に evidence をそろえ、最後に handoff と lessons を残す
 
+topology、authority、memory rule で迷いが残るときだけ [../03-reference/README.md](../03-reference/README.md) を開いてください。
+
 ## Topology Defaults
 
 - Commander is the top-level coordinator.
 - Arms are parallel lane identities.
+- An Arm does not need its own visible thread by default; Shoulder is the usual acting thread inside it.
 - Each Arm may contain Shoulder, optional Elbow, and Fingers.
 - Shoulder may directly control Fingers when Elbow is not needed.
 - Names are identifiers, not fixed specializations.

@@ -6,7 +6,11 @@ From the user side, this is the folder you open when you want the AI system to s
 
 These prompts work best after the user has already named the exact kit path and exact writable project paths.
 
+Most human users do not need this folder until the kit path, writable boundary, and live-run shape are already settled.
+
 There is no default `ARM_THREAD_PROMPT.md` because an `Arm` is usually the lane identity. The default acting thread inside an Arm is `Shoulder`.
+
+In most runs, start `Commander` first and add a visible `Shoulder` thread only for lanes that need direct steering.
 
 Read this folder in order:
 
@@ -41,3 +45,7 @@ Names are identifiers, not fixed roles.
 - [Memory and Personality](../03-reference/memory-and-personality.md)
 - [Runbook](../02-runbook/README.md)
 - [Templates](../templates/README.md)
+
+## Japanese Note
+
+多くの human user は、kit path、writable boundary、live run の形が固まるまでこのフォルダを開かなくて構いません。

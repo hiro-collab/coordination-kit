@@ -4,6 +4,8 @@ Use this file when you want to adopt `coordination-kit` in a real project.
 
 This is the main user guide. Most users only need this file, the reference use case, the placement guide, and the runbook.
 
+The root `README.md` already gives the send-ready first instruction for the AI. This file is for the project-side checks and adoption decisions around that first instruction.
+
 English comes first in this file. A Japanese mirror appears later in the same document.
 
 ## Quick Adoption
@@ -15,19 +17,7 @@ English comes first in this file. A Japanese mirror appears later in the same do
    Ask it to confirm those read/write paths back before it creates anything.
 5. Before real implementation starts, confirm that visible ownership, sign-off, and handoff files exist in the project.
 
-Example instruction:
-
-```text
-The reusable coordination kit is at ../coordination-kit.
-Before creating anything, confirm that you can read ../coordination-kit and that you will write only under ./run-ops and ./run-workspaces.
-Do not create live run files in ../ or inside ../coordination-kit.
-Write only inside this project, mainly under ./run-ops and ./run-workspaces.
-Use coordination-kit for this project.
-Act as Commander.
-Set up Arm A and Arm B as team lanes.
-Create `MISSION_BRIEF.md` and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
-Keep ownership explicit and do not sign off early.
-```
+Use the root `README.md` instruction block first, then confirm the project-side checks in this file.
 
 ## Use This Kit When
 
@@ -63,7 +53,7 @@ Read [reference-use-case.md](reference-use-case.md) for the concrete scenario.
 
 Read these in order:
 
-1. [../README.md](../README.md)
+1. [../README.md](../README.md) if you have not read it yet
 2. [reference-use-case.md](reference-use-case.md)
 3. [project-placement.md](project-placement.md)
 4. [../02-runbook/README.md](../02-runbook/README.md)
@@ -116,19 +106,7 @@ After the first setup pass, you should usually have:
    そのうえで、何か作る前に read path / write path を AI に復唱させる
 5. 実装を始める前に、ownership、sign-off、handoff の visible file が project 側にできているか確認する
 
-例:
-
-```text
-再利用する coordination kit は ../coordination-kit にある。
-何か作る前に、../coordination-kit を読めることと、書き込みが ./run-ops と ./run-workspaces に限定されることを確認する。
-live run file を ../ や ../coordination-kit の中には作らない。
-書き込みはこの project 配下、主に ./run-ops と ./run-workspaces に限定する。
-この project では coordination-kit を使う。
-あなたは Commander として動く。
-Arm A と Arm B を team lane として作る。
-まず `MISSION_BRIEF.md` と `INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を作る。
-ownership を明示し、途中で勝手に sign-off しない。
-```
+最初の AI への指示文は root の [../README.md](../README.md) にある block を使い、このファイルでは project 側の確認事項を詰めます。
 
 ## このキットが向いている場面
 
@@ -164,7 +142,7 @@ ownership を明示し、途中で勝手に sign-off しない。
 
 まずは次の順です。
 
-1. [../README.md](../README.md)
+1. [../README.md](../README.md) をまだ読んでいなければ先に読む
 2. [reference-use-case.md](reference-use-case.md)
 3. [project-placement.md](project-placement.md)
 4. [../02-runbook/README.md](../02-runbook/README.md)

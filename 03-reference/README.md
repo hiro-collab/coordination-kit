@@ -4,6 +4,8 @@ Use this folder after the user-facing adoption path already makes sense.
 
 Most users do not need to read this folder to get started. This folder is for advanced operators, prompt authors, and AI systems that need the stable rules behind the kit.
 
+Do not send a first-time human user here as the first document.
+
 English comes first in this file. A Japanese mirror appears later in the same document.
 
 ## Open This Folder When
@@ -40,6 +42,8 @@ English comes first in this file. A Japanese mirror appears later in the same do
 このフォルダは、user-facing な導入経路を読んだあとに開く AI / system reference です。
 
 多くの user は、開始時点ではこのフォルダを読まなくても構いません。ここは、advanced operator、prompt author、AI system が固定ルールを確認するときのための資料です。
+
+初見の human user を最初にここへ案内しないでください。
 
 ## このフォルダを開くタイミング
 

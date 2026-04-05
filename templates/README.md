@@ -4,6 +4,8 @@ Copy these files into the active project workspace. If the run is competitive, t
 
 From the user side, this folder answers: "Which files should I ask the AI to create in the live workspace?"
 
+Most human users do not need this folder until placement, writable boundaries, and the first run shape are already decided.
+
 Read this folder in order:
 
 1. [01-setup/README.md](01-setup/README.md)
@@ -14,10 +16,12 @@ Read this folder in order:
 ## Japanese Note
 
 フォルダ名がそのまま利用タイミングです。迷ったら、まず `01-setup/` から順に見てください。
+多くの human user は、placement、writable boundary、最初の run shape が決まるまでこのフォルダを開かなくて構いません。
 
 ## Rules
 
 - Copy templates out into the run workspace.
+- Only copy profile-specific templates when the run actually uses that profile.
 - Keep the kit repository reusable and mostly read-only during live execution.
 - Pair file creation with explicit dispatch when someone must read and act.
 

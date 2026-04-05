@@ -1,28 +1,28 @@
 # Language And Onboarding Checklist Template
 
-Use this when the run has a primary human language and the game must be understandable on first launch.
+Use this when the run has a primary human language and a human-facing output must be understandable on first use.
 
 - Owner:
 - Readers:
 
-## Judge-Facing Materials
+## Reviewer-Facing Materials
 
 - [ ] Primary human language is fixed for the run.
 - [ ] Brief summary for the user exists in the primary human language.
-- [ ] Final handoff or submission packet includes judge-facing notes in the primary human language.
+- [ ] Final handoff or submission packet includes reviewer-facing notes in the primary human language.
 
-## Player-Facing Onboarding
+## User-Facing Onboarding
 
-- [ ] The player can find the rule explanation within the first few seconds.
-- [ ] Controls are stated in the primary human language.
-- [ ] Goal or win condition is stated in the primary human language.
-- [ ] Failure or retry path is understandable in the primary human language.
+- [ ] The user can find the first-use explanation quickly.
+- [ ] Controls, steps, or required actions are stated in the primary human language.
+- [ ] Goal, success condition, or expected output is stated in the primary human language.
+- [ ] Failure, retry, or recovery path is understandable in the primary human language.
 
-## UI Fit
+## UI Or Layout Fit
 
 - [ ] The onboarding text fits inside the intended viewport.
-- [ ] HUD or intro text does not hide the main playfield.
-- [ ] Important text remains readable during the first play session.
+- [ ] Intro or helper text does not hide the main work area.
+- [ ] Important text remains readable during the first-use flow.
 
 ## Verification
 
