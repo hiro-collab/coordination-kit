@@ -17,6 +17,7 @@ Competitive browser-game comparison is one supported profile, not the default co
 - [Getting Started](../01-start-here/README.md)
 - [Reference Use Case](../01-start-here/reference-use-case.md)
 - [Agent Topology](../03-reference/agent-topology.md)
+- [Coordination Primitives](../03-reference/coordination-primitives.md)
 - [Memory and Personality](../03-reference/memory-and-personality.md)
 - [Workspace Isolation](../01-start-here/workspace-isolation.md)
 - [Directory Conventions](../03-reference/directory-conventions.md)

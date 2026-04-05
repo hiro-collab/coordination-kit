@@ -54,6 +54,7 @@ The structure is intentionally stage-based: at every directory level, the first 
 
 - a reusable coordination layer for human-supervised multi-agent runs
 - a visible-file operating model for prompts, handoff, verification, and sign-off
+- a protocol/state/policy model for explicit multi-lane coordination
 - a way to keep reusable policy separate from run-local writable state
 
 ## Canonical Example
@@ -100,6 +101,7 @@ So yes, similar tools exist nearby, but they solve a different layer of the prob
 - Git usage recommendation: [01-start-here/git-usage.md](01-start-here/git-usage.md)
 - Generic runbook: [02-runbook/README.md](02-runbook/README.md)
 - Topology and naming: [03-reference/agent-topology.md](03-reference/agent-topology.md)
+- Protocol, state, and policy: [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)
 - Memory and personality: [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
 
 ## Read In Order
@@ -107,11 +109,12 @@ So yes, similar tools exist nearby, but they solve a different layer of the prob
 1. [01-start-here/README.md](01-start-here/README.md)
 2. [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
 3. [03-reference/agent-topology.md](03-reference/agent-topology.md)
-4. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-5. [02-runbook/README.md](02-runbook/README.md)
-6. [prompts/README.md](prompts/README.md)
-7. [templates/README.md](templates/README.md)
-8. [04-maintainers/README.md](04-maintainers/README.md) if you maintain or publish the kit
+4. [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)
+5. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
+6. [02-runbook/README.md](02-runbook/README.md)
+7. [prompts/README.md](prompts/README.md)
+8. [templates/README.md](templates/README.md)
+9. [04-maintainers/README.md](04-maintainers/README.md) if you maintain or publish the kit
 
 ## Repository Structure
 
@@ -142,11 +145,12 @@ coordination-kit/
 3. If Japanese guidance is needed, continue to the Japanese sections in those same files.
 4. Choose the Git placement pattern with [01-start-here/git-usage.md](01-start-here/git-usage.md).
 5. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
-6. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
-7. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
-8. Operate the run with [02-runbook/README.md](02-runbook/README.md).
-9. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
-10. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each run and update the kit after final review is complete.
+6. Understand the protocol/state/policy model with [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md).
+7. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
+8. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
+9. Operate the run with [02-runbook/README.md](02-runbook/README.md).
+10. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
+11. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each run and update the kit after final review is complete.
 
 ## Core Rules
 
@@ -224,6 +228,16 @@ Commander
 
 詳しくは [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) を見てください。
 同じファイルの後半に日本語の代表例があります。
+
+### protocol / state / policy
+
+この kit は、単なるフォルダ整理ではなく、次の 3 層で読むと分かりやすいです。
+
+- `protocol`: 誰が誰に何を依頼し、どう acknowledge し、どう handoff するか
+- `state`: 何が現在の真実で、どのファイルに保存されるか
+- `policy`: 誰が何を決める authority を持つか
+
+まとまった説明は [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md) に置いてあります。
 
 ### 向いている場面
 
