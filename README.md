@@ -12,17 +12,16 @@ In one paragraph: `coordination-kit` is a visible operating model for multi-team
 
 ## How To Use First
 
-If you are evaluating or adopting the kit, start here before reading the deeper concept pages:
+Use the kit like this:
 
-1. Read [01-start-here/README.md](01-start-here/README.md) for the onboarding path.
-2. Read [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for one concrete run.
-3. Decide where the kit should live with [01-start-here/git-usage.md](01-start-here/git-usage.md).
-4. Fix the generic model with [03-reference/agent-topology.md](03-reference/agent-topology.md), [03-reference/coordination-primitives.md](03-reference/coordination-primitives.md), and [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
-5. Choose workspace layout with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
-6. Run the operation with [02-runbook/README.md](02-runbook/README.md).
-7. Copy or adapt assets from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md).
+1. Name one `Commander` and one or more `Arm` team lanes.
+2. Give `Commander` the mission, scope boundary, and final sign-off responsibility.
+3. Inside each Arm, appoint a `Shoulder`. Add an `Elbow` only when that Arm needs another coordination layer.
+4. Dispatch concrete work to lower nodes through visible files. A file by itself is storage, not instruction.
+5. Keep stable behavior policy in `PERSONALITY`, run-local facts in `WORKING_MEMORY`, and shared run truth in mission, integration, verification, and handoff files.
+6. Let `Shoulder` coordinate inside one Arm, let `Commander` rebalance across Arms, and let `Commander` own the final integration and sign-off.
 
-If you only read three things, read `01-start-here/README.md`, `01-start-here/reference-use-case.md`, and `03-reference/agent-topology.md`.
+If you cannot explain your run in these six steps, the run is still underspecified.
 
 The default concept is generic:
 
@@ -179,17 +178,16 @@ runtime や workflow engine ではなく、prompt、template、runbook rule を 
 
 ### 最初の使い方
 
-導入や試用をするときは、概念説明より先に次の順で読むのがおすすめです。
+この kit は、次の 6 ステップで使います。
 
-1. まず [01-start-here/README.md](01-start-here/README.md) で全体の導入手順を見る
-2. 次に [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) で具体例を 1 本読む
-3. [01-start-here/git-usage.md](01-start-here/git-usage.md) で kit をどこに置くか決める
-4. [03-reference/agent-topology.md](03-reference/agent-topology.md)、[03-reference/coordination-primitives.md](03-reference/coordination-primitives.md)、[03-reference/memory-and-personality.md](03-reference/memory-and-personality.md) で generic model を固定する
-5. [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md) で workspace layout を決める
-6. [02-runbook/README.md](02-runbook/README.md) で実運用の流れを確認する
-7. [prompts/README.md](prompts/README.md) と [templates/README.md](templates/README.md) から必要な素材を持っていく
+1. まず `Commander` を 1 人決め、必要な数だけ `Arm` という team lane を置く
+2. `Commander` に mission、scope boundary、最終 sign-off responsibility を持たせる
+3. 各 Arm の中に `Shoulder` を置き、もう 1 段の調整役が必要なときだけ `Elbow` を置く
+4. 下位 node には visible file 経由で具体タスクを dispatch する。ファイルを置いただけでは instruction にならない
+5. 安定した振る舞い policy は `PERSONALITY`、run ごとの事実は `WORKING_MEMORY`、shared truth は mission、integration、verification、handoff file に分ける
+6. Arm 内の調整は `Shoulder`、Arm 間の再配分と最終統合は `Commander` が持つ
 
-時間がないなら、最低でも `01-start-here/README.md`、`01-start-here/reference-use-case.md`、`03-reference/agent-topology.md` の 3 つを先に読むと全体像をつかみやすいです。
+この 6 ステップで説明しきれない run は、まだ設計が曖昧です。
 
 ### 階層の見え方
 
