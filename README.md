@@ -21,11 +21,16 @@ That is the safest default.
 workspace/
   coordination-kit/
   your-project/
+    run-ops/
+    run-workspaces/
 ```
 
 Then open both directories in a file-aware AI coding system such as Codex or Claude Code, and say something like:
 
 ```text
+The reusable coordination kit is at ../coordination-kit.
+Do not write live run files in ../ or inside ../coordination-kit.
+Write only inside this project, mainly under ./run-ops and ./run-workspaces.
 Use coordination-kit as the coordination method for this project.
 You are Commander.
 Create Arm A and Arm B as team lanes.
@@ -46,6 +51,12 @@ Your first visible outputs should usually be:
 - one shared integration file
 - one or more working-memory or log files for active lanes
 - one verification or handoff file before sign-off
+
+Boundary rule:
+
+- `workspace/` is only a container, not a live working area
+- `coordination-kit/` is reusable source material and should stay mostly read-only
+- normal live writes belong in `your-project/run-ops/` and `your-project/run-workspaces/`
 
 If the kit must live inside the project repository, use a Git submodule instead of a plain nested clone.
 
@@ -218,11 +229,16 @@ runtime や workflow engine ではなく、prompt、template、runbook rule を 
 workspace/
   coordination-kit/
   your-project/
+    run-ops/
+    run-workspaces/
 ```
 
 そのうえで、Codex や Claude Code のような file-aware AI coding system に、たとえば次のように伝えます。
 
 ```text
+再利用する coordination kit は ../coordination-kit にある。
+live run file を ../ や ../coordination-kit の中には作らない。
+書き込みはこの project 配下、主に ./run-ops と ./run-workspaces に限定する。
 この project では coordination-kit を coordination method として使う。
 あなたは Commander として動く。
 Arm A と Arm B を team lane として立てる。
@@ -243,6 +259,12 @@ ownership を明示し、最終統合が終わるまで sign-off しない。
 - shared integration file
 - 動いている lane ごとの working-memory か log
 - sign-off 前に確認する verification か handoff file
+
+境界ルール:
+
+- `workspace/` 直下は container であって live working area ではない
+- `coordination-kit/` は再利用する source material で、基本は read-only
+- 通常の live file は `your-project/run-ops/` と `your-project/run-workspaces/` に置く
 
 もし kit を project repository の中に置く必要があるなら、plain な nested clone ではなく Git submodule を使うのが安全です。
 

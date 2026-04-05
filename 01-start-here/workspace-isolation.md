@@ -21,6 +21,9 @@ This is the safest starting point because:
 - it makes each Arm's writable area explicit
 - it keeps `assets/coordination-kit` available as a shared read-only reference
 
+Never treat the shared parent directory or the reusable kit directory as an active writable lane.
+Only the project-side run directories should receive live run files.
+
 ## When To Introduce Git Worktrees
 
 Use git worktrees only if you need:
@@ -42,11 +45,19 @@ Use git worktrees only if you need:
 - one active Arm gets one worktree and one writable root
 - do not let Arms share mutable files during the active run
 - update the coordination kit after the run, not inside multiple active Arm worktrees mid-run
+- when the kit lives outside the project, still keep all live writes inside the project root rather than in the shared parent directory
 
 ## Decision Rule
 
 - first run: separate directories are enough
 - later runs: introduce git and worktrees only if auditability or repeated reruns justify the extra setup
+
+When you instruct an AI, name both:
+
+1. the reusable kit path
+2. the writable project path
+
+For example: `Read reusable guidance from ../coordination-kit, but write live files only under ./run-workspaces and ./run-ops.`
 
 ## Related Docs
 

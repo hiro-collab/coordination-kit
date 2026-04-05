@@ -22,8 +22,15 @@ Why this is recommended:
 - no risk of accidentally staging the kit as an embedded repo
 - easier to update or replace the kit independently
 - the project can copy only the prompts and templates it actually needs
+- the shared parent directory can stay a clean container if live files stay inside the project
 
 Use this when the kit is mainly reference material.
+
+Boundary rule for this pattern:
+
+- `workspace/` is a container only
+- `coordination-kit/` stays reusable and mostly read-only
+- all live run files should stay inside `your-project/`
 
 ### Recommended When The Project Must Pin A Revision: Git Submodule
 
@@ -78,6 +85,9 @@ This is what we recommend:
 2. If it must live inside the project repo, prefer a Git submodule.
 3. If you do not need update tracking, copy the files without the nested `.git`.
 
+When you hand this setup to an AI, tell it the exact kit path first and also tell it where it may write.
+Example: `The reusable kit is at ../coordination-kit. Write live run files only inside ./run-ops and ./run-workspaces.`
+
 ## Related Docs
 
 - [Installation](README.md)
@@ -106,8 +116,15 @@ workspace/
 - kit を embedded repo として誤って stage する事故を避けやすい
 - kit の更新や差し替えを project から独立して行いやすい
 - project 側は必要な prompts や templates だけを取り込める
+- live file を project の中だけに置けば、共有の親階層を clean な container として保ちやすい
 
 kit を主に reference material として使うなら、この配置が向いています。
+
+この配置での境界ルール:
+
+- `workspace/` は container
+- `coordination-kit/` は再利用する kit で、基本は read-only
+- live run file は `your-project/` の中だけに置く
 
 ### project 内で revision を固定したい場合: Git submodule
 
@@ -161,6 +178,9 @@ your-project/
 1. まずは `coordination-kit` を project repo の外に sibling repository として置く。
 2. project repo の中に置く必要があるなら、Git submodule を使う。
 3. update tracking が不要なら、nested `.git` を含めずに files をコピーする。
+
+この構成を AI に渡すときは、最初に kit の実パスと書き込み先を一緒に伝えてください。
+例: `再利用する kit は ../coordination-kit にある。live run file は ./run-ops と ./run-workspaces の中だけに作る。`
 
 ## 関連ドキュメント
 
