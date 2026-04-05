@@ -19,5 +19,5 @@ Read this folder in order:
 ## Related Docs
 
 - [Start Here](../01-start-here/README.md)
-- [Runbook](../02-run-a-trial/README.md)
+- [Runbook](../02-runbook/README.md)
 - [Templates](../templates/README.md)

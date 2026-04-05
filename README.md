@@ -18,7 +18,8 @@ The structure is intentionally stage-based: at every directory level, the first 
 
 - English onboarding: [01-start-here/README.md](01-start-here/README.md)
 - 日本語案内: [01-start-here/README.ja.md](01-start-here/README.ja.md)
-- Generic runbook: [02-run-a-trial/README.md](02-run-a-trial/README.md)
+- Git usage recommendation: [01-start-here/git-usage.md](01-start-here/git-usage.md)
+- Generic runbook: [02-runbook/README.md](02-runbook/README.md)
 - Topology and naming: [03-reference/agent-topology.md](03-reference/agent-topology.md)
 - Memory and personality: [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
 
@@ -27,7 +28,7 @@ The structure is intentionally stage-based: at every directory level, the first 
 1. [01-start-here/README.md](01-start-here/README.md)
 2. [03-reference/agent-topology.md](03-reference/agent-topology.md)
 3. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-4. [02-run-a-trial/README.md](02-run-a-trial/README.md)
+4. [02-runbook/README.md](02-runbook/README.md)
 5. [prompts/README.md](prompts/README.md)
 6. [templates/README.md](templates/README.md)
 7. [04-maintainers/README.md](04-maintainers/README.md) if you maintain or publish the kit
@@ -37,7 +38,7 @@ The structure is intentionally stage-based: at every directory level, the first 
 ```text
 coordination-kit/
   01-start-here/
-  02-run-a-trial/
+  02-runbook/
   03-reference/
   04-maintainers/
   prompts/
@@ -48,7 +49,7 @@ coordination-kit/
 ```
 
 - `01-start-here/` is for first-time adoption and workspace setup.
-- `02-run-a-trial/` is for live execution.
+- `02-runbook/` is for live execution.
 - `03-reference/` holds the generic topology, memory model, stable rules, and lessons learned.
 - `04-maintainers/` is for release and publishing work.
 - `prompts/` contains startup prompts for Commander and active Shoulder threads.
@@ -58,12 +59,13 @@ coordination-kit/
 
 1. Read [01-start-here/README.md](01-start-here/README.md).
 2. If needed, share [01-start-here/README.ja.md](01-start-here/README.ja.md) with Japanese-speaking operators or judges.
-3. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
-4. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
-5. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
-6. Operate the run with [02-run-a-trial/README.md](02-run-a-trial/README.md).
-7. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
-8. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each trial and update the kit after judging is complete.
+3. Choose the Git placement pattern with [01-start-here/git-usage.md](01-start-here/git-usage.md).
+4. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
+5. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
+6. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
+7. Operate the run with [02-runbook/README.md](02-runbook/README.md).
+8. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
+9. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each trial and update the kit after judging is complete.
 
 ## Core Rules
 

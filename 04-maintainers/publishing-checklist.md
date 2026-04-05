@@ -6,7 +6,7 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 
 - [ ] `README.md` explains purpose, layout, and main entry points.
 - [ ] `01-start-here/README.md` explains how to copy, clone, or submodule the kit into another workspace.
-- [ ] `02-run-a-trial/README.md` reflects the latest operating rules.
+- [ ] `02-runbook/README.md` reflects the latest operating rules.
 - [ ] `03-reference/agent-topology.md` reflects the generic hierarchy and naming model.
 - [ ] `03-reference/memory-and-personality.md` reflects the current memory model.
 - [ ] `03-reference/lessons-learned.md` reflects the latest accepted changes.

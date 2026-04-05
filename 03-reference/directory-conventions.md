@@ -5,7 +5,7 @@ Use this to keep coordination files flexible without losing track of who should 
 Related docs:
 
 - [Getting Started](../01-start-here/README.md)
-- [Runbook](../02-run-a-trial/README.md)
+- [Runbook](../02-runbook/README.md)
 
 ## Responsibility Split
 

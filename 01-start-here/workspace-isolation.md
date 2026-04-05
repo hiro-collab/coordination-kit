@@ -49,5 +49,6 @@ Use git worktrees only if you need:
 ## Related Docs
 
 - [Getting Started](README.md)
-- [Runbook](../02-run-a-trial/README.md)
+- [Git Usage](git-usage.md)
+- [Runbook](../02-runbook/README.md)
 - [Directory Conventions](../03-reference/directory-conventions.md)
