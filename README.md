@@ -95,10 +95,11 @@ Read it like this:
 - `Commander` is the top-level coordinator.
 - `Arm` means one parallel team lane under Commander.
 - `Shoulder`, `Elbow`, and `Fingers` belong inside one specific Arm.
+- An `Arm` is usually the lane or container name, not a separate acting thread by itself.
 - `Elbow` is optional. Shoulder may control Fingers directly.
 - Fingers are never a shared global pool. `A.Thumb` belongs to Arm A, `B.Thumb` belongs to Arm B.
 
-For read-aloud team names, many runs treat `A / B / C / D` as call-sign style Arm names such as `Alpha / Blabo / Charlie / Delta`.
+For read-aloud team names, many runs treat `A / B / C / D` as call-sign style Arm names such as `Alpha / Blabo / Charlie / Delta`. `Blabo` is intentional in this kit; use another stable call-sign if your team prefers.
 
 The structure is intentionally stage-based: at every directory level, the first file to read is `README.md` in that directory.
 

@@ -56,7 +56,7 @@ If those five things are not true yet, the run is not ready.
 ## Topology Defaults
 
 - Commander is the top-level coordinator.
-- Arms are parallel work units.
+- Arms are parallel lane identities.
 - Each Arm may contain Shoulder, optional Elbow, and Fingers.
 - Shoulder may directly control Fingers when Elbow is not needed.
 - Names are identifiers, not fixed specializations.
@@ -85,7 +85,7 @@ Use this when you want side-by-side outputs under matched public constraints.
 
 ## Core Principles
 
-- Keep `assets/coordination-kit` stable during active execution.
+- Keep the reusable kit directory stable during active execution, whether it lives at `../coordination-kit` or `./assets/coordination-kit`.
 - Give each Arm its own writable workspace when isolation matters.
 - Keep integration responsibility at the upper layer. Delegation does not remove accountability.
 - Do not assume specialization by Arm or Finger name.
@@ -134,7 +134,7 @@ Use `00_INDEX.md` in directories that may accumulate ad hoc files during the run
   - ensures explicit dispatch messages are sent when a node must read and act
   - records final sign-off
 - Arm
-  - acts as a parallel execution lane under Commander
+  - names a parallel execution lane under Commander
 - Shoulder
   - steers day-to-day execution inside its Arm
   - keeps visible files current
@@ -234,7 +234,7 @@ After the first integrated build or midpoint:
 
 Before final handoff:
 
-- require a team-local or arm-local submission packet that mirrors the final handoff fields
+- require a lane-local submission packet that mirrors the final handoff fields
 - require a visible verification record for the current state when playability or operability is being claimed
 - do not let the only copy of the handoff content live in scattered logs or working-memory notes
 

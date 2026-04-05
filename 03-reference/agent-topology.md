@@ -26,7 +26,7 @@ This is a coordination model, not a literal anatomy.
 ## Topology
 
 - Commander: top-level coordinator
-- Arms: parallel work units such as `A`, `B`, `C`, `D`
+- Arms: parallel lane IDs such as `A`, `B`, `C`, `D`
 - Each Arm may contain:
   - Shoulder: direction and control
   - Elbow: optional decomposition layer
@@ -59,6 +59,13 @@ This means:
 
 You can think of Arms as team units or squad lanes under a single Commander.
 
+## Actor Model
+
+- `Commander` is usually one visible top-level thread.
+- `Shoulder` is the default acting thread inside an Arm.
+- `Elbow` and `Fingers` become acting threads only when the run needs them.
+- An `Arm` is usually the lane or container name, not a standalone actor thread by default.
+
 ## Core Principles
 
 ### Roles Are Not Fixed
@@ -71,16 +78,21 @@ Structure is fixed. Meaning is dynamic.
 
 ### Delegation Model
 
-Higher-level nodes such as Commander, Shoulder, and Elbow:
+Higher-level coordinators such as `Commander`, and within one Arm `Shoulder` or `Elbow` when active:
 
 - decompose tasks
 - assign work
 - integrate results
 
-Lower-level nodes such as Arms and Fingers:
+Lower-level executors such as `Fingers`, and any node currently assigned execution-only work:
 
 - execute assigned tasks
 - avoid global decisions unless instructed
+
+In user terms:
+
+- `Arm` is the lane identity.
+- lower acting nodes such as `Shoulder`, optional `Elbow`, and `Fingers` do the visible execution work inside that lane.
 
 ### Parallel Execution
 
@@ -111,6 +123,8 @@ For read-aloud names, many runs treat these as call-sign style team names such a
 - `B` -> `Blabo`
 - `C` -> `Charlie`
 - `D` -> `Delta`
+
+`Blabo` is intentional in this kit as a distinct call-sign example. Replace it if your team prefers another stable name.
 
 Project-specific team names are also acceptable as long as the compact IDs stay stable in files.
 

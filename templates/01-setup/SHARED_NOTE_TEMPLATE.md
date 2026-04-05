@@ -16,8 +16,8 @@
 
 ## Source Documents
 
-- `AGENTS.md`
-- <project spec>
+- `AGENTS.md` if present
+- <project spec or project README>
 - `INTEGRATION.md`
 - <00_INDEX.md if used>
 

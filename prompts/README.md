@@ -4,6 +4,8 @@ Use this folder when you are ready to start visible working threads.
 
 From the user side, this is the folder you open when you want the AI system to start acting as `Commander` or as a visible `Shoulder`.
 
+There is no default `ARM_THREAD_PROMPT.md` because an `Arm` is usually the lane identity. The default acting thread inside an Arm is `Shoulder`.
+
 Read this folder in order:
 
 1. `COMMANDER_THREAD_PROMPT.md`

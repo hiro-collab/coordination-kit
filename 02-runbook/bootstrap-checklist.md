@@ -10,11 +10,11 @@ Related docs:
 
 ## Project Files
 
-- [ ] `AGENTS.md` exists and states the topology and responsibility split.
+- [ ] `AGENTS.md` exists and states the topology and responsibility split, or an equivalent visible topology note exists.
 - [ ] Active node IDs are fixed, for example `A.Shoulder`, `A.Indy`, `B.Thumb`.
 - [ ] Directory responsibilities are clear for global ops files, Arm files, and reusable assets.
 - [ ] `00_INDEX.md` exists where file growth is likely, or an equivalent index exists.
-- [ ] A project spec or mission brief exists and defines mission scope and acceptance criteria.
+- [ ] A project spec, project `README.md`, or mission brief exists and defines mission scope and acceptance criteria.
 - [ ] `SHARED_NOTE.md` exists.
 - [ ] `INTEGRATION.md` exists.
 - [ ] `WORKING_MEMORY.Commander.md` exists.

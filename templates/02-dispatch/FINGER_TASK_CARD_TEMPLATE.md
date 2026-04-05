@@ -8,7 +8,7 @@ Mission:
 <one-paragraph mission slice>
 
 Read First:
-- <project spec>
+- <project spec, or project README / mission brief>
 - <shared note>
 - <integration note>
 - <working memory file>

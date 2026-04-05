@@ -1,35 +1,39 @@
 # Submission Packet Template
 
-Use this inside the team workspace before posting the final board update.
+Use this inside the lane workspace before posting the final shared update.
 
 - Owner:
 - Readers:
 
 ```text
-[<team>] submission packet draft
+[<lane or node>] submission packet draft
 
-Playable State:
+Current State:
 - <what currently works end to end>
 
 Known Defects:
 - <known issue>
 
-Launch Method:
-- <how to run or open the build>
+Launch Or Use Method:
+- <how to run, open, or otherwise use the deliverable>
 
-Judge This On:
-- <what judges should focus on>
+Review This On:
+- <what reviewers should focus on>
 
 Explicit Cuts:
 - <what was cut and why>
 
-Language And Onboarding Notes:
-- <where the player first sees rules and controls>
-- <what language is used there>
+User-Facing Notes:
+- <where the user first sees rules, controls, onboarding, or usage guidance>
+- <what language is used there if relevant>
 
 Residual Risk:
-- <what could still go wrong during judging>
+- <what could still go wrong during review or handoff>
 
-Mirrored To Shared Board:
+Mirrored To Shared Ops File:
 - <yes/no>
 ```
+
+Optional competitive-trial add-on:
+
+- Replace `Review This On` with trial-specific judging focus when the run uses formal judging.

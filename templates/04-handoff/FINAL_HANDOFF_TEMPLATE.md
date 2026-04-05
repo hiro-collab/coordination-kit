@@ -1,31 +1,35 @@
 # Final Handoff Template
 
-Use this before judging or final Commander sign-off.
+Use this before final Commander sign-off or formal evaluation.
 
 - Owner:
 - Readers:
 
 ```text
-[<node>] final handoff
+[<lane or node>] final handoff
 
-Playable State:
+Current State:
 - <what currently works end to end>
 
 Known Defects:
 - <defect>
 
-Launch Method:
-- <how to run or open the build>
+Launch Or Use Method:
+- <how to run, open, or otherwise use the deliverable>
 
 Submission Packet Source:
-- <team-local file that mirrors this handoff>
+- <lane-local file that mirrors this handoff>
 
-Judge This On:
-- <what the judges should look for>
+Review Focus:
+- <what the reviewer or Commander should focus on>
 
 Explicit Cuts:
 - <what was cut and why>
 
 Residual Risk:
-- <what could still go wrong during judging>
+- <what could still go wrong during review, handoff, or release>
 ```
+
+Optional competitive-trial add-on:
+
+- If the run uses formal judging, add the judging focus and any player-facing onboarding note here.

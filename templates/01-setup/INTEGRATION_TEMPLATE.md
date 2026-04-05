@@ -19,17 +19,23 @@ Commander owns this file.
 
 - [ ] <acceptance item>
 - [ ] <acceptance item>
-- [ ] Midpoint playable was demonstrated by a live end-to-end run.
-- [ ] Canonical contract files were fixed after the first integrated build or midpoint.
+- [ ] Midpoint or early integrated state was demonstrated by a real end-to-end run when that checkpoint matters.
+- [ ] Canonical contract files were fixed after the first integrated build or major checkpoint.
 - [ ] Post-checkpoint redistribution was written visibly and sent explicitly.
 - [ ] Any drifting shared boundary was frozen in a visible interface-contract note.
-- [ ] Verification records exist for midpoint and pre-handoff claims.
-- [ ] Language and onboarding checks are visible when the run has a primary human language.
-- [ ] Local submission packet exists before final board posting when formal handoff is used.
-- [ ] Final handoff includes current state, known defects, launch method, evaluation focus, and explicit cuts where relevant.
+- [ ] Verification records exist for midpoint and pre-handoff claims when those claims matter.
+- [ ] Language, onboarding, or reviewer-facing checks are visible when the run has human-facing materials.
+- [ ] Local submission packet exists before final handoff when formal handoff is used.
+- [ ] Final handoff includes current state, known defects, launch or use method, review focus, and explicit cuts where relevant.
 - [ ] Known gaps are documented.
 - [ ] Assumptions are explicit.
 - [ ] Integration ownership remains visible.
+
+## Optional Competitive-Trial Checks
+
+- [ ] Midpoint playable was demonstrated by a live end-to-end run.
+- [ ] Player-facing onboarding and language checks are visible.
+- [ ] Local submission packet exists before final board posting when the run uses a shared judging board.
 
 ## Open Conflicts
 
@@ -40,7 +46,7 @@ Commander owns this file.
 - Keep global scope fixed.
 - Prefer explicit interfaces over implicit coupling.
 - Pull behavior conflicts upward to Commander quickly.
-- The active Shoulder or Arm lead owns lower-node spawn and routine steering.
+- The active Shoulder or lane lead owns lower-node spawn and routine steering.
 
 ## Commander Sign-Off
 
