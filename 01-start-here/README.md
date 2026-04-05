@@ -8,6 +8,46 @@ If you are browsing the repository for the first time, read this file before any
 
 English comes first in this file. A Japanese mirror and extra Japanese operator notes appear later in the same document.
 
+## Quick Adoption
+
+If you want to try the kit in a real project, do this first:
+
+1. Put `coordination-kit` next to your project as a sibling directory. If it must live inside the project repo, use a Git submodule.
+2. Keep live run files in the project workspace, not back inside the kit.
+3. Open both the project and the kit in a file-aware AI coding system such as Codex or Claude Code, or any similar tool that can read repository files and follow written instructions.
+4. Tell the AI to use `coordination-kit` as the coordination method, create one `Commander`, create one or more Arms, and set up visible mission, working-memory, integration, verification, and handoff files.
+5. Confirm that the AI created visible ownership and sign-off structure before real implementation starts.
+
+Recommended layout:
+
+```text
+workspace/
+  coordination-kit/
+  your-project/
+    run-ops/
+    run-workspaces/
+      arm-a/
+      arm-b/
+```
+
+Example instruction:
+
+```text
+Use coordination-kit for this project.
+Act as Commander.
+Set up Arm A and Arm B as team lanes.
+Create the visible files needed for mission, working memory, integration, verification, and handoff.
+Keep ownership explicit, keep status out of hidden chat context, and do not sign off early.
+```
+
+You should expect:
+
+- one clear coordination owner
+- one visible scope file
+- one visible integration path
+- explicit handoff or verification checkpoints
+- active workspaces that live in the project, not in the reusable kit
+
 ## Use This Kit When
 
 - one person or one top-level thread must supervise several agent lanes on the same task
@@ -22,16 +62,23 @@ English comes first in this file. A Japanese mirror and extra Japanese operator 
 
 ## One Concrete Example
 
-The default example for this repository is a scoped software delivery run:
+The default example for this repository is a scoped software delivery run.
 
-- `Commander` owns the mission brief and final integration.
-- `Arm A` and `Arm B` are stable team identities, not fixed departments.
-- In this example, current assignments put more implementation work in `Arm A` and more verification or handoff work in `Arm B`.
-- Nodes such as `A.Indy` and `B.Thumb` execute concrete subtasks with visible status updates.
+The user wants:
+
+- one feature or change shipped
+- API stability preserved
+- parallel AI work without losing final control
+
+The user should see:
+
+- one lane leaning implementation-heavy
+- another lane leaning verification or handoff-heavy
+- visible files that show scope, status, evidence, and sign-off ownership
 
 Read [reference-use-case.md](reference-use-case.md) before going deeper if you want to see the model in a real scenario.
 
-## Read In This Order
+## Read More If Needed
 
 1. [../README.md](../README.md)
 2. [reference-use-case.md](reference-use-case.md)
@@ -221,6 +268,46 @@ your-project/
 このファイルでは英語本文のあとに日本語を続けて置いています。
 
 コードの framework ではなく、visible multi-agent operations のための document と template 集です。package manager で install するものではありません。
+
+### まず試すときの最短手順
+
+実プロジェクトで試すなら、まず次の流れで十分です。
+
+1. `coordination-kit` を project の横に置くか、submodule として入れる
+2. live run files は kit の中ではなく、project 側の workspace に置く
+3. project と kit の両方を file-aware な AI coding system で開く
+4. `coordination-kit` を使うこと、`Commander` を立てること、Arm を 1 つ以上作ること、mission / working-memory / integration / verification / handoff の visible file を作ることを AI に伝える
+5. 実装を始める前に、ownership と sign-off の構造が visible file として出ているか確認する
+
+推奨レイアウト:
+
+```text
+workspace/
+  coordination-kit/
+  your-project/
+    run-ops/
+    run-workspaces/
+      arm-a/
+      arm-b/
+```
+
+たとえば次のように伝えます。
+
+```text
+この project では coordination-kit を使う。
+あなたは Commander として動く。
+Arm A と Arm B を team lane として作る。
+mission、working-memory、integration、verification、handoff の visible file を作る。
+ownership を明示し、status を hidden chat に埋めず、途中で勝手に sign-off しない。
+```
+
+最初に見えればよいもの:
+
+- coordination owner が 1 か所に決まっている
+- scope を書いた visible file がある
+- integration の集約先がある
+- handoff か verification の checkpoint が明示されている
+- reusable kit と active workspace の置き場所が分かれている
 
 ### このキットが向いている場面
 

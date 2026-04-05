@@ -2,6 +2,25 @@
 
 Use this file when you want the kit explained as an operating model rather than only as a directory layout.
 
+For a user, this file explains what should happen after the setup prompt: how work moves, where truth lives, and who gets to decide.
+
+In user terms:
+
+- `protocol` answers: "What do I tell the AI to do?"
+- `state` answers: "Which file should I check?"
+- `policy` answers: "Who is allowed to decide?"
+
+The practical loop is:
+
+1. assign an owner
+2. dispatch explicit work
+3. wait for acknowledgement
+4. read visible reports
+5. integrate or escalate
+6. sign off against written criteria
+
+If those six actions are unclear, the run will drift.
+
 English comes first in this file. A Japanese mirror appears later in the same document.
 
 This reference groups the kit into three layers:
@@ -218,6 +237,23 @@ Use this file together with:
 ## Japanese
 
 このファイルは、この kit を単なるフォルダ構成ではなく、運用モデルとして理解したいときに読むための基準文書です。
+
+利用者の言葉で言えば:
+
+- `protocol` は「AI に何をさせるか」
+- `state` は「どのファイルを見ればよいか」
+- `policy` は「だれが決めてよいか」
+
+ユーザー目線では、次の 6 動作で見れば実務上は十分です。
+
+1. owner を assign する
+2. 明示的に dispatch する
+3. acknowledge を待つ
+4. visible report を読む
+5. integrate するか escalate する
+6. written criteria に対して sign-off する
+
+この 6 動作が曖昧な run は、途中で drift しやすくなります。
 
 この reference では、kit を次の 3 層に分けて説明します。
 

@@ -2,6 +2,8 @@
 
 Copy these files into the active project or trial workspace. Do not treat the kit copy as the live working area.
 
+From the user side, this folder answers: "Which files should I ask the AI to create in the live workspace?"
+
 Read this folder in order:
 
 1. [01-setup/README.md](01-setup/README.md)

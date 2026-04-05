@@ -1,6 +1,6 @@
 # Runbook
 
-Use this when hierarchical nodes are collaborating on a task and need visible coordination.
+Use this when you have already chosen to run `coordination-kit` on a real task and now need the live-operation checklist.
 
 If you want one concrete front-door scenario before reading the runbook, start with [../01-start-here/reference-use-case.md](../01-start-here/reference-use-case.md).
 
@@ -11,6 +11,20 @@ This kit supports:
 - competitive trials
 
 Competitive browser-game comparison is one supported profile, not the default concept.
+
+## What The User Does Here
+
+Use this file when you are about to start a live run, not when you are still deciding whether the kit makes sense.
+
+The user job in this phase is simple:
+
+1. confirm the active topology and lane names
+2. make sure writable workspaces and visible ops files exist
+3. start Commander and any visible Shoulder threads
+4. check that dispatch, status, verification, and handoff are happening visibly
+5. keep final sign-off centralized
+
+If those five things are not true yet, the run is not ready.
 
 ## Read Before Running
 
@@ -29,6 +43,18 @@ Competitive browser-game comparison is one supported profile, not the default co
 3. Dispatch work across Arms and lower nodes.
 4. Monitor, rebalance, and integrate visibly.
 5. Sign off, hand off, and capture lessons.
+
+## Japanese Summary
+
+このファイルは、導入検討ではなく実運用中に開く runbook です。
+
+ユーザーがやることは次の 5 つです。
+
+1. どの Arm と node ID を動かすか決める
+2. visible file と writable workspace をそろえる
+3. file を置くだけで済ませず、明示的な dispatch を送る
+4. drift や詰まりを見ながら再配分し、必要なら integration を固定する
+5. sign-off 前に evidence をそろえ、最後に handoff と lessons を残す
 
 ## Topology Defaults
 

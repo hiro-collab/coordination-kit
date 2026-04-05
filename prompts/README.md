@@ -2,6 +2,8 @@
 
 Use this folder when you are ready to start visible working threads.
 
+From the user side, this is the folder you open when you want the AI system to start acting as `Commander` or as a visible `Shoulder`.
+
 Read this folder in order:
 
 1. `COMMANDER_THREAD_PROMPT.md`

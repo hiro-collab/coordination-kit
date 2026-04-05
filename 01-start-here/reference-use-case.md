@@ -14,6 +14,15 @@ Example task:
 - keep an existing API contract stable
 - verify the acceptance criteria before handoff
 
+Example user instruction:
+
+```text
+Use coordination-kit for this feature work.
+Act as Commander.
+Create at least two team lanes so implementation and verification can move in parallel.
+Keep the API stable, keep handoff visible, and keep final sign-off centralized.
+```
+
 ## Example Topology
 
 ```text
@@ -27,16 +36,16 @@ Commander
     B.Thumb
 ```
 
-One reasonable division of work is:
+One reasonable early state is:
 
 - `Commander`: owns the mission brief, timing, and final integration
-- `Arm A`: one stable team lane under Commander
-- `A.Shoulder`: steers implementation inside Arm A
-- `A.Thumb`: updates data flow or backend integration
-- `A.Indy`: updates UI and local validation
-- `Arm B`: another stable team lane under Commander
-- `B.Shoulder`: owns verification scope and release readiness
-- `B.Thumb`: checks acceptance criteria, docs, and handoff quality
+- `Arm A`: one stable team lane under Commander, currently carrying more implementation-heavy work
+- `A.Shoulder`: coordinates current work inside Arm A
+- `A.Thumb`: currently updates data flow or backend integration
+- `A.Indy`: currently updates UI and local validation
+- `Arm B`: another stable team lane under Commander, currently carrying more verification or handoff-heavy work
+- `B.Shoulder`: coordinates current work inside Arm B
+- `B.Thumb`: currently checks acceptance criteria, docs, or handoff quality
 
 The exact roles may change during the run. The important thing is that the IDs stay stable while the work emphasis stays visible. Arm names are team identities, not permanent departments.
 
@@ -56,6 +65,13 @@ Instead of relying on hidden chat state, the run writes visible coordination art
 - `INTEGRATION.md`
 - `VERIFICATION_RECORD.md`
 - `FINAL_HANDOFF.md`
+
+## What The User Should Notice
+
+- the user can tell who currently owns scope and sign-off
+- the user can see which lane is implementing and which lane is checking
+- the user can intervene without reconstructing hidden context from chat
+- the final delivery is backed by visible evidence instead of memory
 
 ## Why This Kit Helps
 
@@ -89,6 +105,15 @@ If you only need one agent and no formal handoff, this kit is probably heavier t
 - 既存 API 契約は壊さない
 - 最終 handoff 前に acceptance criteria を明示的に確認する
 
+たとえばユーザーは次のように言います。
+
+```text
+この機能追加では coordination-kit を使う。
+あなたは Commander として動く。
+実装と検証が並列に進むように、少なくとも 2 つの team lane を作る。
+API は壊さず、handoff を visible にし、最終 sign-off は 1 か所に残す。
+```
+
 ### 例となるトポロジ
 
 ```text
@@ -102,16 +127,16 @@ Commander
     B.Thumb
 ```
 
-たとえば次のように分けられます。
+たとえば run の初期状態として、次のように分かれます。
 
 - `Commander`: mission brief、期限、最終統合を持つ
-- `Arm A`: Commander 配下の安定した team lane
-- `A.Shoulder`: Arm A 内の実装方針をまとめる
-- `A.Thumb`: データフローや backend 連携を担当する
-- `A.Indy`: UI 変更とローカル確認を担当する
-- `Arm B`: Commander 配下の別の安定した team lane
-- `B.Shoulder`: 検証観点と release readiness を持つ
-- `B.Thumb`: acceptance criteria、docs、handoff 品質を確認する
+- `Arm A`: Commander 配下の安定した team lane で、この時点では実装寄りの作業が多い
+- `A.Shoulder`: Arm A 内の現在の作業を調整する
+- `A.Thumb`: この時点ではデータフローや backend 連携を進める
+- `A.Indy`: この時点では UI 変更とローカル確認を進める
+- `Arm B`: Commander 配下の別の安定した team lane で、この時点では検証や handoff 寄りの作業が多い
+- `B.Shoulder`: Arm B 内の現在の作業を調整する
+- `B.Thumb`: この時点では acceptance criteria、docs、handoff 品質を確認する
 
 この役割分担は固定ではありません。大事なのは、node id は安定させたまま、今どの node が何を重視して動いているかを見えるようにすることです。Arm 名は担当部署ではなく、team identity です。
 
@@ -119,7 +144,7 @@ Commander
 
 ### 何が可視化されるか
 
-このキットでは、会話の中だけに状態を閉じ込めず、次のような書類を visible artifact として持ちます。
+hidden chat state に頼らず、たとえば次のような coordination artifact が visible file として残ります。
 
 - `MISSION_BRIEF.md`
 - 永続的な行動方針が必要なら `PERSONALITY.<node>.md`
@@ -128,6 +153,13 @@ Commander
 - `INTEGRATION.md`
 - `VERIFICATION_RECORD.md`
 - `FINAL_HANDOFF.md`
+
+### ユーザーから見て分かること
+
+- いま誰が scope と sign-off を持っているかが分かる
+- どの lane が実装寄りで、どの lane が確認寄りかが分かる
+- hidden chat を復元しなくても途中介入しやすい
+- 最終成果物の根拠が記憶ではなく visible evidence になる
 
 ### このキットが効く理由
 

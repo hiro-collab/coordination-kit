@@ -2,6 +2,8 @@
 
 Use this guide before any team starts writing files.
 
+For a user, this file answers a practical question first: "Where should each lane be allowed to write?"
+
 ## Default Recommendation
 
 For most first runs, use separate arm directories inside the current project root:

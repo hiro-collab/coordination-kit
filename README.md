@@ -40,6 +40,13 @@ What you get:
 - one clear place for integration and final sign-off
 - easier mid-run rebalancing when one lane stalls or drifts
 
+Your first visible outputs should usually be:
+
+- one mission file that states scope and finish conditions
+- one shared integration file
+- one or more working-memory or log files for active lanes
+- one verification or handoff file before sign-off
+
 If the kit must live inside the project repository, use a Git submodule instead of a plain nested clone.
 
 The default concept is generic:
@@ -93,12 +100,17 @@ The structure is intentionally stage-based: at every directory level, the first 
 
 ## Canonical Example
 
-The default front-door example is a scoped software delivery run:
+The default front-door example is a scoped software delivery run.
 
-- `Commander` owns the mission and final integration.
-- `Arm A` and `Arm B` are stable team lanes, not fixed departments.
-- In this example, current assignments place more implementation work in `Arm A` and more verification or handoff work in `Arm B`.
-- Lower nodes such as `A.Indy`, `A.Middy`, and `B.Thumb` execute concrete subtasks and report through visible files.
+Typical user intent:
+
+- "Add a feature, keep the API stable, and let AI work in parallel."
+
+Typical first result:
+
+- one lane starts implementation-heavy work
+- another lane starts verification, docs, or handoff-heavy work
+- the user can still see who owns scope, what is blocked, and who may sign off
 
 See [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for the concrete walk-through. The same file includes a Japanese section after the English section.
 
@@ -225,6 +237,13 @@ ownership を明示し、最終統合が終わるまで sign-off しない。
 - integration と final sign-off の責任者が明確になる
 - 途中で lane が詰まっても再配分しやすい
 
+最初の導入が正しくできているなら、たいてい最初に次の visible file が見えるはずです。
+
+- scope と finish condition を書いた mission file
+- shared integration file
+- 動いている lane ごとの working-memory か log
+- sign-off 前に確認する verification か handoff file
+
 もし kit を project repository の中に置く必要があるなら、plain な nested clone ではなく Git submodule を使うのが安全です。
 
 ### 階層の見え方
@@ -268,10 +287,16 @@ Commander
 
 入口の標準例は、スコープを絞ったソフトウェア変更です。
 
-- `Commander` が mission と最終統合を持つ
-- `Arm A` と `Arm B` は担当固定ではなく、安定したチーム lane 名として動く
-- この例では、その時点の assign として `Arm A` に実装寄りの作業が多く、`Arm B` に検証や docs / handoff 支援が多い
-- `A.Indy` や `B.Thumb` のような lower node が visible file 経由で具体タスクを進める
+ユーザーの典型的な意図:
+
+- 「機能追加はしたいが、API は壊したくない」
+- 「AI を並列で動かしたいが、最後の責任は 1 か所に残したい」
+
+最初に起きることの典型:
+
+- ある lane で実装寄りの作業が進む
+- 別の lane で検証、docs、handoff 寄りの作業が進む
+- ユーザーは scope、blocker、sign-off 権限を visible file で追える
 
 詳しくは [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) を見てください。
 同じファイルの後半に日本語の代表例があります。

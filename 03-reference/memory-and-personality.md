@@ -2,6 +2,20 @@
 
 Use this when you want stable behavior without contaminating task-local state.
 
+For a user, this file answers: "What should stay stable across runs, and what should stay disposable inside the current run?"
+
+Default starting point:
+
+- start with `WORKING_MEMORY`
+- add `PERSONALITY` only if you need stable behavior across sessions or across multiple runs
+
+Rule of thumb:
+
+- write `PERSONALITY` only for behavior you want to reuse later
+- write `WORKING_MEMORY` for facts and reasoning that matter only in the current run
+- if you are unsure, default to `WORKING_MEMORY`
+- never let scratch notes turn into long-term policy by accident
+
 ## Purpose
 
 This model separates:

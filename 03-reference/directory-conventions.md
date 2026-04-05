@@ -2,6 +2,8 @@
 
 Use this to keep coordination files flexible without losing track of who should read them.
 
+For a user, this file explains where reusable kit files end and live run files begin.
+
 Related docs:
 
 - [Getting Started](../01-start-here/README.md)

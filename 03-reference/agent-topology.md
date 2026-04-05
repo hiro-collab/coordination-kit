@@ -2,6 +2,24 @@
 
 Use this as the generic concept document for the kit.
 
+For a user, this file answers one question: "If I ask AI to work in parallel, what stable lane structure am I asking it to create?"
+
+Default starting point:
+
+- one `Commander`
+- one or two Arms
+- no `Elbow` until one Arm actually needs another coordination layer
+
+Start small:
+
+- one `Commander`
+- one or two `Arm` lanes
+- one `Shoulder` inside each active Arm
+- `Elbow` only when one Arm needs another coordination layer
+- `Fingers` only for concrete parallel tasks
+
+If you cannot explain why a second Arm exists, you probably do not need it yet.
+
 ## Purpose
 
 This project uses a hierarchical multi-agent coordination model.
