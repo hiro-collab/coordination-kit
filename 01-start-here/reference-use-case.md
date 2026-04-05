@@ -30,13 +30,20 @@ Commander
 One reasonable division of work is:
 
 - `Commander`: owns the mission brief, timing, and final integration
+- `Arm A`: one implementation team lane under Commander
 - `A.Shoulder`: steers implementation inside Arm A
 - `A.Thumb`: updates data flow or backend integration
 - `A.Indy`: updates UI and local validation
+- `Arm B`: one verification and handoff-support team lane under Commander
 - `B.Shoulder`: owns verification scope and release readiness
 - `B.Thumb`: checks acceptance criteria, docs, and handoff quality
 
 The exact roles may change during the run. The important thing is that the IDs stay stable while the work emphasis stays visible.
+
+If it helps, read Arm names aloud like team call-signs:
+
+- `Arm A` -> `Alpha`
+- `Arm B` -> `Bravo`
 
 ## What Becomes Visible
 
@@ -98,13 +105,17 @@ Commander
 たとえば次のように分けられます。
 
 - `Commander`: mission brief、期限、最終統合を持つ
+- `Arm A`: Commander 配下の実装チーム lane
 - `A.Shoulder`: Arm A 内の実装方針をまとめる
 - `A.Thumb`: データフローや backend 連携を担当する
 - `A.Indy`: UI 変更とローカル確認を担当する
+- `Arm B`: Commander 配下の検証と handoff 支援チーム lane
 - `B.Shoulder`: 検証観点と release readiness を持つ
 - `B.Thumb`: acceptance criteria、docs、handoff 品質を確認する
 
 この役割分担は固定ではありません。大事なのは、node id は安定させたまま、今どの node が何を重視して動いているかを見えるようにすることです。
+
+会話上は `Arm A` を `Alpha`、`Arm B` を `Bravo` のような team callsign として読むとイメージしやすいです。
 
 ### 何が可視化されるか
 

@@ -20,6 +20,33 @@ This is a coordination model, not a literal anatomy.
   - Elbow: optional decomposition layer
   - Fingers: execution slots
 
+## Hierarchy Shape
+
+Do not read this as a flat sequence like `Commander -> Arms -> Shoulder -> Elbow -> Fingers`.
+
+The intended shape is:
+
+```text
+Commander
+  Arm A
+    Shoulder
+      Elbow (optional)
+        Thumb / Indy / Middy / Ringy / Pinky
+  Arm B
+    Shoulder
+      Fingers...
+```
+
+This means:
+
+- Commander owns the overall mission.
+- Each Arm is one parallel team lane under Commander.
+- Shoulder, Elbow, and Fingers belong inside a specific Arm.
+- Elbow is optional, and Shoulder may directly control Fingers.
+- `A.Thumb` and `B.Thumb` are different nodes because they belong to different Arms.
+
+You can think of Arms as team units or squad lanes under a single Commander.
+
 ## Core Principles
 
 ### Roles Are Not Fixed
@@ -66,6 +93,15 @@ Arms:
 
 - `A`, `B`, `C`, `D`
 
+For read-aloud names, many runs treat these as call-sign style team names such as:
+
+- `A` -> `Alpha`
+- `B` -> `Bravo`
+- `C` -> `Charlie`
+- `D` -> `Delta`
+
+Project-specific team names are also acceptable as long as the compact IDs stay stable in files.
+
 Finger local names:
 
 - `Thumb`
@@ -96,6 +132,15 @@ Human-readable examples:
 - Some Arms may have multiple Elbows.
 - Shoulder may directly control Fingers.
 - Finger count is often 5, but it may vary.
+
+Common simplified shape without Elbow:
+
+```text
+Commander
+  Arm A
+    Shoulder
+      Thumb / Indy / Middy / Ringy / Pinky
+```
 
 ## Execution Model
 

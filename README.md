@@ -11,10 +11,42 @@ English comes first in this file. A Japanese mirror appears later in the same do
 The default concept is generic:
 
 - Commander coordinates across one or more Arms.
-- Each Arm may use a Shoulder, an optional Elbow, and one or more Fingers.
+- Each Arm is a parallel team lane under Commander.
+- Inside each Arm, the usual structure is Shoulder -> optional Elbow -> Fingers.
 - Node names are identifiers, not fixed roles.
 
-If an arm uses five finger lanes, the standard local names are `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`. Use compact node IDs such as `A.Thumb`, `A.Middy`, and `B.Shoulder`.
+If an Arm uses five finger lanes, the standard local names are `Thumb`, `Indy`, `Middy`, `Ringy`, and `Pinky`. Use compact node IDs such as `A.Thumb`, `A.Middy`, and `B.Shoulder`.
+
+## Hierarchy At A Glance
+
+This is a nested structure, not a flat list of unrelated parts.
+
+```text
+Commander
+  Arm A (Alpha team lane)
+    A.Shoulder
+      A.Elbow (optional)
+        A.Thumb
+        A.Indy
+        A.Middy
+        A.Ringy
+        A.Pinky
+  Arm B (Bravo team lane)
+    B.Shoulder
+      B.Thumb
+      B.Indy
+      ...
+```
+
+Read it like this:
+
+- `Commander` is the top-level coordinator.
+- `Arm` means one parallel team lane under Commander.
+- `Shoulder`, `Elbow`, and `Fingers` belong inside one specific Arm.
+- `Elbow` is optional. Shoulder may control Fingers directly.
+- Fingers are never a shared global pool. `A.Thumb` belongs to Arm A, `B.Thumb` belongs to Arm B.
+
+For read-aloud team names, many runs treat `A / B / C / D` as call-sign style Arm names such as `Alpha / Bravo / Charlie / Delta`.
 
 The structure is intentionally stage-based: at every directory level, the first file to read is `README.md` in that directory.
 
@@ -29,8 +61,8 @@ The structure is intentionally stage-based: at every directory level, the first 
 The default front-door example is a scoped software delivery run:
 
 - `Commander` owns the mission and final integration.
-- `Arm A` implements the change.
-- `Arm B` verifies acceptance criteria and prepares docs or handoff notes.
+- `Arm A` is one implementation team lane.
+- `Arm B` is one verification and handoff-support team lane.
 - Lower nodes such as `A.Indy`, `A.Middy`, and `B.Thumb` execute concrete subtasks and report through visible files.
 
 See [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for the concrete walk-through. The same file includes a Japanese section after the English section.
@@ -133,6 +165,37 @@ If you publish this kit as its own repository:
 1 人の人間または上位 coordinator が、同じ task に対して複数の agent lane を走らせたいときに使います。
 runtime や workflow engine ではなく、prompt、template、runbook rule を visible file ベースで組み立てるためのキットです。
 
+### 階層の見え方
+
+これは `Commander -> Arms -> Shoulder / Elbow / Fingers` という平らな並びではなく、Arm の中に下位構造が入る入れ子です。
+
+```text
+Commander
+  Arm A (Alpha team lane)
+    A.Shoulder
+      A.Elbow (optional)
+        A.Thumb
+        A.Indy
+        A.Middy
+        A.Ringy
+        A.Pinky
+  Arm B (Bravo team lane)
+    B.Shoulder
+      B.Thumb
+      B.Indy
+      ...
+```
+
+つまり:
+
+- `Commander` が最上位
+- `Arm` は Commander 配下の並列 team lane
+- `Shoulder`、`Elbow`、`Fingers` はその Arm の内部構造
+- `Elbow` は任意で、なくてもよい
+- `A.Thumb` と `B.Thumb` は別の Arm に属する別 node
+
+会話上は `A / B / C / D` を、`Alpha / Bravo / Charlie / Delta` のような team callsign として読むとイメージしやすいです。
+
 ### このキットが何か
 
 - human-supervised multi-agent run のための再利用可能な coordination layer
@@ -144,8 +207,8 @@ runtime や workflow engine ではなく、prompt、template、runbook rule を 
 入口の標準例は、スコープを絞ったソフトウェア変更です。
 
 - `Commander` が mission と最終統合を持つ
-- `Arm A` が実装を進める
-- `Arm B` が acceptance criteria の確認と docs / handoff note を担当する
+- `Arm A` が実装チーム lane として動く
+- `Arm B` が検証と docs / handoff 支援のチーム lane として動く
 - `A.Indy` や `B.Thumb` のような lower node が visible file 経由で具体タスクを進める
 
 詳しくは [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) を見てください。
