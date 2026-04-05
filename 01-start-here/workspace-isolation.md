@@ -7,7 +7,7 @@ Use this guide before any team starts writing files.
 For most first runs, use separate arm directories inside the current project root:
 
 ```text
-trial-runs/
+run-workspaces/
   arm-a/
   arm-b/
 ```
@@ -16,15 +16,15 @@ This is the safest starting point because:
 
 - it does not require git setup
 - it does not write above the current project root
-- it makes each team's writable area explicit
+- it makes each Arm's writable area explicit
 - it keeps `assets/coordination-kit` available as a shared read-only reference
 
 ## When To Introduce Git Worktrees
 
 Use git worktrees only if you need:
 
-- branch history for each trial
-- repeatable diffs between team outputs
+- branch history for each run
+- repeatable diffs between Arm outputs
 - isolation that follows repository branches rather than plain directories
 
 ## Minimum Safe Worktree Sequence
@@ -38,13 +38,13 @@ Use git worktrees only if you need:
 
 - never create worktrees above the current project root
 - one active Arm gets one worktree and one writable root
-- do not let teams share mutable files during the active run
-- update the coordination kit after the trial, not inside multiple active team worktrees mid-run
+- do not let Arms share mutable files during the active run
+- update the coordination kit after the run, not inside multiple active Arm worktrees mid-run
 
 ## Decision Rule
 
-- first trial: separate directories are enough
-- later trials: introduce git and worktrees only if auditability or repeated reruns justify the extra setup
+- first run: separate directories are enough
+- later runs: introduce git and worktrees only if auditability or repeated reruns justify the extra setup
 
 ## Related Docs
 

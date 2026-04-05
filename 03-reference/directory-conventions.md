@@ -12,12 +12,14 @@ Related docs:
 - `assets/coordination-kit/`
   - reusable templates, prompts, and policy
   - should not hold run-specific working files
-- `trial-ops/`
+- `run-ops/`
   - run-specific global operations files
   - shared between Commander, user, and any Arm that needs global visibility
-- `trial-runs/arm-*/`
+- `run-workspaces/arm-*/`
   - Arm-specific working files, code, handoff, and retrospective
   - should not be treated as global reference by other Arms unless explicitly allowed
+
+If the run is explicitly comparative, `trial-ops/` and `trial-runs/arm-*/` are also reasonable names.
 
 ## File Metadata
 
@@ -71,6 +73,6 @@ Set one primary human language for the run.
 
 This language should be used for:
 
-- judge-facing summaries
-- player-facing onboarding and rule explanation
+- reviewer-facing or stakeholder-facing summaries
+- user-facing onboarding, instructions, or rule explanation
 - any file the user is expected to read directly during the run

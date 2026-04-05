@@ -2,6 +2,8 @@
 
 Use this when hierarchical nodes are collaborating on a task and need visible coordination.
 
+If you want one concrete front-door scenario before reading the runbook, start with [../01-start-here/reference-use-case.md](../01-start-here/reference-use-case.md).
+
 This kit supports:
 
 - single-arm tests
@@ -13,6 +15,7 @@ Competitive browser-game comparison is one supported profile, not the default co
 ## Read Before Running
 
 - [Getting Started](../01-start-here/README.md)
+- [Reference Use Case](../01-start-here/reference-use-case.md)
 - [Agent Topology](../03-reference/agent-topology.md)
 - [Memory and Personality](../03-reference/memory-and-personality.md)
 - [Workspace Isolation](../01-start-here/workspace-isolation.md)
@@ -66,7 +69,7 @@ Use this when you want side-by-side outputs under matched public constraints.
 - If a node must act, send an explicit message naming the file and required action.
 - If a human operator must forward that message, hand them the exact send-ready prompt body.
 - Keep multi-node collaboration purposeful. The goal is not fewer nodes by default; the goal is visible contribution and integration.
-- Use one primary human language for operator-facing, judge-facing, or player-facing material within a given run.
+- Use one primary human language for operator-facing, reviewer-facing, stakeholder-facing, or end-user-facing material within a given run.
 - After the first integrated build or a major scope cut, redistribute work explicitly so validation, documentation, localization, and handoff support do not collapse silently into one node.
 - If a checkpoint has a required visible update, schedule the reminder before the deadline and escalate before cutoff if the update is still missing.
 
@@ -75,7 +78,7 @@ Use this when you want side-by-side outputs under matched public constraints.
 Use one of these layouts inside the current project root:
 
 ```text
-trial-runs/
+run-workspaces/
   arm-a/
   arm-b/
 ```
@@ -87,6 +90,8 @@ worktrees/
 ```
 
 If the run is competitive, those arm directories may correspond to teams.
+
+If you want the directory names to emphasize comparison, `trial-runs/` and `trial-ops/` are also acceptable.
 
 Do not place active workspaces above the current project root.
 

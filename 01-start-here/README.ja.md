@@ -1,10 +1,27 @@
-# 日本語クイックガイド
+# 日本語スタートガイド
 
 `coordination-kit` は、`Commander -> Arms -> Shoulder / Elbow / Fingers` で進める階層型マルチエージェント運用を、見える形で管理するためのテンプレート集です。
 
 コードのフレームワークではなく、役割分担、可視化、引き継ぎ、評価のための運用キットだと考えると分かりやすいです。
 
 このフォルダでは、まずこの `README.ja.md` か [README.md](README.md) を読んでから次へ進む想定です。
+
+## このキットが向いている場面
+
+- 1 人の人間や上位 thread が、複数の agent lane を同時に監督したい
+- prompt だけでは足りず、handoff、検証、統合のための visible file が欲しい
+- プロジェクトごとに再利用できる coordination 資産を持ちたい
+
+## このキットが向いていない場面
+
+- 1 agent と 1 user でそのまま終わる小タスク
+- workflow engine や scheduler、runtime を探している場合
+- visible file や explicit dispatch を運用するつもりがない場合
+
+## 代表ユースケース
+
+この repo の front-door 例は「まとまったソフトウェア変更を、実装 lane と検証 lane に分けて進める run」です。
+詳しくは [reference-use-case.ja.md](reference-use-case.ja.md) を読むと、何に使うキットなのかが早く掴めます。
 
 ## このリポジトリの見方
 
@@ -18,12 +35,14 @@
 
 ## 最初に読む順番
 
-1. [英語版 Installation](README.md)
-2. [Agent Topology](../03-reference/agent-topology.md)
-3. [Memory and Personality](../03-reference/memory-and-personality.md)
-4. [Workspace Isolation](workspace-isolation.md)
-5. [Runbook](../02-runbook/README.md)
-6. [Reference](../03-reference/README.md)
+1. [英語版 Start Here](README.md)
+2. [代表ユースケース](reference-use-case.ja.md)
+3. [Agent Topology](../03-reference/agent-topology.md)
+4. [Memory and Personality](../03-reference/memory-and-personality.md)
+5. [git-usage.md](git-usage.md)
+6. [Workspace Isolation](workspace-isolation.md)
+7. [Runbook](../02-runbook/README.md)
+8. [Reference](../03-reference/README.md)
 
 ## 10分で始める手順
 
@@ -31,7 +50,7 @@
 2. `A.Shoulder`, `A.Indy` のような node id と階層を決める
 3. 必要なら `PERSONALITY` と `WORKING_MEMORY` の分離方針を決める
 4. [git-usage.md](git-usage.md) を見て、どう配置するかを決める
-5. 実行用の作業領域を `trial-ops/` と `trial-runs/arm-a/`, `trial-runs/arm-b/` のように分ける
+5. 実行用の作業領域を `run-ops/` と `run-workspaces/arm-a/`, `run-workspaces/arm-b/` のように分ける
 6. `../templates/01-setup/MISSION_BRIEF_TEMPLATE.md` から共通ブリーフを作る
 7. 必要なら `../templates/01-setup/PERSONALITY_TEMPLATE.md` から personality ファイルを作る
 8. `../prompts/COMMANDER_THREAD_PROMPT.md` で Commander を開始する
@@ -88,13 +107,13 @@ finger を 5 本使う場合のローカル名は次です。
 - 人が別スレッドへ転送する文面を作る: `../templates/02-dispatch/SEND_READY_PROMPT_TEMPLATE.md`
 - 中盤以降に担当を組み替える: `../templates/03-checkpoints/POST_CHECKPOINT_REDISTRIBUTION_TEMPLATE.md`
 - 最終引き継ぎを固定フォーマットで残す: `../templates/04-handoff/FINAL_HANDOFF_TEMPLATE.md`
-- 評価の記録を残す: `../templates/04-handoff/GAME_JUDGING_SCORECARD_TEMPLATE.md`
+- 比較型 browser-game trial の評価記録を残す: `../templates/04-handoff/GAME_JUDGING_SCORECARD_TEMPLATE.md`
 
 ## 日本語運用で意識したい点
 
-- judge 向けと player 向けの説明は同じ主言語でそろえる
+- reviewer 向けや end-user 向けの説明がある run では、同じ主言語でそろえる
 - ルール説明は開始直後に見える場所へ置く
-- `midpoint playable` は「たぶん動く」ではなく「通しで見せられる」
+- demo checkpoint を置く run では、`midpoint playable` を「たぶん動く」ではなく「通しで見せられる」の意味で使う
 - ファイルを書いただけでは指示にならないので、読む相手に明示的に送る
 - 中盤以降は実装だけでなく、検証、文書化、ローカライズ、handoff にも担当を配る
 - `PERSONALITY` と `WORKING_MEMORY` は混ぜない
@@ -106,14 +125,17 @@ finger を 5 本使う場合のローカル名は次です。
 your-project/
   assets/
     coordination-kit/
-  trial-ops/
-  trial-runs/
+  run-ops/
+  run-workspaces/
     arm-a/
     arm-b/
 ```
 
+比較実験を強調したい run なら、`trial-ops/` や `trial-runs/` という名前でも構いません。
+
 ## 迷ったときの入口
 
-- 新規導入: [英語版 Installation](README.md)
+- 新規導入: [英語版 Start Here](README.md)
+- 代表ユースケース: [reference-use-case.ja.md](reference-use-case.ja.md)
 - 実運用: [Runbook](../02-runbook/README.md)
 - 公開前確認: [Publishing Checklist](../04-maintainers/publishing-checklist.md)

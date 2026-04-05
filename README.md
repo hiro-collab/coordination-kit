@@ -1,8 +1,10 @@
 # Coordination Kit
 
-Reusable coordination prompts, templates, and operating rules for a hierarchical multi-agent model centered on `Commander -> Arms -> Shoulder / Elbow / Fingers`.
+A documentation-first operating kit for visible, auditable multi-agent work.
 
-This repository is process-first. It helps teams run visible, auditable multi-agent execution without relying on hidden coordination state.
+Use this when one human or top-level coordinator needs to run several agent lanes on the same task without losing traceability, handoff quality, or integration ownership.
+
+This repository is not a workflow engine, distributed runtime, or graph DSL. It gives you prompts, templates, and runbook rules for coordinating real work in visible files.
 
 The default concept is generic:
 
@@ -14,10 +16,44 @@ If an arm uses five finger lanes, the standard local names are `Thumb`, `Indy`, 
 
 The structure is intentionally stage-based: at every directory level, the first file to read is `README.md` in that directory.
 
+## What This Is
+
+- a reusable coordination layer for human-supervised multi-agent runs
+- a visible-file operating model for prompts, handoff, verification, and sign-off
+- a way to keep reusable policy separate from run-local writable state
+
+## Canonical Example
+
+The default front-door example is a scoped software delivery run:
+
+- `Commander` owns the mission and final integration.
+- `Arm A` implements the change.
+- `Arm B` verifies acceptance criteria and prepares docs or handoff notes.
+- Lower nodes such as `A.Indy`, `A.Middy`, and `B.Thumb` execute concrete subtasks and report through visible files.
+
+See [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md) for the concrete walk-through and [01-start-here/reference-use-case.ja.md](01-start-here/reference-use-case.ja.md) for the Japanese version.
+
+## Best Fits
+
+- AI-assisted software delivery where one operator supervises multiple visible agent lanes
+- multi-arm exploration or comparison runs where you need explicit handoff and integration
+- human-in-the-loop workflows where prompts alone are not enough and auditability matters
+
+Competitive browser-game trials are still supported, but they are now one profile, not the default concept.
+
+## What This Is Not
+
+- not a replacement for `Temporal`, `Airflow`, or other workflow schedulers
+- not a compute runtime such as `Ray`
+- not a graph execution framework such as `LangGraph`
+- not the right tool for a tiny one-thread task with no handoff or verification pressure
+
 ## Start Here
 
 - English onboarding: [01-start-here/README.md](01-start-here/README.md)
+- Reference use case: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
 - 日本語案内: [01-start-here/README.ja.md](01-start-here/README.ja.md)
+- 日本語の代表例: [01-start-here/reference-use-case.ja.md](01-start-here/reference-use-case.ja.md)
 - Git usage recommendation: [01-start-here/git-usage.md](01-start-here/git-usage.md)
 - Generic runbook: [02-runbook/README.md](02-runbook/README.md)
 - Topology and naming: [03-reference/agent-topology.md](03-reference/agent-topology.md)
@@ -26,12 +62,13 @@ The structure is intentionally stage-based: at every directory level, the first 
 ## Read In Order
 
 1. [01-start-here/README.md](01-start-here/README.md)
-2. [03-reference/agent-topology.md](03-reference/agent-topology.md)
-3. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
-4. [02-runbook/README.md](02-runbook/README.md)
-5. [prompts/README.md](prompts/README.md)
-6. [templates/README.md](templates/README.md)
-7. [04-maintainers/README.md](04-maintainers/README.md) if you maintain or publish the kit
+2. [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
+3. [03-reference/agent-topology.md](03-reference/agent-topology.md)
+4. [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md)
+5. [02-runbook/README.md](02-runbook/README.md)
+6. [prompts/README.md](prompts/README.md)
+7. [templates/README.md](templates/README.md)
+8. [04-maintainers/README.md](04-maintainers/README.md) if you maintain or publish the kit
 
 ## Repository Structure
 
@@ -58,14 +95,15 @@ coordination-kit/
 ## Recommended Use Order
 
 1. Read [01-start-here/README.md](01-start-here/README.md).
-2. If needed, share [01-start-here/README.ja.md](01-start-here/README.ja.md) with Japanese-speaking operators or judges.
-3. Choose the Git placement pattern with [01-start-here/git-usage.md](01-start-here/git-usage.md).
-4. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
-5. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
-6. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
-7. Operate the run with [02-runbook/README.md](02-runbook/README.md).
-8. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
-9. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each trial and update the kit after judging is complete.
+2. Read the front-door example in [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md).
+3. If needed, share [01-start-here/README.ja.md](01-start-here/README.ja.md) and [01-start-here/reference-use-case.ja.md](01-start-here/reference-use-case.ja.md) with Japanese-speaking operators or reviewers.
+4. Choose the Git placement pattern with [01-start-here/git-usage.md](01-start-here/git-usage.md).
+5. Fix the generic topology with [03-reference/agent-topology.md](03-reference/agent-topology.md).
+6. Confirm memory separation with [03-reference/memory-and-personality.md](03-reference/memory-and-personality.md).
+7. Choose workspace isolation with [01-start-here/workspace-isolation.md](01-start-here/workspace-isolation.md).
+8. Operate the run with [02-runbook/README.md](02-runbook/README.md).
+9. Copy prompts and templates from [prompts/README.md](prompts/README.md) and [templates/README.md](templates/README.md) into your run workspace.
+10. Review [03-reference/lessons-learned.md](03-reference/lessons-learned.md) after each run and update the kit after final review is complete.
 
 ## Core Rules
 
@@ -76,7 +114,7 @@ coordination-kit/
 - Keep persistent personality separate from task-specific working memory.
 - Do not auto-update personality from working memory.
 - Use visible artifacts for handoff, verification, and sign-off.
-- Keep judge-facing and player-facing language aligned to the run's primary human language.
+- Keep human-facing materials aligned to the run's primary human language.
 - After midpoint or the first integrated build, redistribute work visibly instead of letting everything collapse back to one operator.
 - Use compact node IDs when lower nodes are active, for example `A.Thumb`, `A.Indy`, `A.Middy`, `A.Ringy`, and `A.Pinky`.
 

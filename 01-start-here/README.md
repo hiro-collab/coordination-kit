@@ -1,21 +1,46 @@
-# Installation
+# Start Here
 
-Use this guide when you want to adopt `coordination-kit` in another workspace.
+Use this guide when you want to adopt `coordination-kit` in another workspace and decide whether it is the right tool.
 
-This repository is documentation and templates. There is no package-manager install step.
+This repository is documentation and templates for visible multi-agent operations. There is no package-manager install step and no hidden execution runtime.
 
 If you are browsing the repository for the first time, read this file before any deeper file in this folder.
+
+## Use This Kit When
+
+- one person or one top-level thread must supervise several agent lanes on the same task
+- prompts alone are no longer enough and you need explicit files for handoff, verification, and integration
+- you want reusable coordination assets that can be copied into many project runs
+
+## Avoid It When
+
+- one agent and one user can finish the task directly with no coordination overhead
+- you are looking for an execution framework, scheduler, or event runtime
+- your team will not maintain visible files or explicit dispatch messages
+
+## One Concrete Example
+
+The default example for this repository is a scoped software delivery run:
+
+- `Commander` owns the mission brief and final integration.
+- `Arm A` implements the product change.
+- `Arm B` verifies acceptance criteria and prepares docs or handoff notes.
+- Nodes such as `A.Indy` and `B.Thumb` execute concrete subtasks with visible status updates.
+
+Read [reference-use-case.md](reference-use-case.md) before going deeper if you want to see the model in a real scenario.
 
 ## Read In This Order
 
 1. [../README.md](../README.md)
-2. [README.ja.md](README.ja.md) if the operators or judges need Japanese guidance
-3. [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
-4. [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
-5. [git-usage.md](git-usage.md)
-6. [workspace-isolation.md](workspace-isolation.md)
-7. [../02-runbook/README.md](../02-runbook/README.md)
-8. [../03-reference/README.md](../03-reference/README.md)
+2. [reference-use-case.md](reference-use-case.md)
+3. [README.ja.md](README.ja.md) if the operators or reviewers need Japanese guidance
+4. [reference-use-case.ja.md](reference-use-case.ja.md) if the example also needs Japanese guidance
+5. [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
+6. [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
+7. [git-usage.md](git-usage.md)
+8. [workspace-isolation.md](workspace-isolation.md)
+9. [../02-runbook/README.md](../02-runbook/README.md)
+10. [../03-reference/README.md](../03-reference/README.md)
 
 ## Folder Map
 
@@ -107,10 +132,11 @@ git submodule update --init --recursive
 10. If the user needs direct steering access, create a visible Shoulder thread with `../prompts/SHOULDER_THREAD_PROMPT.md`.
 11. Copy the live-run templates you need into the project workspace, not back into the kit itself.
 
-## Minimum Files To Start A New Trial
+## Minimum Files To Start A New Run
 
 Read first:
 
+- [reference-use-case.md](reference-use-case.md)
 - [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
 - [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
 - [git-usage.md](git-usage.md)
@@ -130,7 +156,6 @@ Usually copy these into the new run:
 - `../templates/03-checkpoints/POST_CHECKPOINT_REDISTRIBUTION_TEMPLATE.md`
 - `../templates/04-handoff/SUBMISSION_PACKET_TEMPLATE.md`
 - `../templates/04-handoff/FINAL_HANDOFF_TEMPLATE.md`
-- `../templates/04-handoff/GAME_JUDGING_SCORECARD_TEMPLATE.md`
 - `../templates/04-handoff/KIT_RETROSPECTIVE_TEMPLATE.md`
 
 Add these when the run needs them:
@@ -139,6 +164,7 @@ Add these when the run needs them:
 - `../templates/03-checkpoints/INTERFACE_CONTRACT_FREEZE_TEMPLATE.md`
 - `../templates/03-checkpoints/VERIFICATION_RECORD_TEMPLATE.md`
 - `../templates/03-checkpoints/LANGUAGE_AND_ONBOARDING_CHECKLIST_TEMPLATE.md`
+- `../templates/04-handoff/GAME_JUDGING_SCORECARD_TEMPLATE.md` for comparative browser-game trials
 
 ## Suggested Directory Layout In The Target Workspace
 
@@ -146,26 +172,28 @@ Add these when the run needs them:
 your-project/
   assets/
     coordination-kit/
-  trial-ops/
-  trial-runs/
+  run-ops/
+  run-workspaces/
     arm-a/
     arm-b/
 ```
+
+If this is specifically a comparative trial, `trial-ops/` and `trial-runs/` are also reasonable names.
 
 If the kit stays external:
 
 ```text
 coordination-kit/
 your-project/
-  trial-ops/
-  trial-runs/
+  run-ops/
+  run-workspaces/
 ```
 
 ## Update Policy
 
 - Treat the kit as reusable source material.
 - Keep run-specific files outside the kit.
-- If you improve the kit during a live trial, capture the idea and publish the kit update after judgment unless a safety issue forces immediate change.
+- If you improve the kit during a live run, capture the idea and publish the kit update after final review unless a safety issue forces immediate change.
 
 ## Before Publishing Or Reusing Widely
 
@@ -177,6 +205,7 @@ your-project/
 
 - Generic topology: [../03-reference/agent-topology.md](../03-reference/agent-topology.md)
 - Memory and personality: [../03-reference/memory-and-personality.md](../03-reference/memory-and-personality.md)
+- Reference use case: [reference-use-case.md](reference-use-case.md)
 - Git usage recommendation: [git-usage.md](git-usage.md)
 - Live execution: [../02-runbook/README.md](../02-runbook/README.md)
 - Preflight check: [../02-runbook/bootstrap-checklist.md](../02-runbook/bootstrap-checklist.md)
