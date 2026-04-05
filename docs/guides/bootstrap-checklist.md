@@ -2,6 +2,12 @@
 
 Use this before starting a new coordination run.
 
+Related docs:
+
+- [Runbook](runbook.md)
+- [Directory Conventions](../reference/directory-conventions.md)
+- [Workspace Isolation](workspace-isolation.md)
+
 ## Project Files
 
 - [ ] `AGENTS.md` exists and states the topology and responsibility split.

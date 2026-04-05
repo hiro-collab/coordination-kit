@@ -4,10 +4,11 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 
 ## Repository Readiness
 
-- [ ] `README.md` explains purpose, use order, and included assets.
-- [ ] `INSTALLATION.md` explains how to copy, clone, or submodule the kit into another workspace.
-- [ ] `RUNBOOK.md` reflects the latest operating rules.
-- [ ] `LESSONS_LEARNED.md` reflects the latest accepted changes.
+- [ ] `README.md` explains purpose, layout, and main entry points.
+- [ ] `docs/getting-started.md` explains how to copy, clone, or submodule the kit into another workspace.
+- [ ] `docs/guides/runbook.md` reflects the latest operating rules.
+- [ ] `docs/reference/lessons-learned.md` reflects the latest accepted changes.
+- [ ] `docs/ja/getting-started.md` is current if Japanese guidance is part of the public offering.
 - [ ] `templates/` contains the full current template set.
 - [ ] `prompts/` contains the current Commander and Shoulder prompts.
 
@@ -26,9 +27,8 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 
 ## Suggested Publish Flow
 
-1. Initialize git inside this directory.
-2. Review `git status`.
-3. Commit the standalone kit.
-4. Create the GitHub repository.
-5. Push `main`.
-6. Tag the first reusable revision if desired.
+1. Review `git status`.
+2. Commit the standalone kit.
+3. Create or confirm the GitHub repository.
+4. Push `main`.
+5. Tag the first reusable revision if desired.

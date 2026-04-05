@@ -2,6 +2,11 @@
 
 Use this to keep coordination files flexible without losing track of who should read them.
 
+Related docs:
+
+- [Getting Started](../getting-started.md)
+- [Runbook](../guides/runbook.md)
+
 ## Responsibility Split
 
 - `assets/coordination-kit/`

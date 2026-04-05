@@ -3,6 +3,8 @@
 - Owner: Commander / kit maintainer
 - Readers: user, Commander, visible A.Shoulder threads, future trial operators
 
+Use this as the maintainer-facing record of rules that survived real runs.
+
 ## What Worked
 
 - Visible `LIVE_STATUS_BOARD.md` updates made it possible to compare team progress without relying on hidden thread state.

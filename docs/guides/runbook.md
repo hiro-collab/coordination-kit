@@ -2,6 +2,19 @@
 
 Use this when two teams are building separate browser games from the same coordination kit and you want to compare both outputs fairly.
 
+## Read Before Running
+
+- [Getting Started](../getting-started.md)
+- [Workspace Isolation](workspace-isolation.md)
+- [Directory Conventions](../reference/directory-conventions.md)
+
+## Quick Flow
+
+1. Bootstrap the run and lock fair public constraints.
+2. Monitor live progress with visible checkpoints and explicit dispatch.
+3. Freeze changes and judge the shipped outputs.
+4. Update the kit only after judging is complete.
+
 ## Core Principles
 
 - Keep `assets/coordination-kit` stable during active execution.

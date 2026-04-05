@@ -1,103 +1,57 @@
 # Coordination Kit
 
-Reusable coordination assets extracted from the first browser-game trial and extended for side-by-side competitive runs.
+Reusable coordination prompts, templates, and operating rules for the `Commander -> A.Shoulder -> fingers` model.
 
-This folder is maintained so it can also be published as a standalone GitHub repository and reused outside the current workspace.
+This repository is process-first. It helps teams run visible, auditable multi-thread or multi-agent execution without relying on hidden context.
 
-## Purpose
+## Start Here
 
-Use this kit when you want to reuse the Commander -> A.Shoulder -> fingers operating model in a new project without carrying over hidden thread state.
+- New to the kit: [docs/getting-started.md](docs/getting-started.md)
+- Japanese quick guide: [docs/ja/getting-started.md](docs/ja/getting-started.md)
+- Live trial operations: [docs/guides/runbook.md](docs/guides/runbook.md)
+- File and directory rules: [docs/reference/directory-conventions.md](docs/reference/directory-conventions.md)
 
-This version also supports trials where two teams build competing outputs and Commander plus the user judge both the game quality and the operating model.
+## Repository Layout
 
-For setup in another workspace, see `INSTALLATION.md`.
+```text
+coordination-kit/
+  docs/
+  prompts/
+  templates/
+  CHANGELOG.md
+  LICENSE
+  README.md
+```
 
-## What Changed After The First Trial
-
-- A.Shoulder should be a visible thread when the user needs to give it direct instructions.
-- Shared coordination files should exist before lower-node spawning starts.
-- A.Shoulder, not Commander, should own lower-node spawn and routine steering.
-- Hidden sub-agent context is not enough for auditability; visible files and status reports are required.
-- Each finger should update its own working-memory and log files at task start and completion.
-- Commander should record explicit final sign-off instead of stopping at "the code exists."
+- `docs/` explains setup, live operation, conventions, lessons learned, and publishing.
+- `prompts/` contains startup prompts for Commander and A.Shoulder.
+- `templates/` contains reusable coordination files to copy into a real run.
 
 ## Recommended Use Order
 
-1. Choose workspace isolation with `WORKSPACE_ISOLATION_GUIDE.md`.
-2. Adopt directory responsibilities with `DIRECTORY_CONVENTIONS.md`.
-3. Add `00_INDEX.md` files using `templates/00_INDEX_TEMPLATE.md` where the file set may grow during the run.
-4. Copy the templates from `templates/` into the new project root or trial workspace.
-5. Create the public game brief with `templates/PUBLIC_TRIAL_BRIEF_TEMPLATE.md`.
-6. Start the Commander thread with `prompts/COMMANDER_THREAD_PROMPT.md`.
-7. If direct user interaction with A.Shoulder is needed, create a visible A.Shoulder thread with `prompts/SHOULDER_THREAD_PROMPT.md`.
-8. Use `templates/COMMAND_DISPATCH_TEMPLATE.md` whenever a node must read a file and act on it.
-9. If a human must forward the instruction, also prepare a send-ready body with `templates/SEND_READY_PROMPT_TEMPLATE.md`.
-10. Let A.Shoulder create or update the shared files, file-ownership map, and finger task cards.
-11. Let A.Shoulder spawn fingers using `templates/FINGER_TASK_CARD_TEMPLATE.md` plus project-specific scope.
-12. After the first integrated build or midpoint risk, use `templates/POST_CHECKPOINT_REDISTRIBUTION_TEMPLATE.md` to reassign active work visibly.
-13. Freeze drifting boundaries with `templates/INTERFACE_CONTRACT_FREEZE_TEMPLATE.md`.
-14. Track playable claims with `templates/VERIFICATION_RECORD_TEMPLATE.md`.
-15. Check human-language onboarding with `templates/LANGUAGE_AND_ONBOARDING_CHECKLIST_TEMPLATE.md`.
-16. Track the run with `templates/RUN_MONITOR_TEMPLATE.md`.
-17. Require a team-local submission draft with `templates/SUBMISSION_PACKET_TEMPLATE.md`.
-18. Require final handoff with `templates/FINAL_HANDOFF_TEMPLATE.md`.
-19. Judge each output with `templates/GAME_JUDGING_SCORECARD_TEMPLATE.md`.
-20. Capture kit improvements with `templates/KIT_RETROSPECTIVE_TEMPLATE.md`.
-21. Update the kit after the run is over, not during active team execution unless there is a safety issue.
+1. Read [docs/getting-started.md](docs/getting-started.md).
+2. Choose workspace isolation with [docs/guides/workspace-isolation.md](docs/guides/workspace-isolation.md).
+3. Adopt directory responsibilities with [docs/reference/directory-conventions.md](docs/reference/directory-conventions.md).
+4. Copy the required files from `prompts/` and `templates/` into your run workspace.
+5. Operate the run with [docs/guides/runbook.md](docs/guides/runbook.md).
+6. Review [docs/reference/lessons-learned.md](docs/reference/lessons-learned.md) after each trial and update the kit after judging is complete.
 
-## Included Assets
+## Core Rules
 
-- `LESSONS_LEARNED.md`
-- `BOOTSTRAP_CHECKLIST.md`
-- `DIRECTORY_CONVENTIONS.md`
-- `RUNBOOK.md`
-- `INSTALLATION.md`
-- `WORKSPACE_ISOLATION_GUIDE.md`
-- `prompts/COMMANDER_THREAD_PROMPT.md`
-- `prompts/SHOULDER_THREAD_PROMPT.md`
-- `templates/00_INDEX_TEMPLATE.md`
-- `templates/COMMAND_DISPATCH_TEMPLATE.md`
-- `templates/SEND_READY_PROMPT_TEMPLATE.md`
-- `templates/FINGER_TASK_CARD_TEMPLATE.md`
-- `templates/POST_CHECKPOINT_REDISTRIBUTION_TEMPLATE.md`
-- `templates/INTERFACE_CONTRACT_FREEZE_TEMPLATE.md`
-- `templates/SHARED_NOTE_TEMPLATE.md`
-- `templates/INTEGRATION_TEMPLATE.md`
-- `templates/WORKING_MEMORY_TEMPLATE.md`
-- `templates/LOG_TEMPLATE.md`
-- `templates/COMMANDER_SIGNOFF_TEMPLATE.md`
-- `templates/VERIFICATION_RECORD_TEMPLATE.md`
-- `templates/LANGUAGE_AND_ONBOARDING_CHECKLIST_TEMPLATE.md`
-- `templates/SUBMISSION_PACKET_TEMPLATE.md`
-- `templates/FINAL_HANDOFF_TEMPLATE.md`
-- `templates/PUBLIC_TRIAL_BRIEF_TEMPLATE.md`
-- `templates/RUN_MONITOR_TEMPLATE.md`
-- `templates/GAME_JUDGING_SCORECARD_TEMPLATE.md`
-- `templates/KIT_RETROSPECTIVE_TEMPLATE.md`
-- `CHANGELOG.md`
-- `PUBLISHING_CHECKLIST.md`
+- Keep reusable kit files separate from run-specific writable files.
+- Treat file creation as storage, not instruction delivery.
+- Use visible artifacts for handoff, verification, and sign-off.
+- Keep judge-facing and player-facing language aligned to the run's primary human language.
+- After midpoint or the first integrated build, redistribute work visibly instead of letting everything collapse back to one operator.
 
-## Scope Notes
+## Documentation Map
 
-- This kit is process-first.
-- It is framework-agnostic.
-- It favors visible traceability over hidden convenience.
-- Competitive trials should keep each team in a separate writable workspace.
-- Exact judging weights do not need to be fixed in advance; use public constraints plus post-run evidence.
-- Writing a file is not the same thing as dispatching work; required actions should be sent explicitly to the responsible thread.
-- When a human intermediary must forward a prompt, provide the full send-ready message body, not only a file path or document name.
-- Judge-facing documents and first-play player guidance should use the primary human language for the run.
-- After the first playable build exists, the run needs visible redistribution, not only continued integration by default.
-- When parallel lanes drift across a shared boundary, freeze the interface contract visibly instead of relying on shoulder memory.
-- Playability claims at midpoint and pre-handoff should be backed by a visible verification record.
-- A team-local submission packet should be prepared before the final board update so handoff does not depend on last-minute reconstruction.
+See [docs/README.md](docs/README.md) for the full document index.
 
-## Standalone Repo Use
+## Standalone Repository Notes
 
-If you publish this folder on GitHub as its own repository:
+If you publish this kit as its own repository:
 
 1. Keep this directory as the repository root.
-2. Add a license before public release.
-3. Document installation and reuse with `INSTALLATION.md`.
-4. Use `PUBLISHING_CHECKLIST.md` before pushing.
-5. Keep run-specific files outside this repository and treat this repository as reusable source material only.
+2. Keep run-specific artifacts outside this repository.
+3. Review [docs/maintenance/publishing-checklist.md](docs/maintenance/publishing-checklist.md) before release.
