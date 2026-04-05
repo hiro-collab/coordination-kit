@@ -7,12 +7,6 @@ For a user, this file answers one question: "If I ask AI to work in parallel, wh
 Default starting point:
 
 - one `Commander`
-- one or two Arms
-- no `Elbow` until one Arm actually needs another coordination layer
-
-Start small:
-
-- one `Commander`
 - one or two `Arm` lanes
 - one `Shoulder` inside each active Arm
 - `Elbow` only when one Arm needs another coordination layer
