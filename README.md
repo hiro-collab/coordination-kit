@@ -33,11 +33,8 @@ Then open both directories in a file-aware AI coding system such as Codex or Cla
 The reusable coordination kit is at ../coordination-kit.
 Read the kit and follow its rules for this project.
 I want help with <this work>, and I want the collaboration to work like <this>.
-Start as Commander.
-If parallel lanes are useful, create Arm A and Arm B as team lanes.
-When lane-level direct steering is needed, use `A.Shoulder` and `B.Shoulder` as the first acting threads inside those lanes.
-Create `MISSION_BRIEF.md`, `SHARED_NOTE.md`, and `INTEGRATION.md` first, then create node-local working-memory or log files, plus `VERIFICATION_RECORD.md` or `FINAL_HANDOFF.md` when needed.
-Keep ownership explicit and do not sign off until the final integration is complete.
+You are Commander.
+If parallel work helps, you may form one or more Arm team lanes.
 ```
 
 Do not front-load every boundary rule into that first ask. The kit already defines the reusable constraints. The first request should mainly do two things:
@@ -45,7 +42,7 @@ Do not front-load every boundary rule into that first ask. The kit already defin
 - tell the AI to read and follow the kit
 - tell the AI what you want help with and how you want the collaboration to work
 
-Exact project-side path and write-boundary checks still matter, but they are better handled as project setup, not as the main point of the first request. See [01-start-here/project-placement.md](01-start-here/project-placement.md).
+Do not overload that first request with topology details, setup file lists, ownership rules, or sign-off mechanics. Those belong in project bootstrap and live operation. See [01-start-here/README.md](01-start-here/README.md), [01-start-here/project-placement.md](01-start-here/project-placement.md), and [02-runbook/README.md](02-runbook/README.md).
 
 What you get:
 
@@ -232,11 +229,8 @@ AI は shared な `workspace/` 親ではなく、`your-project/` を起点に開
 再利用する coordination kit は ../coordination-kit にある。
 この project ではその kit を読み、規定に沿って coordination method として使う。
 私は「<この作業>」を、「<こういう関わり方>」で手伝ってほしい。
-まず Commander として始める。
-並列 lane が有効なら、Arm A と Arm B を team lane として立てる。
-lane ごとの direct steering が必要になったら、その最初の acting thread は `A.Shoulder` と `B.Shoulder` にする。
-まず `MISSION_BRIEF.md`、`SHARED_NOTE.md`、`INTEGRATION.md` を作り、そのあと node ごとの working-memory か log、必要なら `VERIFICATION_RECORD.md` か `FINAL_HANDOFF.md` を用意する。
-ownership を明示し、最終統合が終わるまで sign-off しない。
+あなたは Commander として動く。
+並列処理が有効なら、必要に応じて 1 本以上の Arm team lane を編成してよい。
 ```
 
 最初のお願いの中で境界ルールを全部言い直す必要はありません。再利用する制約は kit の文書側にあります。最初の依頼の主眼は、次の 2 点です。
@@ -244,7 +238,7 @@ ownership を明示し、最終統合が終わるまで sign-off しない。
 - kit を読んで、その規定に沿って動いてもらうこと
 - 「何を」「どういう形で」手伝ってほしいかを伝えること
 
-もちろん、project ごとの path や write boundary の確認は必要です。ただし、それは最初の依頼の中心というより project setup の確認事項です。詳しくは [01-start-here/project-placement.md](01-start-here/project-placement.md) を見てください。
+最初の依頼に topology の細部、setup file の一覧、ownership rule、sign-off の仕組みまで詰め込む必要はありません。そうした内容は project bootstrap と live operation の段階で扱う方が自然です。詳しくは [01-start-here/README.md](01-start-here/README.md)、[01-start-here/project-placement.md](01-start-here/project-placement.md)、[02-runbook/README.md](02-runbook/README.md) を見てください。
 
 この kit を使うと、次の利点があります。
 
