@@ -4,7 +4,7 @@ Use this file when you want to adopt `coordination-kit` in a real project.
 
 This is the main user guide. Most users only need this file, the reference use case, the placement guide, and the runbook.
 
-The root `README.md` already gives the send-ready first instruction for the AI. This file is for the project-side checks and adoption decisions around that first instruction.
+The root `README.md` already gives the first request pattern for the AI. This file is for the project-side checks and adoption decisions around that first request.
 
 English comes first in this file. A Japanese mirror appears later in the same document.
 
@@ -13,11 +13,11 @@ English comes first in this file. A Japanese mirror appears later in the same do
 1. Put `coordination-kit` next to your project, or add it as a Git submodule.
 2. Decide the exact kit path and the exact writable project paths.
 3. Open both the project and the kit in a file-aware AI coding system, but start the session from the project root.
-4. Tell the AI to use `coordination-kit`, name the kit path, and restrict writes to project-side directories such as `./run-ops` and `./run-workspaces`.
-   Ask it to confirm those read/write paths back before it creates anything.
-5. Before real implementation starts, confirm that visible ownership, sign-off, and handoff files exist in the project.
+4. Start with the root `README.md` request pattern: tell the AI where the kit is, ask it to follow the kit, and tell it what work you want help with.
+5. Then confirm the exact project-side read/write paths before it creates anything.
+6. Before real implementation starts, confirm that visible ownership, sign-off, and handoff files exist in the project.
 
-Use the root `README.md` instruction block first, then confirm the project-side checks in this file.
+Use the root `README.md` request pattern first, then confirm the exact project-side checks in this file.
 
 ## User Reading Path
 
@@ -75,11 +75,11 @@ After the first setup pass, you should usually have:
 1. `coordination-kit` を project の横に置くか、Git submodule として入れる
 2. kit の実パスと、project 側の書き込み先を決める
 3. project と kit の両方を file-aware な AI coding system で開くが、session の起点は project root にする
-4. `coordination-kit` を使うこと、kit の場所、書き込み境界を AI に伝える
-   そのうえで、何か作る前に read path / write path を AI に復唱させる
-5. 実装を始める前に、ownership、sign-off、handoff の visible file が project 側にできているか確認する
+4. root の [../README.md](../README.md) にある最初の依頼パターンを使い、kit の場所、kit に従うこと、手伝ってほしい作業内容を AI に伝える
+5. そのあとで、何か作る前に exact な read path / write path を AI に復唱させる
+6. 実装を始める前に、ownership、sign-off、handoff の visible file が project 側にできているか確認する
 
-最初の AI への指示文は root の [../README.md](../README.md) にある block を使い、このファイルでは project 側の確認事項を詰めます。
+最初の AI への依頼は root の [../README.md](../README.md) にあるパターンを使い、このファイルでは project 側の exact な確認事項を詰めます。
 
 ## ユーザー向けの読む順番
 
