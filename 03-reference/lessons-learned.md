@@ -7,6 +7,10 @@ Use this as the maintainer-facing record of rules that survived real runs.
 
 Most items below are generic carry-forward rules. Trial-only notes are kept in a separate section so they do not accidentally redefine the default model.
 
+Read this after the core reference docs already make sense. This file is a retrospective layer, not the first explanation of the model.
+
+English comes first in this file. A Japanese mirror appears later in the same document.
+
 ## Generic Lessons
 
 ### What Worked
@@ -77,3 +81,97 @@ These notes are useful when the run is explicitly a judged browser-game comparis
 - Merge the forthcoming Team Alpha retrospective into these lessons once it is visible.
 - Merge the forthcoming Team Blabo retrospective into these lessons once it is visible.
 - Re-check whether the new dispatch, handoff, and directory rules cover the concrete failures the teams report.
+
+## Reading Map
+
+- Read [agent-topology.md](agent-topology.md) for the lane structure itself.
+- Read [coordination-primitives.md](coordination-primitives.md) for protocol, state, and policy.
+- Read [profile-inheritance/README.md](profile-inheritance/README.md) for durable personality and carry-forward rules.
+
+## Japanese
+
+- Owner: Commander / kit maintainer
+- Readers: user, Commander, visible A.Shoulder threads, future operators
+
+このファイルは、実運用を通って生き残ったルールを maintainer 視点で記録するためのものです。
+
+下の大半は generic な carry-forward ルールです。trial 専用の note は別 section に分け、既定モデルを書き換えてしまわないようにしています。
+
+このファイルは、core reference docs がすでに頭に入っている前提で読みます。最初にモデルを説明する文書ではなく、retrospective layer です。
+
+## Generic Lessons
+
+### うまくいったこと
+
+- writable workspace を分けたことで、active lane を分離でき、無関係な directory を汚さずに済んだ。
+- shared template により、run ごとの operating-model quality を比較しやすくなった。
+
+### 改善が必要だったこと
+
+- file を書くことが dispatch と誤認されがちで、明示的な thread-level command がなお必要だった。
+- operator に「prompt はその file にある」と伝えるだけでは間接的すぎ、転送者には send-ready な本文が必要だった。
+- directory と markdown の layout は柔軟だったが、file ownership と readership が十分には明示されていなかった。
+- final handoff の内容は run のかなり後半になってから明確になり、もっと早く標準化すべきだった。
+- multi-node execution の問題は頭数そのものではなく、各 node に clear な work、visibility、coordination があるかどうかだった。
+- checkpoint 後に、完了済みまたは半待機状態の node を verification、docs、localization、handoff support に移せる visible な再配分 step が必要だった。
+- integration drift が起きたときに、visible な interface-contract freeze note が必要だった。
+
+### 引き継ぐべきルール
+
+- user が直接 steering したいときは、visible な `A.Shoulder` thread を使う。
+- file を書くことと task を dispatch することを分け、file 名と required action を明示した message を送る。
+- human operator が relay する必要があるなら、reference file だけでなく send-ready な prompt 本文も渡す。
+- finger spawn を始める前に、shared coordination file を作る。
+- collaborative execution の前に、file ownership を明示する。
+- 曖昧さで遅れが出そうな human-facing markdown には `Owner:` と `Readers:` を入れる。
+- file が増えそうな directory には `00_INDEX.md` を入れて、後から見ても辿れるようにする。
+- hidden thread context は、visible file や status に反映されない限り authoritative とみなさない。
+- 複数 lane が drift し始めたら、最初の integrated build や checkpoint の後で canonical contract file を freeze する。
+- checkpoint 後に visible な redistribution を書き、active な各 node に新しい役割があるか、明示的に release されている状態にする。
+- required な visible update が遅れる前に、phase-end reminder と escalation を仕込む。
+- final handoff は fixed visible format で提出させる。
+- multi-node collaboration は、人数の多少ではなく contribution quality と coordination quality で評価する。
+
+### Generic Failure Checks
+
+- `A.Shoulder` が advisor に退き、`Commander` が fingers を micro-manage している。
+- `Fingers` が code work を終えても visible state を更新しない。
+- shared assumption が変わったのに `SHARED_NOTE.md` が更新されていない。
+- file は更新されたが、誰がそれを読んで act するかが thread に明示されていない。
+- send-ready prompt が file reference としてしか存在せず、human forwarder が結局 message を再構成する必要がある。
+- handoff が fixed visible format で提出されず、暗黙のものとして扱われている。
+- ownership、dependency、required input が明示されず、idle な node が出る。
+- node が最初の slice を終えても、checkpoint 後に recall や reassignment がされない。
+- shared boundary が drift しているのに、authoritative file と owner を示す visible contract freeze がない。
+
+## Competitive Browser-Game Trial Notes
+
+これらは、run が明示的に judged browser-game comparison であるときに有用な note です。generic default ではありません。
+
+- visible な `LIVE_STATUS_BOARD.md` update により、hidden thread state に頼らず team progress を比較できた。
+- plan lock、midpoint、feature freeze、submission cutoff のような time checkpoint により、`Commander` が介入すべき瞬間を持てた。
+- shared template により、game quality の評価と operating-model の評価を同じ run から集められた。
+- `midpoint playable` は解釈が緩すぎたので、visible な end-to-end live run を意味するよう定義すべきだった。
+- judge-facing material と first-play guidance には、より強い日本語対応が必要だった。
+- final shared-board update の前に team-local submission packet が必要で、そうしないと handoff 内容を scattered file から再構成する羽目になった。
+- playable claim が争点になったときのために、visible proof-of-play record も必要だった。
+- game winner、operations winner、overall result は判断が分かれうるので別々に記録すべきだった。
+- judge-facing summary と player-facing onboarding には primary human language を使うべきだった。
+
+### Trial Failure Checks
+
+- visible な end-to-end run がないのに midpoint 完了としている。
+- build 自体は起動できても、player が rule explanation をすぐ見つけられない。
+- team が playable progress を主張しているのに、実際に何をテストしたかを示す visible verification record がない。
+
+## Pending Follow-Up
+
+- forthcoming な Team Alpha retrospective が visible になったら、ここへ統合する。
+- forthcoming な Team Blabo retrospective が visible になったら、ここへ統合する。
+- 新しい dispatch、handoff、directory ルールが、team の報告する具体的 failure を本当にカバーできているか再確認する。
+
+## Reading Map
+
+- lane structure 自体は [agent-topology.md](agent-topology.md) を読む。
+- protocol、state、policy は [coordination-primitives.md](coordination-primitives.md) を読む。
+- durable personality と carry-forward rule は [profile-inheritance/README.md](profile-inheritance/README.md) を読む。

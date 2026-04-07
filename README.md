@@ -147,7 +147,7 @@ So yes, similar tools exist nearby, but they solve a different layer of the prob
 - Live operation runbook: [02-runbook/README.md](02-runbook/README.md)
 - Concrete example when needed: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
 - AI / system rules only when needed: [03-reference/README.md](03-reference/README.md)
-- Durable profile carry-forward rules: [03-reference/profile-promotion.md](03-reference/profile-promotion.md)
+- Durable profile carry-forward rules: [03-reference/profile-inheritance/README.md](03-reference/profile-inheritance/README.md)
 - Prompt assets only when starting visible AI threads: [prompts/README.md](prompts/README.md)
 - Template assets only when creating live run files: [templates/README.md](templates/README.md)
 - Maintainer docs: [04-maintainers/README.md](04-maintainers/README.md)
@@ -340,8 +340,10 @@ browser-game の competitive trial も扱えますが、それは optional profi
 - live operation の runbook: [02-runbook/README.md](02-runbook/README.md)
 - 具体例が欲しいとき: [01-start-here/reference-use-case.md](01-start-here/reference-use-case.md)
 - AI / system rule が必要になったときだけ: [03-reference/README.md](03-reference/README.md)
+- durable profile の carry-forward ルール: [03-reference/profile-inheritance/README.md](03-reference/profile-inheritance/README.md)
 - visible AI thread を立てるときだけ: [prompts/README.md](prompts/README.md)
 - live run file を作るときだけ: [templates/README.md](templates/README.md)
+- maintainer 向けの公開・整備手順: [04-maintainers/README.md](04-maintainers/README.md)
 
 ### コアルール
 

@@ -231,7 +231,7 @@ Sign-off should require:
 Use this file together with:
 
 - [agent-topology.md](agent-topology.md) for hierarchy and naming
-- [memory-and-personality.md](memory-and-personality.md) for persistent versus disposable state
+- [profile-inheritance/memory-and-personality.md](profile-inheritance/memory-and-personality.md) for persistent versus disposable state
 - [../01-start-here/project-placement.md](../01-start-here/project-placement.md) for where shared and lane-local artifacts should live
 - [../02-runbook/README.md](../02-runbook/README.md) for the execution sequence
 
@@ -464,6 +464,6 @@ sign-off には少なくとも次が必要です。
 このファイルは次の文書と一緒に読む想定です。
 
 - [agent-topology.md](agent-topology.md): hierarchy と naming
-- [memory-and-personality.md](memory-and-personality.md): persistent state と disposable state の分離
+- [profile-inheritance/memory-and-personality.md](profile-inheritance/memory-and-personality.md): persistent state と disposable state の分離
 - [../01-start-here/project-placement.md](../01-start-here/project-placement.md): shared artifact と lane-local artifact をどこに置くか
 - [../02-runbook/README.md](../02-runbook/README.md): 実行順序と運用手順

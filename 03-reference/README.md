@@ -14,20 +14,28 @@ English comes first in this file. A Japanese mirror appears later in the same do
 - you need to settle a topology, naming, authority, or memory dispute
 - you are tuning prompts, templates, or multi-lane operating rules
 
-## Read In This Order
+## Structure At A Glance
+
+- `agent-topology.md`: lane shape, hierarchy, and naming
+- `coordination-primitives.md`: protocol, state, and policy
+- `profile-inheritance/`: durable personality and carry-forward rules
+- `lessons-learned.md`: accepted lessons from real runs after the core model already makes sense
+
+## Read Core Docs In This Order
 
 1. [agent-topology.md](agent-topology.md)
 2. [coordination-primitives.md](coordination-primitives.md)
-3. [memory-and-personality.md](memory-and-personality.md)
-4. [profile-promotion.md](profile-promotion.md)
-5. [lessons-learned.md](lessons-learned.md)
+3. [profile-inheritance/README.md](profile-inheritance/README.md)
+
+## Read After The Core Docs
+
+- [lessons-learned.md](lessons-learned.md) when you are maintaining the kit or revising rules from real runs
 
 ## Which File Answers Which Question
 
 - `agent-topology.md`: "What lane structure and naming system should exist?"
 - `coordination-primitives.md`: "How does work move, where is visible truth, and who decides?"
-- `memory-and-personality.md`: "What should stay stable across runs, and what should stay disposable?"
-- `profile-promotion.md`: "What is safe to carry forward, and what should stay local to this run?"
+- `profile-inheritance/README.md`: "How should durable personality and disposable working memory be separated and carried forward?"
 - `lessons-learned.md`: "What rules were learned from real runs and kept?"
 
 ## Related Docs
@@ -53,20 +61,28 @@ English comes first in this file. A Japanese mirror appears later in the same do
 - topology、naming、authority、memory で迷いが出た
 - prompt、template、multi-lane rule を調整したい
 
-## 読む順番
+## 構成の見取り図
+
+- `agent-topology.md`: lane の形、階層、naming
+- `coordination-primitives.md`: protocol, state, policy
+- `profile-inheritance/`: durable personality と carry-forward の規則
+- `lessons-learned.md`: core model を理解したあとに参照する、実運用からの accepted lesson
+
+## まず読む順番
 
 1. [agent-topology.md](agent-topology.md)
 2. [coordination-primitives.md](coordination-primitives.md)
-3. [memory-and-personality.md](memory-and-personality.md)
-4. [profile-promotion.md](profile-promotion.md)
-5. [lessons-learned.md](lessons-learned.md)
+3. [profile-inheritance/README.md](profile-inheritance/README.md)
+
+## あとから読むもの
+
+- [lessons-learned.md](lessons-learned.md): kit を保守するときや、実運用の学びからルールを見直すとき
 
 ## どの疑問ならどのファイルか
 
 - `agent-topology.md`: 「どの lane 構造と naming system を前提にするか」
 - `coordination-primitives.md`: 「仕事がどう動き、visible truth がどこにあり、誰が決めるか」
-- `memory-and-personality.md`: 「何を run をまたいで残し、何を disposable にするか」
-- `profile-promotion.md`: 「何を carry forward してよく、何を今回限りに留めるべきか」
+- `profile-inheritance/README.md`: 「durable な personality と disposable な working memory をどう分けて引き継ぐか」
 - `lessons-learned.md`: 「実運用から学んで固定したルールは何か」
 
 ## 関連ドキュメント
