@@ -8,11 +8,13 @@ English comes first in this file. A Japanese mirror appears later in the same do
 
 ## Read In This Order
 
-1. [memory-and-personality.md](memory-and-personality.md)
-2. [profile-promotion.md](profile-promotion.md)
+1. [design-target.md](design-target.md)
+2. [memory-and-personality.md](memory-and-personality.md)
+3. [profile-promotion.md](profile-promotion.md)
 
 ## Which File Answers Which Question
 
+- `design-target.md`: "What is this mechanism trying to preserve, and what is it deliberately refusing to preserve?"
 - `memory-and-personality.md`: "What should stay stable across runs, and what should stay disposable?"
 - `profile-promotion.md`: "What is safe to carry forward, and what should stay local to this run?"
 
@@ -31,11 +33,13 @@ English comes first in this file. A Japanese mirror appears later in the same do
 
 ## 読む順番
 
-1. [memory-and-personality.md](memory-and-personality.md)
-2. [profile-promotion.md](profile-promotion.md)
+1. [design-target.md](design-target.md)
+2. [memory-and-personality.md](memory-and-personality.md)
+3. [profile-promotion.md](profile-promotion.md)
 
 ## どの疑問ならどのファイルか
 
+- `design-target.md`: 「この仕組みは何を残したくて、何を意図的に残さないのか」
 - `memory-and-personality.md`: 「何を run をまたいで残し、何を disposable にするか」
 - `profile-promotion.md`: 「何を carry forward してよく、何を今回限りに留めるべきか」
 
