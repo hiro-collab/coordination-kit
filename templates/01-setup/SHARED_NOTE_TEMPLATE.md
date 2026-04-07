@@ -54,6 +54,14 @@
 
 - <assumption>
 
+## Model And Reasoning Budget
+
+- Commander: <model or model class, plus reasoning/cost posture>
+- Shoulder: <model or model class, plus reasoning/cost posture>
+- Elbow: <if used>
+- Fingers default: <lower-cost model or lower reasoning budget by default>
+- Escalate to higher spend when: <conditions>
+
 ## Open Questions
 
 - <question>

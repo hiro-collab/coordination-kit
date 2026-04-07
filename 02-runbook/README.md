@@ -54,6 +54,8 @@ Only if a topology, authority, or memory rule is still disputed:
 
 topology、authority、memory rule で迷いが残るときだけ [../03-reference/README.md](../03-reference/README.md) を開いてください。
 
+model 名や消費量の固定ルールは kit に埋め込まず、その run の bootstrap で決めてください。下位の execution node は既定で軽くし、曖昧さ処理や統合判断が必要な上位 node にだけ高い推論コストを許す、という方針を visible に残すのが安全です。
+
 ## Topology Defaults
 
 - Commander is the top-level coordinator.
@@ -98,6 +100,10 @@ Use this when you want side-by-side outputs under matched public constraints.
 - Use one primary human language for operator-facing, reviewer-facing, stakeholder-facing, or end-user-facing material within a given run.
 - After the first integrated build or a major scope cut, redistribute work explicitly so validation, documentation, localization, and handoff support do not collapse silently into one node.
 - If a checkpoint has a required visible update, schedule the reminder before the deadline and escalate before cutoff if the update is still missing.
+- Do not hard-code specific model versions into the kit as durable defaults.
+- Decide model choice, reasoning budget, and cost posture at team bootstrap for the current run.
+- Lower execution nodes should default to lower-cost models or lower reasoning budgets unless there is a visible reason to spend more.
+- Higher coordination nodes may use more capable or more expensive settings when ambiguity, integration, or conflict resolution requires it.
 
 ## Recommended Layout
 
@@ -159,14 +165,26 @@ Keep shared files such as `MISSION_BRIEF.md`, `SHARED_NOTE.md`, `INTEGRATION.md`
 2. Write one `MISSION_BRIEF.md` shared to all participating nodes.
 3. If the run is comparative, also lock fairness constraints before work begins.
 4. Set the primary human language for the run.
-5. Copy the setup templates into each active workspace.
-6. Create `00_INDEX.md` files where visibility would otherwise sprawl.
-7. Create `SHARED_NOTE.md`, `INTEGRATION.md`, `WORKING_MEMORY.<node>.md`, and `LOG.<node>.md` for active nodes.
-8. Create `PERSONALITY.<node>.md` files if persistent personality is part of the run.
-9. Create `RUN_MONITOR.md` when the run is long, parallel, or risky enough to need checkpoint tracking.
-10. Prepare a `SUBMISSION_PACKET.md` draft path before final handoff if formal handoff is expected.
-11. Decide where `VERIFICATION_RECORD.md`, `INTERFACE_CONTRACT_FREEZE.md`, and any language or onboarding checklists will live if they are needed.
-12. Send explicit dispatch messages for required read-and-act steps. Do not assume file creation alone will trigger work.
+5. Decide the model choice, reasoning budget, and cost posture for the current team and run.
+6. Copy the setup templates into each active workspace.
+7. Create `00_INDEX.md` files where visibility would otherwise sprawl.
+8. Create `SHARED_NOTE.md`, `INTEGRATION.md`, `WORKING_MEMORY.<node>.md`, and `LOG.<node>.md` for active nodes.
+9. Create `PERSONALITY.<node>.md` files if persistent personality is part of the run.
+10. Create `RUN_MONITOR.md` when the run is long, parallel, or risky enough to need checkpoint tracking.
+11. Prepare a `SUBMISSION_PACKET.md` draft path before final handoff if formal handoff is expected.
+12. Decide where `VERIFICATION_RECORD.md`, `INTERFACE_CONTRACT_FREEZE.md`, and any language or onboarding checklists will live if they are needed.
+13. Send explicit dispatch messages for required read-and-act steps. Do not assume file creation alone will trigger work.
+
+### Model And Reasoning Budget Policy
+
+Lock a visible policy before parallel execution starts.
+
+- Do not bind the kit to one named model family as a permanent rule.
+- Record the chosen model or model class for the current run only.
+- Record the expected reasoning or cost budget by node layer.
+- Default lower execution nodes such as Fingers to lower-cost settings.
+- Escalate cost only when ambiguity, integration pressure, or failure evidence justifies it.
+- Revisit the policy if quality is too low or cost is too high.
 
 ## Optional Competitive Browser-Game Profile
 

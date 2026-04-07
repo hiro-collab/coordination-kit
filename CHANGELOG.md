@@ -9,6 +9,7 @@
 - Grouped durable-profile guidance under `03-reference/profile-inheritance/`.
 - Added `03-reference/profile-inheritance/design-target.md` to state the design goal and boundary of profile inheritance.
 - Added `03-reference/profile-inheritance/memory-and-personality.md` and `03-reference/profile-inheritance/profile-promotion.md`, plus durable-profile templates for constitution, beliefs, team overlays, playbooks, and promotion review.
+- Added run-level model and reasoning budget guidance to the runbook, bootstrap checklist, and shared-note template without hard-coding specific model versions.
 - Added `templates/01-setup/PERSONALITY_TEMPLATE.md`.
 - Renamed `02-run-a-trial/` to `02-runbook/`.
 - Consolidated project integration patterns into `01-start-here/project-placement.md`.

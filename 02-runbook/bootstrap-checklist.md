@@ -49,6 +49,9 @@ Related docs:
 - [ ] Each active Arm has its own writable workspace when isolation matters.
 - [ ] Cross-arm visibility rules are written down.
 - [ ] Mode labels, if used, are explicit and understandable to participants.
+- [ ] Model choice, reasoning budget, and cost posture are fixed for this run.
+- [ ] Lower execution nodes default to lower-cost settings unless an explicit exception is written down.
+- [ ] The escalation path for spending more model budget is visible.
 
 ## Comparative Run Only
 
