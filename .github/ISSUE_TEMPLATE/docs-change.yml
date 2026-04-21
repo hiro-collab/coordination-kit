@@ -1,0 +1,37 @@
+name: Docs or kit change
+description: Propose a documentation, prompt, template, or operating-rule change.
+title: "[docs] "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or gap
+      description: What is unclear, missing, stale, or hard to use?
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected files or flow
+      description: Name the docs, prompts, templates, or user path involved.
+      placeholder: README.md, 02-runbook/README.md, templates/...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should change, and what should stay out of scope?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Boundary checks
+      options:
+        - label: This keeps live run artifacts out of the reusable kit.
+        - label: This preserves Commander / Arm / Shoulder / optional Elbow / Fingers as the topology.
+        - label: This does not turn the kit into a workflow engine or runtime.
+        - label: This keeps competitive trial guidance optional unless the issue is specifically about that profile.
