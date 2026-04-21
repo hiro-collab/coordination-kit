@@ -10,6 +10,8 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 - [ ] `03-reference/agent-topology.md` reflects the generic hierarchy and naming model.
 - [ ] `03-reference/memory-and-personality.md` reflects the current memory model.
 - [ ] `03-reference/lessons-learned.md` reflects the latest accepted changes.
+- [ ] `AGENTS.md` gives Codex, GitHub Agents, and other coding agents a concise repository entry point.
+- [ ] `.github/` contains current contributor, pull request, issue, and Copilot guidance if the repository is public on GitHub.
 - [ ] `README.md`, `01-start-here/README.md`, and `01-start-here/reference-use-case.md` include current Japanese sections if Japanese guidance is part of the public offering.
 - [ ] `01-start-here/README.ja.md` and `01-start-here/reference-use-case.ja.md` still point to the integrated bilingual files if those redirect stubs are kept.
 - [ ] `templates/` contains the full current template set.
@@ -24,6 +26,7 @@ Use this before pushing `coordination-kit` to GitHub as a standalone repository.
 ## Release Decisions
 
 - [ ] Repository name is fixed.
+- [ ] Repository About text matches the generic kit positioning and does not describe only a competitive-trial profile.
 - [ ] Visibility is fixed: public or private.
 - [ ] A license has been chosen before public release.
 - [ ] A short release note or tag message is prepared.

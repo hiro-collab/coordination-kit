@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added repository-level `AGENTS.md` and GitHub templates so Codex, Copilot, reviewers, and contributors have a clear entry point.
+- Simplified the first-request example so topology details are handled during bootstrap instead of being front-loaded.
 - Reorganized guidance into stage-based top-level folders with `README.md` at the head of each hierarchy.
 - Merged front-door English and Japanese guidance into shared bilingual onboarding files.
 - Restored the generic `Commander -> Arms -> Shoulder / Elbow / Fingers` concept to the front of the kit.
